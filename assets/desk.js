@@ -1,4 +1,4 @@
-/* TW Daytrade Desk — static JSON client */
+/* Daytrade Desk v3 client */
 (function () {
   const $ = (id) => document.getElementById(id);
   const state = { index: null, selected: null, cache: {} };
@@ -6,7 +6,7 @@
   function fmtDate(ymd) {
     if (!ymd || String(ymd).length !== 8) return ymd || "—";
     const s = String(ymd);
-    return `${s.slice(0, 4)}.${s.slice(4, 6)}.${s.slice(6, 8)}`;
+    return `${s.slice(0, 4)}-${s.slice(4, 6)}-${s.slice(6, 8)}`;
   }
 
   function num(x, d = 2) {
@@ -24,15 +24,11 @@
     return n > 0 ? "up" : "down";
   }
 
-  function biasClass(bias) {
-    const s = String(bias || "");
+  function biasClass(b) {
+    const s = String(b || "");
     if (s.includes("多")) return "long";
     if (s.includes("空")) return "short";
     return "mid";
-  }
-
-  function gateExtreme(tag) {
-    return /高波動|警戒|extreme/i.test(String(tag || ""));
   }
 
   async function loadJSON(path) {
@@ -56,26 +52,22 @@
       return blob.includes(q);
     });
 
-    $("archive-count").textContent = String(list.length);
-
     if (!list.length) {
-      box.innerHTML = '<div class="dim" style="padding:14px">無符合項目</div>';
+      box.innerHTML = '<div class="muted" style="padding:10px">無符合項目</div>';
       return;
     }
 
-    list.forEach((e, i) => {
+    list.forEach((e) => {
       const btn = document.createElement("button");
       btn.type = "button";
+      btn.className = "date-btn" + (state.selected === e.date ? " active" : "");
       btn.setAttribute("role", "option");
       btn.setAttribute("aria-selected", state.selected === e.date ? "true" : "false");
-      btn.className = "arch-item" + (state.selected === e.date ? " active" : "");
       btn.innerHTML = `
-        <div class="arch-date">${fmtDate(e.date)}</div>
-        <div class="arch-tag">${e.gate_tag || "—"} · ${e.count ?? 0} 檔</div>
-        <div class="arch-meta">${(e.top_codes || []).slice(0, 3).join(" · ") || "—"}</div>
+        <span class="d">${fmtDate(e.date)}</span>
+        <span class="g">${e.gate_tag || "—"} · ${e.count ?? 0}檔</span>
       `;
       btn.addEventListener("click", () => selectDate(e.date));
-      btn.style.animationDelay = `${Math.min(i, 12) * 30}ms`;
       box.appendChild(btn);
     });
   }
@@ -88,72 +80,54 @@
 
     let report = state.cache[date];
     if (!report) {
-      $("pill-status").textContent = "載入中";
-      $("pill-status").className = "status-pill";
+      $("pill-status").textContent = "LOADING";
+      $("pill-status").className = "badge";
       try {
         report = await loadJSON(`data/reports/${date}.json`);
         state.cache[date] = report;
       } catch (err) {
-        $("pill-status").textContent = "讀取失敗";
-        $("pill-status").className = "status-pill err";
+        $("pill-status").textContent = "ERROR";
+        $("pill-status").className = "badge err";
         $("d-md").textContent = String(err);
         return;
       }
     }
 
     $("pill-status").textContent = "LIVE";
-    $("pill-status").className = "status-pill ok";
+    $("pill-status").className = "badge ok";
 
     const gate = report.gate || {};
     const idx = report.index || {};
     const rows = report.results || [];
     const meta = report.screen_meta || {};
 
-    $("d-eyebrow").textContent = "OPENING SESSION · D=" + (report.screen_date || date);
     $("d-date").textContent = fmtDate(report.screen_date || date);
-    $("d-generated").textContent = `產出 ${report.generated_at || "—"}`;
     $("d-gate").textContent = gate.tag || "—";
-    const wrap = $("d-gate-wrap");
-    wrap.classList.toggle("extreme", gateExtreme(gate.tag) || !!gate.extreme);
+    $("d-advice").textContent = gate.advice || "—";
+    $("d-mode").textContent = meta.relaxed ? "寬鬆" : "標準";
+    $("d-count").textContent = String(rows.length);
+    $("d-generated").textContent = `產出 ${report.generated_at || "—"} · D=${report.screen_date || date}`;
 
     const chg = idx.change;
     const chgTxt =
-      chg === null || chg === undefined
-        ? "—"
-        : `${Number(chg) > 0 ? "+" : ""}${num(chg, 0)} (${idx.change_pct || "—"})`;
-    const idxEl = $("d-index");
-    idxEl.textContent = `${idx.label || idx.source || "index"} · ${chgTxt}`;
-    idxEl.className = "index-line mono " + chgClass(chg);
-
-    $("d-count").textContent = String(rows.length);
+      chg == null ? "—" : `${Number(chg) > 0 ? "+" : ""}${num(chg, 0)} (${idx.change_pct || "—"})`;
     const chgEl = $("d-chg");
     chgEl.textContent = chgTxt;
-    chgEl.className = "kpi-v " + chgClass(chg);
-    $("d-mode").textContent = meta.relaxed ? "寬鬆" : "標準";
-    $("d-advice").textContent = gate.advice || "—";
-    $("d-top-codes").textContent = rows
-      .slice(0, 5)
-      .map((r) => r.code)
-      .join(" · ");
+    chgEl.className = "t-v mono " + chgClass(chg);
+
+    const idxEl = $("d-index");
+    idxEl.textContent = idx.label ? `${idx.label}` : "";
+    idxEl.className = "mono muted " + chgClass(chg);
+
+    $("d-top-codes").textContent = rows.length
+      ? "Top: " + rows.slice(0, 5).map((r) => `${r.code} ${r.name || ""}`.trim()).join(" · ")
+      : "";
 
     const tbody = $("tbl").querySelector("tbody");
     tbody.innerHTML = "";
     const labels = [
-      "#",
-      "代號",
-      "名稱",
-      "收盤",
-      "漲跌%",
-      "振幅%",
-      "量(張)",
-      "額(億)",
-      "當沖%",
-      "週轉%",
-      "量比",
-      "分",
-      "偏向",
-      "支撐",
-      "壓力",
+      "#", "代號", "名稱", "收盤", "漲跌%", "振幅%", "量(張)", "額(億)",
+      "當沖%", "週轉%", "量比", "分", "偏向", "支撐", "壓力",
     ];
 
     rows.forEach((r, i) => {
@@ -187,29 +161,28 @@
       const tvYi =
         r.turnover_value != null ? (Number(r.turnover_value) / 1e8).toFixed(2) : "—";
       const bias = r.bias_hint || "—";
-      const bcls = biasClass(bias);
 
       const cells = [
-        { html: `<span class="rank">${String(i + 1).padStart(2, "0")}</span>`, cls: "" },
-        { html: `<span class="code">${r.code || ""}</span>`, cls: "" },
-        { html: r.name || "", cls: "name-cell" },
-        { html: num(r.close, 2), cls: "" },
+        { html: `<span class="rank">${String(i + 1).padStart(2, "0")}</span>` },
+        { html: `<span class="code">${r.code || ""}</span>` },
+        { html: r.name || "", cls: "name" },
+        { html: num(r.close, 2) },
         { html: chgShow, cls: chgClass(chgN) },
-        { html: amp, cls: "" },
-        { html: num(r.volume_lots, 0), cls: "" },
-        { html: tvYi, cls: "" },
-        { html: dtr, cls: "" },
-        { html: turn, cls: "" },
-        { html: r.volume_ratio != null ? num(r.volume_ratio, 2) : "—", cls: "" },
-        { html: num(r.quality_score, 0), cls: "" },
-        { html: `<span class="bias-chip ${bcls}">${bias}</span>`, cls: "" },
-        { html: num(r.support_obs, 2), cls: "sr-cell" },
-        { html: num(r.resistance_obs, 2), cls: "sr-cell" },
+        { html: amp },
+        { html: num(r.volume_lots, 0) },
+        { html: tvYi },
+        { html: dtr },
+        { html: turn },
+        { html: r.volume_ratio != null ? num(r.volume_ratio, 2) : "—" },
+        { html: num(r.quality_score, 0) },
+        { html: `<span class="bias ${biasClass(bias)}">${bias}</span>` },
+        { html: num(r.support_obs, 2), cls: "sr-val sr-col" },
+        { html: num(r.resistance_obs, 2), cls: "sr-val sr-col" },
       ];
 
-      cells.forEach((c, idxCell) => {
+      cells.forEach((c, idx) => {
         const td = document.createElement("td");
-        td.setAttribute("data-label", labels[idxCell] || "");
+        td.setAttribute("data-label", labels[idx] || "");
         if (c.cls) td.className = c.cls;
         td.innerHTML = c.html;
         tr.appendChild(td);
@@ -218,18 +191,16 @@
     });
 
     $("d-md").textContent = report.report_text || "(no markdown)";
-    if (location.hash !== "#" + date) {
-      history.replaceState(null, "", "#" + date);
-    }
+    if (location.hash !== "#" + date) history.replaceState(null, "", "#" + date);
   }
 
   async function boot() {
     try {
       const idx = await loadJSON("data/index.json");
       state.index = idx;
-      $("updated-at").textContent = "updated " + (idx.updated_at || "—");
+      $("updated-at").textContent = idx.updated_at ? `updated ${idx.updated_at}` : "—";
       $("pill-status").textContent = "READY";
-      $("pill-status").className = "status-pill ok";
+      $("pill-status").className = "badge ok";
       const entries = idx.entries || [];
       if (!entries.length) {
         $("empty").classList.remove("hidden");
@@ -244,10 +215,10 @@
       await selectDate(initial);
     } catch (err) {
       $("pill-status").textContent = "NO DATA";
-      $("pill-status").className = "status-pill err";
+      $("pill-status").className = "badge err";
       $("empty").classList.remove("hidden");
       $("empty").querySelector("p").textContent =
-        "讀不到 data/index.json。請先跑 07:30 報告腳本。 (" + err + ")";
+        "讀不到 data/index.json，請先跑 07:30 報告。 (" + err + ")";
     }
   }
 
