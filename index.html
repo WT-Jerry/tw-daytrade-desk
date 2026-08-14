@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>TW Daytrade Desk · 當沖觀察追蹤</title>
-  <meta name="description" content="Hermes 每日 07:30 台股當沖觀察報告追蹤台 · 依日期回溯" />
-  <!-- GitHub Pages project site base; local preview still works with relative URLs when opened at folder root -->
+  <title>TW Daytrade Desk · 當沖觀察台</title>
+  <meta name="description" content="Hermes 每日 07:30 台股當沖觀察報告 · 專業回溯台" />
+  <meta name="theme-color" content="#070B14" />
   <script>
     (function () {
       var p = location.pathname || "";
@@ -18,107 +18,145 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/desk.css" />
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <div class="orb orb-a" aria-hidden="true"></div>
-  <div class="orb orb-b" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">跳至內容</a>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="bg-grain" aria-hidden="true"></div>
 
-  <header class="top">
-    <div class="brand">
-      <div class="mark">DT</div>
-      <div>
-        <div class="brand-title">TW Daytrade Desk</div>
-        <div class="brand-sub">07:30 · Screener v1 · Hermes</div>
+  <header class="site-header">
+    <div class="brand-block">
+      <div class="mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="40" height="40" fill="none">
+          <rect x="1" y="1" width="38" height="38" rx="10" stroke="currentColor" stroke-width="1.5" opacity=".45"/>
+          <path d="M10 26V14h4.2c2.8 0 4.5 1.5 4.5 3.8 0 1.6-.8 2.8-2.2 3.4L20 26h-3.1l-2.7-4.2H13.2V26H10zm3.2-6.6h1.1c1.2 0 1.9-.6 1.9-1.5s-.7-1.5-1.9-1.5h-1.1v3zM22.2 26l3.4-12h3.3L32.4 26h-3.2l-.6-2.2h-3.5L24.5 26h-2.3zm5.1-4.7h2.3l-1.15-4.1h-.05L27.3 21.3z" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="brand-copy">
+        <p class="brand-kicker">Hermes · Asia/Taipei · 07:30</p>
+        <h1 class="brand-title">Daytrade Desk</h1>
+        <p class="brand-sub">台股當沖觀察台 · Screener v1</p>
       </div>
     </div>
-    <div class="top-meta">
-      <span class="pill" id="pill-status">LOADING</span>
-      <span class="mono dim" id="updated-at">—</span>
+    <div class="header-meta">
+      <span class="status-pill" id="pill-status" role="status">載入中</span>
+      <span class="meta-line mono" id="updated-at">—</span>
+      <a class="ghost-link" href="https://github.com/WT-Jerry/tw-daytrade-desk" target="_blank" rel="noopener">Repo</a>
     </div>
   </header>
 
-  <main class="layout">
-    <aside class="rail">
-      <div class="rail-head">
-        <h2>Archive</h2>
-        <input id="search" type="search" placeholder="搜尋日期 / 代號 / 標籤" autocomplete="off" />
+  <main id="main" class="shell">
+    <aside class="rail" aria-label="歷史報告">
+      <div class="rail-top">
+        <div class="rail-title-row">
+          <h2>Archive</h2>
+          <span class="rail-count mono" id="archive-count">0</span>
+        </div>
+        <label class="sr-only" for="search">搜尋</label>
+        <div class="search-wrap">
+          <svg class="search-ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <input id="search" type="search" placeholder="日期、代號、閘門標籤…" autocomplete="off" />
+        </div>
       </div>
-      <div id="archive-list" class="archive-list"></div>
-      <p class="hint">資料僅在 07:30 排程（或手動跑報告腳本）觸發時更新。</p>
+      <div id="archive-list" class="archive-list" role="listbox" aria-label="報告日期列表"></div>
+      <p class="rail-note">資料僅在 07:30 排程或手動報告腳本觸發時更新，並同步 GitHub Pages。</p>
     </aside>
 
-    <section class="stage">
-      <div id="empty" class="empty hidden">
+    <section class="stage" aria-live="polite">
+      <div id="empty" class="empty-state hidden">
+        <div class="empty-icon" aria-hidden="true">◇</div>
         <h2>尚無報告</h2>
-        <p>等待下一次 <code>daytrade_report_0730.py</code> 觸發寫入。</p>
+        <p>等待下一次 07:30 排程寫入觀測池。</p>
       </div>
 
       <article id="detail" class="detail hidden">
-        <div class="hero">
-          <div>
-            <div class="eyebrow" id="d-eyebrow">REPORT</div>
-            <h1 id="d-date">—</h1>
-            <p class="lede" id="d-generated">—</p>
+        <header class="session-hero">
+          <div class="session-left">
+            <p class="eyebrow" id="d-eyebrow">OPENING SESSION</p>
+            <h2 class="session-date" id="d-date">—</h2>
+            <p class="session-meta" id="d-generated">—</p>
           </div>
-          <div class="hero-stat">
-            <div class="stat-label">Gate</div>
-            <div class="stat-value" id="d-gate">—</div>
-            <div class="stat-sub mono" id="d-index">—</div>
+          <div class="session-right">
+            <div class="gate-stamp" id="d-gate-wrap">
+              <span class="gate-label">Night Gate</span>
+              <span class="gate-value" id="d-gate">—</span>
+            </div>
+            <p class="index-line mono" id="d-index">—</p>
+          </div>
+        </header>
+
+        <div class="kpi-strip">
+          <div class="kpi">
+            <span class="kpi-k">觀察池</span>
+            <span class="kpi-v" id="d-count">—</span>
+            <span class="kpi-u">檔</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-k">夜盤參考</span>
+            <span class="kpi-v" id="d-chg">—</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-k">篩選模式</span>
+            <span class="kpi-v sm" id="d-mode">標準</span>
+          </div>
+          <div class="kpi advice">
+            <span class="kpi-k">操作建議</span>
+            <p class="kpi-text" id="d-advice">—</p>
           </div>
         </div>
 
-        <div class="cards">
-          <div class="card">
-            <div class="card-k">池內檔數</div>
-            <div class="card-v" id="d-count">—</div>
-          </div>
-          <div class="card">
-            <div class="card-k">夜盤／參考漲跌</div>
-            <div class="card-v" id="d-chg">—</div>
-          </div>
-          <div class="card">
-            <div class="card-k">模式</div>
-            <div class="card-v" id="d-mode">標準</div>
-          </div>
-          <div class="card wide">
-            <div class="card-k">操作建議</div>
-            <div class="card-text" id="d-advice">—</div>
-          </div>
-        </div>
-
-        <div class="panel">
-          <div class="panel-head">
-            <h3>觀察池 · 點位</h3>
-            <span class="dim mono" id="d-top-codes"></span>
+        <section class="board">
+          <div class="board-head">
+            <div>
+              <h3>觀察池 · 點位板</h3>
+              <p class="board-sub">支撐優先昨低 · 壓力優先昨高 · 僅供開盤觀察</p>
+            </div>
+            <span class="board-tags mono" id="d-top-codes"></span>
           </div>
           <div class="table-wrap">
             <table id="tbl">
               <thead>
                 <tr>
-                  <th>代號</th><th>名稱</th><th>收盤</th><th>漲跌%</th><th>振幅%</th>
-                  <th>量(張)</th><th>額(億)</th><th>當沖%</th><th>週轉%</th><th>量比</th>
-                  <th>分</th><th>偏向</th><th>支撐</th><th>壓力</th>
+                  <th scope="col">#</th>
+                  <th scope="col">代號</th>
+                  <th scope="col">名稱</th>
+                  <th scope="col">收盤</th>
+                  <th scope="col">漲跌%</th>
+                  <th scope="col">振幅%</th>
+                  <th scope="col">量(張)</th>
+                  <th scope="col">額(億)</th>
+                  <th scope="col">當沖%</th>
+                  <th scope="col">週轉%</th>
+                  <th scope="col">量比</th>
+                  <th scope="col">分</th>
+                  <th scope="col">偏向</th>
+                  <th scope="col">支撐</th>
+                  <th scope="col">壓力</th>
                 </tr>
               </thead>
               <tbody></tbody>
             </table>
           </div>
-        </div>
+        </section>
 
-        <div class="panel">
-          <div class="panel-head"><h3>原文報告</h3></div>
-          <pre id="d-md" class="md-block"></pre>
-        </div>
+        <section class="transcript">
+          <details open>
+            <summary>
+              <span>原文報告</span>
+              <span class="summary-hint">Markdown 原文 · 可摺疊</span>
+            </summary>
+            <pre id="d-md" class="md-block"></pre>
+          </details>
+        </section>
       </article>
     </section>
   </main>
 
-  <footer class="foot">
-    <span>Hermes Finance · 非投資建議</span>
-    <span class="mono">path: ~/.hermes/www/daytrade-tracker</span>
+  <footer class="site-footer">
+    <p>非投資建議 · 觀察池 ≠ 進場單</p>
+    <p class="mono">wt-jerry.github.io/tw-daytrade-desk</p>
   </footer>
 
   <script src="assets/desk.js"></script>
