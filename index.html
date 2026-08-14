@@ -6,6 +6,7 @@
   <title>TW Daytrade Desk</title>
   <meta name="description" content="每日 07:30 台股當沖觀察池 · 點位回溯" />
   <meta name="theme-color" content="#0a0e17" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <script>
     (function () {
       var p = location.pathname || "";
@@ -39,7 +40,6 @@
     </div>
   </header>
 
-  <!-- Signature: morning ticker strip -->
   <section class="ticker" id="ticker" aria-label="當日情境摘要">
     <div class="ticker-item">
       <span class="t-k">資料日</span>
@@ -74,7 +74,7 @@
       <div class="dates-head">
         <h2>日期</h2>
         <label class="sr-only" for="search">搜尋</label>
-        <input id="search" type="search" placeholder="搜尋日期 / 代號…" autocomplete="off" />
+        <input id="search" type="search" placeholder="搜尋日期 / 代號…" autocomplete="off" enterkeyhint="search" />
       </div>
       <div id="archive-list" class="dates" role="listbox" aria-label="報告日期"></div>
     </section>
@@ -98,7 +98,11 @@
           </div>
         </div>
 
-        <div class="table-scroll">
+        <!-- Mobile / narrow: vertical cards only -->
+        <div id="cards" class="cards" aria-label="觀察池卡片"></div>
+
+        <!-- Desktop: wide table -->
+        <div class="table-scroll desktop-only">
           <table id="tbl">
             <thead>
               <tr>

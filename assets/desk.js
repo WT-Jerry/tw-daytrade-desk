@@ -1,4 +1,4 @@
-/* Daytrade Desk v3 client */
+/* Daytrade Desk v4 — mobile-first cards + desktop table */
 (function () {
   const $ = (id) => document.getElementById(id);
   const state = { index: null, selected: null, cache: {} };
@@ -31,6 +31,32 @@
     return "mid";
   }
 
+  function asPct(v) {
+    if (v == null || Number.isNaN(Number(v))) return null;
+    const n = Number(v);
+    return Math.abs(n) <= 1 ? n * 100 : n;
+  }
+
+  function fmtPct(v, d = 2) {
+    const p = asPct(v);
+    if (p == null) return "—";
+    return p.toFixed(d);
+  }
+
+  function fmtChgSigned(v) {
+    const p = asPct(v);
+    if (p == null) return "—";
+    const sign = p > 0 ? "+" : "";
+    return sign + p.toFixed(2) + "%";
+  }
+
+  function fmtLots(v) {
+    if (v == null || Number.isNaN(Number(v))) return "—";
+    const n = Number(v);
+    if (n >= 10000) return (n / 10000).toFixed(1) + "萬";
+    return num(n, 0);
+  }
+
   async function loadJSON(path) {
     const res = await fetch(path + (path.includes("?") ? "&" : "?") + "t=" + Date.now(), {
       cache: "no-store",
@@ -53,7 +79,7 @@
     });
 
     if (!list.length) {
-      box.innerHTML = '<div class="muted" style="padding:10px">無符合項目</div>';
+      box.innerHTML = '<div class="muted empty-hint">無符合項目</div>';
       return;
     }
 
@@ -69,6 +95,142 @@
       `;
       btn.addEventListener("click", () => selectDate(e.date));
       box.appendChild(btn);
+    });
+  }
+
+  function buildRowModel(r, i) {
+    const chgN = r.change_pct;
+    const chgShow = fmtPct(chgN);
+    const amp = fmtPct(r.amplitude);
+    const dtr = fmtPct(r.daytrade_rate);
+    const turn =
+      r.turnover_rate_pct != null
+        ? Number(r.turnover_rate_pct).toFixed(2)
+        : r.turnover_rate != null
+          ? (Number(r.turnover_rate) * 100).toFixed(2)
+          : "—";
+    const tvYi =
+      r.turnover_value != null ? (Number(r.turnover_value) / 1e8).toFixed(2) : "—";
+    const bias = r.bias_hint || "—";
+    return {
+      i,
+      code: r.code || "",
+      name: r.name || "",
+      close: num(r.close, 2),
+      chgShow,
+      chgClass: chgClass(chgN),
+      chgSigned: fmtChgSigned(chgN),
+      amp,
+      lots: num(r.volume_lots, 0),
+      lotsShort: fmtLots(r.volume_lots),
+      tvYi,
+      dtr,
+      turn,
+      volRatio: r.volume_ratio != null ? num(r.volume_ratio, 2) : "—",
+      score: num(r.quality_score, 0),
+      bias,
+      biasClass: biasClass(bias),
+      support: num(r.support_obs, 2),
+      resistance: num(r.resistance_obs, 2),
+    };
+  }
+
+  function renderTable(rows) {
+    const tbody = $("tbl").querySelector("tbody");
+    tbody.innerHTML = "";
+    const labels = [
+      "#", "代號", "名稱", "收盤", "漲跌%", "振幅%", "量(張)", "額(億)",
+      "當沖%", "週轉%", "量比", "分", "偏向", "支撐", "壓力",
+    ];
+
+    rows.forEach((m) => {
+      const tr = document.createElement("tr");
+      const cells = [
+        { html: `<span class="rank">${String(m.i + 1).padStart(2, "0")}</span>` },
+        { html: `<span class="code">${m.code}</span>` },
+        { html: m.name, cls: "name" },
+        { html: m.close },
+        { html: m.chgShow, cls: m.chgClass },
+        { html: m.amp },
+        { html: m.lots },
+        { html: m.tvYi },
+        { html: m.dtr },
+        { html: m.turn },
+        { html: m.volRatio },
+        { html: m.score },
+        { html: `<span class="bias ${m.biasClass}">${m.bias}</span>` },
+        { html: m.support, cls: "sr-val sr-col" },
+        { html: m.resistance, cls: "sr-val sr-col" },
+      ];
+      cells.forEach((c, idx) => {
+        const td = document.createElement("td");
+        td.setAttribute("data-label", labels[idx] || "");
+        if (c.cls) td.className = c.cls;
+        td.innerHTML = c.html;
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+  }
+
+  function renderCards(rows) {
+    const box = $("cards");
+    box.innerHTML = "";
+    if (!rows.length) {
+      box.innerHTML = '<div class="muted empty-hint">本日無觀察池標的</div>';
+      return;
+    }
+
+    rows.forEach((m) => {
+      const card = document.createElement("article");
+      card.className = "stock-card";
+      card.innerHTML = `
+        <header class="sc-head">
+          <div class="sc-id">
+            <span class="sc-rank">${String(m.i + 1).padStart(2, "0")}</span>
+            <span class="sc-code">${m.code}</span>
+            <span class="sc-name">${m.name}</span>
+          </div>
+          <span class="bias ${m.biasClass}">${m.bias}</span>
+        </header>
+
+        <div class="sc-price-row">
+          <div class="sc-price">
+            <span class="sc-k">收盤</span>
+            <span class="sc-close mono">${m.close}</span>
+          </div>
+          <div class="sc-chg ${m.chgClass}">
+            <span class="sc-k">漲跌</span>
+            <span class="sc-chg-v mono">${m.chgSigned}</span>
+          </div>
+          <div class="sc-score">
+            <span class="sc-k">品質分</span>
+            <span class="sc-score-v mono">${m.score}</span>
+          </div>
+        </div>
+
+        <div class="sc-sr">
+          <div class="sc-sr-box s">
+            <span class="sc-k">支撐 S</span>
+            <span class="mono sr-val">${m.support}</span>
+          </div>
+          <div class="sc-sr-mid" aria-hidden="true">→</div>
+          <div class="sc-sr-box r">
+            <span class="sc-k">壓力 R</span>
+            <span class="mono sr-val">${m.resistance}</span>
+          </div>
+        </div>
+
+        <div class="sc-stats">
+          <span><i>當沖</i>${m.dtr}%</span>
+          <span><i>振幅</i>${m.amp}%</span>
+          <span><i>量</i>${m.lotsShort}</span>
+          <span><i>額</i>${m.tvYi}億</span>
+          <span><i>週轉</i>${m.turn}%</span>
+          <span><i>量比</i>${m.volRatio}</span>
+        </div>
+      `;
+      box.appendChild(card);
     });
   }
 
@@ -98,19 +260,23 @@
 
     const gate = report.gate || {};
     const idx = report.index || {};
-    const rows = report.results || [];
+    const rawRows = report.results || [];
     const meta = report.screen_meta || {};
+    const rows = rawRows.map((r, i) => buildRowModel(r, i));
 
     $("d-date").textContent = fmtDate(report.screen_date || date);
     $("d-gate").textContent = gate.tag || "—";
     $("d-advice").textContent = gate.advice || "—";
     $("d-mode").textContent = meta.relaxed ? "寬鬆" : "標準";
     $("d-count").textContent = String(rows.length);
-    $("d-generated").textContent = `產出 ${report.generated_at || "—"} · D=${report.screen_date || date}`;
+    $("d-generated").textContent =
+      `產出 ${report.generated_at || "—"} · D=${report.screen_date || date}`;
 
     const chg = idx.change;
     const chgTxt =
-      chg == null ? "—" : `${Number(chg) > 0 ? "+" : ""}${num(chg, 0)} (${idx.change_pct || "—"})`;
+      chg == null
+        ? "—"
+        : `${Number(chg) > 0 ? "+" : ""}${num(chg, 0)} (${idx.change_pct || "—"})`;
     const chgEl = $("d-chg");
     chgEl.textContent = chgTxt;
     chgEl.className = "t-v mono " + chgClass(chg);
@@ -120,75 +286,11 @@
     idxEl.className = "mono muted " + chgClass(chg);
 
     $("d-top-codes").textContent = rows.length
-      ? "Top: " + rows.slice(0, 5).map((r) => `${r.code} ${r.name || ""}`.trim()).join(" · ")
+      ? "Top: " + rows.slice(0, 5).map((r) => `${r.code} ${r.name}`.trim()).join(" · ")
       : "";
 
-    const tbody = $("tbl").querySelector("tbody");
-    tbody.innerHTML = "";
-    const labels = [
-      "#", "代號", "名稱", "收盤", "漲跌%", "振幅%", "量(張)", "額(億)",
-      "當沖%", "週轉%", "量比", "分", "偏向", "支撐", "壓力",
-    ];
-
-    rows.forEach((r, i) => {
-      const tr = document.createElement("tr");
-      const chgN = r.change_pct;
-      let chgShow = "—";
-      if (chgN != null && !Number.isNaN(Number(chgN))) {
-        const n = Number(chgN);
-        chgShow = (Math.abs(n) <= 1 ? n * 100 : n).toFixed(2);
-      }
-      const amp =
-        r.amplitude == null
-          ? "—"
-          : (Math.abs(Number(r.amplitude)) <= 1
-              ? Number(r.amplitude) * 100
-              : Number(r.amplitude)
-            ).toFixed(2);
-      const dtr =
-        r.daytrade_rate == null
-          ? "—"
-          : (Math.abs(Number(r.daytrade_rate)) <= 1
-              ? Number(r.daytrade_rate) * 100
-              : Number(r.daytrade_rate)
-            ).toFixed(2);
-      const turn =
-        r.turnover_rate_pct != null
-          ? Number(r.turnover_rate_pct).toFixed(2)
-          : r.turnover_rate != null
-            ? (Number(r.turnover_rate) * 100).toFixed(2)
-            : "—";
-      const tvYi =
-        r.turnover_value != null ? (Number(r.turnover_value) / 1e8).toFixed(2) : "—";
-      const bias = r.bias_hint || "—";
-
-      const cells = [
-        { html: `<span class="rank">${String(i + 1).padStart(2, "0")}</span>` },
-        { html: `<span class="code">${r.code || ""}</span>` },
-        { html: r.name || "", cls: "name" },
-        { html: num(r.close, 2) },
-        { html: chgShow, cls: chgClass(chgN) },
-        { html: amp },
-        { html: num(r.volume_lots, 0) },
-        { html: tvYi },
-        { html: dtr },
-        { html: turn },
-        { html: r.volume_ratio != null ? num(r.volume_ratio, 2) : "—" },
-        { html: num(r.quality_score, 0) },
-        { html: `<span class="bias ${biasClass(bias)}">${bias}</span>` },
-        { html: num(r.support_obs, 2), cls: "sr-val sr-col" },
-        { html: num(r.resistance_obs, 2), cls: "sr-val sr-col" },
-      ];
-
-      cells.forEach((c, idx) => {
-        const td = document.createElement("td");
-        td.setAttribute("data-label", labels[idx] || "");
-        if (c.cls) td.className = c.cls;
-        td.innerHTML = c.html;
-        tr.appendChild(td);
-      });
-      tbody.appendChild(tr);
-    });
+    renderTable(rows);
+    renderCards(rows);
 
     $("d-md").textContent = report.report_text || "(no markdown)";
     if (location.hash !== "#" + date) history.replaceState(null, "", "#" + date);
