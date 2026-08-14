@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>TW Daytrade Desk · 當沖觀察追蹤</title>
   <meta name="description" content="Hermes 每日 07:30 台股當沖觀察報告追蹤台 · 依日期回溯" />
+  <!-- GitHub Pages project site base; local preview still works with relative URLs when opened at folder root -->
+  <script>
+    (function () {
+      var p = location.pathname || "";
+      if (p.indexOf("/tw-daytrade-desk") === 0) {
+        var b = document.createElement("base");
+        b.href = "/tw-daytrade-desk/";
+        document.head.appendChild(b);
+      }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
