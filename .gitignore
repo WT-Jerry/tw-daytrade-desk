@@ -1,0 +1,7 @@
+# Ignore local editor / OS junk only — data/ IS tracked (Pages archive)
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+__pycache__/

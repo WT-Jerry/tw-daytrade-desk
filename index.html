@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>TW Daytrade Desk · 當沖觀察追蹤</title>
+  <meta name="description" content="Hermes 每日 07:30 台股當沖觀察報告追蹤台 · 依日期回溯" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/desk.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="orb orb-b" aria-hidden="true"></div>
+
+  <header class="top">
+    <div class="brand">
+      <div class="mark">DT</div>
+      <div>
+        <div class="brand-title">TW Daytrade Desk</div>
+        <div class="brand-sub">07:30 · Screener v1 · Hermes</div>
+      </div>
+    </div>
+    <div class="top-meta">
+      <span class="pill" id="pill-status">LOADING</span>
+      <span class="mono dim" id="updated-at">—</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="rail">
+      <div class="rail-head">
+        <h2>Archive</h2>
+        <input id="search" type="search" placeholder="搜尋日期 / 代號 / 標籤" autocomplete="off" />
+      </div>
+      <div id="archive-list" class="archive-list"></div>
+      <p class="hint">資料僅在 07:30 排程（或手動跑報告腳本）觸發時更新。</p>
+    </aside>
+
+    <section class="stage">
+      <div id="empty" class="empty hidden">
+        <h2>尚無報告</h2>
+        <p>等待下一次 <code>daytrade_report_0730.py</code> 觸發寫入。</p>
+      </div>
+
+      <article id="detail" class="detail hidden">
+        <div class="hero">
+          <div>
+            <div class="eyebrow" id="d-eyebrow">REPORT</div>
+            <h1 id="d-date">—</h1>
+            <p class="lede" id="d-generated">—</p>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-label">Gate</div>
+            <div class="stat-value" id="d-gate">—</div>
+            <div class="stat-sub mono" id="d-index">—</div>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <div class="card-k">池內檔數</div>
+            <div class="card-v" id="d-count">—</div>
+          </div>
+          <div class="card">
+            <div class="card-k">夜盤／參考漲跌</div>
+            <div class="card-v" id="d-chg">—</div>
+          </div>
+          <div class="card">
+            <div class="card-k">模式</div>
+            <div class="card-v" id="d-mode">標準</div>
+          </div>
+          <div class="card wide">
+            <div class="card-k">操作建議</div>
+            <div class="card-text" id="d-advice">—</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h3>觀察池 · 點位</h3>
+            <span class="dim mono" id="d-top-codes"></span>
+          </div>
+          <div class="table-wrap">
+            <table id="tbl">
+              <thead>
+                <tr>
+                  <th>代號</th><th>名稱</th><th>收盤</th><th>漲跌%</th><th>振幅%</th>
+                  <th>量(張)</th><th>額(億)</th><th>當沖%</th><th>週轉%</th><th>量比</th>
+                  <th>分</th><th>偏向</th><th>支撐</th><th>壓力</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>原文報告</h3></div>
+          <pre id="d-md" class="md-block"></pre>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>Hermes Finance · 非投資建議</span>
+    <span class="mono">path: ~/.hermes/www/daytrade-tracker</span>
+  </footer>
+
+  <script src="assets/desk.js"></script>
+</body>
+</html>
