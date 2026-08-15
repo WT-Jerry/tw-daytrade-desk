@@ -1,7 +1,7 @@
 /* Daytrade Desk v4 — mobile-first cards + desktop table */
 (function () {
   const $ = (id) => document.getElementById(id);
-  const state = { index: null, selected: null, cache: {} };
+  const state = { index: null, selected: null, cache: {}, rows: [], sortKey: "i", sortDir: 1 };
 
   function fmtDate(ymd) {
     if (!ymd || String(ymd).length !== 8) return ymd || "—";
@@ -46,8 +46,9 @@
   function fmtChgSigned(v) {
     const p = asPct(v);
     if (p == null) return "—";
-    const sign = p > 0 ? "+" : "";
-    return sign + p.toFixed(2) + "%";
+    if (p > 0) return "▲ " + p.toFixed(2) + "%";
+    if (p < 0) return "▼ " + Math.abs(p).toFixed(2) + "%";
+    return "0.00%";
   }
 
   function fmtLots(v) {
@@ -100,7 +101,6 @@
 
   function buildRowModel(r, i) {
     const chgN = r.change_pct;
-    const chgShow = fmtPct(chgN);
     const amp = fmtPct(r.amplitude);
     const dtr = fmtPct(r.daytrade_rate);
     const turn =
@@ -112,26 +112,43 @@
     const tvYi =
       r.turnover_value != null ? (Number(r.turnover_value) / 1e8).toFixed(2) : "—";
     const bias = r.bias_hint || "—";
+    const turnN =
+      r.turnover_rate_pct != null
+        ? Number(r.turnover_rate_pct)
+        : r.turnover_rate != null
+          ? Number(r.turnover_rate) * 100
+          : NaN;
     return {
       i,
       code: r.code || "",
       name: r.name || "",
       close: num(r.close, 2),
-      chgShow,
+      closeN: Number(r.close),
+      chgShow: fmtChgSigned(chgN),
+      chgN: asPct(chgN),
       chgClass: chgClass(chgN),
       chgSigned: fmtChgSigned(chgN),
       amp,
+      ampN: asPct(r.amplitude),
       lots: num(r.volume_lots, 0),
+      lotsN: Number(r.volume_lots),
       lotsShort: fmtLots(r.volume_lots),
       tvYi,
+      tvN: r.turnover_value != null ? Number(r.turnover_value) / 1e8 : NaN,
       dtr,
+      dtrN: asPct(r.daytrade_rate),
       turn,
+      turnN,
       volRatio: r.volume_ratio != null ? num(r.volume_ratio, 2) : "—",
+      volN: r.volume_ratio != null ? Number(r.volume_ratio) : NaN,
       score: num(r.quality_score, 0),
+      scoreN: Number(r.quality_score),
       bias,
       biasClass: biasClass(bias),
       support: num(r.support_obs, 2),
+      supportN: Number(r.support_obs),
       resistance: num(r.resistance_obs, 2),
+      resistN: Number(r.resistance_obs),
     };
   }
 
@@ -139,7 +156,7 @@
     const tbody = $("tbl").querySelector("tbody");
     tbody.innerHTML = "";
     const labels = [
-      "#", "代號", "名稱", "收盤", "漲跌%", "振幅%", "量(張)", "額(億)",
+      "#", "名稱", "收盤", "漲跌%", "振幅%", "量(張)", "額(億)",
       "當沖%", "週轉%", "量比", "分", "偏向", "支撐", "壓力",
     ];
 
@@ -147,20 +164,21 @@
       const tr = document.createElement("tr");
       const cells = [
         { html: `<span class="rank">${String(m.i + 1).padStart(2, "0")}</span>` },
-        { html: `<span class="code">${m.code}</span>` },
-        { html: m.name, cls: "name" },
-        { html: m.close },
-        { html: m.chgShow, cls: m.chgClass },
-        { html: m.amp },
-        { html: m.lots },
-        { html: m.tvYi },
-        { html: m.dtr },
-        { html: m.turn },
-        { html: m.volRatio },
-        { html: m.score },
+        {
+          html: `<div class="name-cell"><span class="code">${m.code}</span><span class="nm">${m.name}</span></div>`,
+        },
+        { html: m.close, cls: "num" },
+        { html: m.chgShow, cls: "num chg-cell " + m.chgClass },
+        { html: m.amp, cls: "num" },
+        { html: m.lots, cls: "num" },
+        { html: m.tvYi, cls: "num" },
+        { html: m.dtr, cls: "num" },
+        { html: m.turn, cls: "num" },
+        { html: m.volRatio, cls: "num" },
+        { html: m.score, cls: "num" },
         { html: `<span class="bias ${m.biasClass}">${m.bias}</span>` },
-        { html: m.support, cls: "sr-val sr-col" },
-        { html: m.resistance, cls: "sr-val sr-col" },
+        { html: m.support, cls: "sr-val sr-col num" },
+        { html: m.resistance, cls: "sr-val sr-col num" },
       ];
       cells.forEach((c, idx) => {
         const td = document.createElement("td");
@@ -289,8 +307,8 @@
       ? "Top: " + rows.slice(0, 5).map((r) => `${r.code} ${r.name}`.trim()).join(" · ")
       : "";
 
-    renderTable(rows);
-    renderCards(rows);
+    state.rows = rows;
+    applySort(state.sortKey, state.sortDir, false);
 
     $("d-md").textContent = report.report_text || "(no markdown)";
     if (location.hash !== "#" + date) history.replaceState(null, "", "#" + date);
@@ -324,6 +342,34 @@
     }
   }
 
+  function applySort(key, dir, toggle) {
+    if (toggle && state.sortKey === key) dir = -state.sortDir;
+    state.sortKey = key;
+    state.sortDir = dir;
+    const rows = state.rows.slice().sort((a, b) => {
+      const va = a[key];
+      const vb = b[key];
+      if (va == null || va === "" || Number.isNaN(va)) return 1;
+      if (vb == null || vb === "" || Number.isNaN(vb)) return -1;
+      if (typeof va === "string") return va.localeCompare(vb, "zh-Hant") * dir;
+      return (va - vb) * dir;
+    });
+    document.querySelectorAll("#tbl th[data-sort]").forEach((th) => {
+      th.classList.toggle("sorted", th.getAttribute("data-sort") === key);
+    });
+    renderTable(rows);
+    renderCards(rows);
+  }
+
   $("search").addEventListener("input", (e) => renderArchive(e.target.value));
+  document.querySelectorAll("#tbl th[data-sort]").forEach((th) => {
+    th.addEventListener("click", () => applySort(th.getAttribute("data-sort"), 1, true));
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "/" && document.activeElement !== $("search") && !e.ctrlKey && !e.metaKey) {
+      e.preventDefault();
+      $("search").focus();
+    }
+  });
   boot();
 })();

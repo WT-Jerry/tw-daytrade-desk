@@ -19,7 +19,7 @@
   --sr: #fbbf24;
   --sr-bg: rgba(251, 191, 36, 0.12);
   --ok: #34d399;
-  --radius: 14px;
+  --radius: 8px;
   --font: "DM Sans", "Noto Sans TC", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
   --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
@@ -41,10 +41,7 @@ body {
   line-height: 1.5;
   color: var(--text);
   overflow-x: hidden;
-  background:
-    radial-gradient(900px 420px at 0% 0%, rgba(56, 189, 248, 0.07), transparent 55%),
-    radial-gradient(700px 380px at 100% 0%, rgba(244, 63, 94, 0.05), transparent 50%),
-    var(--bg);
+  background: var(--bg);
 }
 
 .sr-only {
@@ -69,23 +66,22 @@ body {
 .topbar {
   display: flex; justify-content: space-between; align-items: center;
   gap: 12px; flex-wrap: wrap;
-  padding: 14px clamp(12px, 3vw, 28px);
+  height: auto; min-height: 64px;
+  padding: 0 clamp(12px, 3vw, 24px);
   border-bottom: 1px solid var(--line);
-  background: rgba(10, 14, 23, 0.92);
-  backdrop-filter: blur(12px);
+  background: var(--bg);
   position: sticky; top: 0; z-index: 20;
 }
-.brand { display: flex; gap: 12px; align-items: center; min-width: 0; }
+.brand { display: flex; gap: 10px; align-items: center; min-width: 0; }
 .logo {
-  width: 44px; height: 44px; border-radius: 12px; flex: 0 0 auto;
+  width: 32px; height: 32px; border-radius: 8px; flex: 0 0 auto;
   display: grid; place-items: center;
-  font-weight: 700; letter-spacing: 0.04em;
+  font-weight: 700; letter-spacing: 0.04em; font-size: 0.72rem;
   color: #041018;
-  background: linear-gradient(145deg, #7dd3fc, var(--cyan));
-  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.25);
+  background: var(--cyan);
 }
-.brand-name { font-weight: 700; font-size: 1.2rem; letter-spacing: -0.02em; }
-.brand-tag { color: var(--muted); font-size: 0.88rem; margin-top: 2px; }
+.brand-name { font-weight: 700; font-size: 1.05rem; letter-spacing: -0.02em; }
+.brand-tag { color: var(--muted); font-size: 0.78rem; margin-top: 1px; }
 .top-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .badge {
   font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
@@ -113,18 +109,18 @@ body {
 }
 .ticker-item {
   background: var(--bg-elev);
-  padding: 14px clamp(12px, 2vw, 20px);
-  min-height: 78px;
-  display: flex; flex-direction: column; justify-content: center; gap: 6px;
+  padding: 10px clamp(12px, 2vw, 20px);
+  min-height: 56px;
+  display: flex; flex-direction: column; justify-content: center; gap: 4px;
   min-width: 0;
 }
-.ticker-item.grow { background: linear-gradient(90deg, rgba(56,189,248,.08), var(--bg-elev)); }
+.ticker-item.grow { background: var(--bg-elev); }
 .t-k {
   font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
   text-transform: uppercase; color: var(--muted);
 }
 .t-v {
-  font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em;
+  font-size: 1.05rem; font-weight: 600; letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
   overflow-wrap: anywhere;
 }
@@ -175,10 +171,10 @@ body {
   text-transform: uppercase; color: var(--muted); font-weight: 700;
 }
 #search {
-  width: 100%; min-height: 46px;
-  border-radius: 12px; border: 1px solid var(--line);
+  width: 100%; min-height: 32px;
+  border-radius: 8px; border: 1px solid var(--line);
   background: var(--bg); color: var(--text);
-  padding: 10px 14px; font: inherit; font-size: 1rem; outline: none;
+  padding: 6px 12px; font: inherit; font-size: 0.92rem; outline: none;
 }
 #search:focus {
   border-color: rgba(56,189,248,.55);
@@ -215,7 +211,7 @@ body {
 .main-panel {
   padding: 16px clamp(12px, 2vw, 24px) 28px;
   min-width: 0;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 .empty { text-align: center; padding: 72px 20px; color: var(--muted); }
 .empty h2 { color: var(--text); margin: 0 0 8px; font-size: 1.35rem; }
@@ -397,7 +393,6 @@ body {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--bg-elev);
-  box-shadow: var(--shadow);
   -webkit-overflow-scrolling: touch;
   max-width: 100%;
 }
@@ -405,38 +400,42 @@ table {
   width: 100%;
   border-collapse: collapse;
   font-family: var(--mono);
-  font-size: 0.95rem;
-  font-variant-numeric: tabular-nums;
-  min-width: 1020px;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums lining-nums;
+  min-width: 0;
+  table-layout: auto;
 }
 th, td {
-  padding: 12px 11px;
-  border-bottom: 1px solid rgba(148,163,184,.08);
+  padding: 6px 8px;
+  height: 48px;
+  border-bottom: 1px solid var(--line);
   white-space: nowrap;
 }
 th {
   position: sticky; top: 0; z-index: 2;
-  background: #0f1522;
+  background: var(--bg-elev);
   color: var(--muted);
   font-family: var(--font);
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-align: right;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-align: left;
+  cursor: pointer;
+  user-select: none;
 }
-th:nth-child(1), th:nth-child(2), th:nth-child(3),
-td:nth-child(1), td:nth-child(2), td:nth-child(3),
-th:nth-child(13), td:nth-child(13) { text-align: left; }
+th.num, td.num { text-align: right; }
+th.sorted { color: var(--cyan); }
 th.sr, td.sr-col {
   background-image: linear-gradient(180deg, rgba(251,191,36,.06), transparent);
 }
-td { text-align: right; color: #c9d4e8; }
+td { color: #c9d4e8; font-weight: 500; }
 tbody tr:nth-child(even) { background: rgba(255,255,255,.015); }
 tbody tr:hover { background: rgba(56,189,248,.05); }
-.rank { color: var(--muted); font-size: 0.82rem; }
-.code { color: var(--cyan); font-weight: 600; }
-.name { font-family: var(--font); font-weight: 600; color: var(--text); }
+.rank { color: var(--muted); font-size: 12px; }
+.name-cell { display: flex; align-items: baseline; gap: 8px; line-height: 1.25; }
+.name-cell .code { color: var(--cyan); font-weight: 600; font-size: 13px; }
+.name-cell .nm { font-family: var(--font); font-weight: 500; color: var(--text); font-size: 13px; }
+.chg-cell { font-weight: 600; }
 
 .tops { margin-top: 12px; font-size: 0.92rem; overflow-wrap: anywhere; }
 
@@ -512,7 +511,7 @@ tbody tr:hover { background: rgba(56,189,248,.05); }
   .desktop-only { display: none !important; }
   .cards { display: flex; }
 
-  .main-panel { padding: 14px 12px 28px; }
+  .main-panel { padding: 14px 12px 28px; overflow-x: hidden; }
   .panel-head h2 { font-size: 1.35rem; }
   .advice-bar p { font-size: 1.08rem; }
 
