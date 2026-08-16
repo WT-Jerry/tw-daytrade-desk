@@ -79,8 +79,8 @@
     } else if (Number.isFinite(c) && Number.isFinite(s) && c <= s) {
       pos = 0;
     }
-    if (Number.isFinite(c) && Number.isFinite(r) && c >= r - 0.011) tag = "貼R";
-    else if (Number.isFinite(c) && Number.isFinite(s) && c <= s + 0.011) tag = "貼S";
+    if (Number.isFinite(c) && Number.isFinite(r) && c >= r - 0.011) tag = "貼壓力";
+    else if (Number.isFinite(c) && Number.isFinite(s) && c <= s + 0.011) tag = "貼支撐";
     return { pos: Math.round(pos * 10) / 10, tag };
   }
 
