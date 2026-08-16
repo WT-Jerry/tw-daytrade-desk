@@ -1,7 +1,7 @@
-/* Daytrade Desk v6 — desktop table + mobile ticket tape
+/* Daytrade Desk v5.1 — desktop table + mobile cards (terminal density)
    Cool charcoal + cyan · TW red-up / green-down
-   Phone: sticky HUD, compact S→R rail tickets, no page H-scroll
-   Backups: v4 (Jerry approved cards), v5.1 (desktop density)
+   Phone: cards only, 8px radius, KPI snap-strip, no page H-scroll
+   v4 backup: backups/v4/ (commit f88c5cd)
 */
 :root {
   --bg: #0a0e17;
@@ -23,6 +23,7 @@
   --radius: 8px;
   --font: "DM Sans", "Noto Sans TC", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
   --tap: 48px;
 }
 
@@ -98,7 +99,6 @@ body {
   display: inline-flex; align-items: center;
 }
 .link:hover, .link:focus-visible { background: var(--cyan-dim); outline: none; }
-.desktop-inline { display: inline; }
 
 /* —— Ticker —— */
 .ticker {
@@ -115,6 +115,7 @@ body {
   display: flex; flex-direction: column; justify-content: center; gap: 4px;
   min-width: 0;
 }
+.ticker-item.grow { background: var(--bg-elev); }
 .t-k {
   font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
   text-transform: uppercase; color: var(--muted);
@@ -233,165 +234,128 @@ body {
 .lg.down { color: var(--down); background: var(--down-bg); border-color: rgba(52,211,153,.25); }
 .lg.sr { color: var(--sr); background: var(--sr-bg); border-color: rgba(251,191,36,.25); }
 
-.pool-toolbar { margin: 0 0 12px; }
-.bias-filters { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip {
-  cursor: pointer;
-  font: inherit;
-  font-size: 0.92rem;
-  font-weight: 700;
-  color: var(--muted);
-  background: var(--bg-soft);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 8px 14px;
-  min-height: 40px;
-  transition: background .15s ease, color .15s ease, border-color .15s ease;
-}
-.chip:hover { background: var(--bg-elev); color: var(--text); }
-.chip.on {
-  color: #041018;
-  background: var(--cyan);
-  border-color: var(--cyan);
-}
-.chip:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
-
-/* —— Mobile ticket tape —— */
+/* —— Mobile stock cards (default on narrow) —— */
 .cards {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.ticket {
+.stock-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--bg-elev);
+  box-shadow: none;
+  padding: 12px;
   min-width: 0;
-  overflow: hidden;
 }
-.ticket.open { border-color: rgba(56,189,248,.28); }
-.ticket-main {
-  display: block;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  padding: 10px 12px 12px;
-  min-height: 44px;
+.sc-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
 }
-.ticket-main:focus-visible { outline: 2px solid var(--cyan); outline-offset: -2px; }
-.tk-row1, .tk-row2 {
+.sc-id {
   display: flex;
   align-items: baseline;
   gap: 8px;
+  flex-wrap: wrap;
   min-width: 0;
 }
-.tk-row1 { margin-bottom: 6px; }
-.tk-row2 {
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-.tk-rank {
+.sc-rank {
   font-family: var(--mono);
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  flex: 0 0 auto;
 }
-.tk-code {
+.sc-code {
   font-family: var(--mono);
   color: var(--cyan);
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
-.tk-name {
+.sc-name {
   font-weight: 700;
-  font-size: 1.08rem;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  flex: 1 1 auto;
+  font-size: 1.15rem;
+  color: var(--text);
 }
-.tk-close {
+.sc-price-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 0.8fr;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.sc-price, .sc-chg, .sc-score {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 2px 0;
+  min-width: 0;
+}
+.sc-k {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.sc-close {
   font-size: 1.45rem;
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
 }
-.tk-chg {
-  font-size: 1.12rem;
+.sc-chg-v {
+  font-size: 1.35rem;
   font-weight: 700;
 }
-.tk-score {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--muted);
+.sc-score-v {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text);
 }
-.tk-score b { color: var(--text); font-weight: 700; }
-
-.sr-rail { min-width: 0; }
-.sr-ends {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+.sc-sr {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   gap: 8px;
-  margin-bottom: 6px;
-  font-family: var(--mono);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--sr);
+  align-items: stretch;
+  margin-bottom: 10px;
 }
-.sr-tag {
-  font-family: var(--font);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  padding: 2px 7px;
-  border-radius: 999px;
+.sc-sr-box {
   background: var(--sr-bg);
-  border: 1px solid rgba(251,191,36,.35);
-  color: var(--sr);
+  border: 1px solid rgba(251,191,36,.28);
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 0;
 }
-.sr-track {
-  position: relative;
-  height: 8px;
-  border-radius: 99px;
-  background: rgba(251, 191, 36, 0.16);
-  overflow: visible;
-}
-.sr-fill {
+.sc-sr-box .mono {
   display: block;
-  height: 100%;
-  width: var(--pos, 50%);
-  border-radius: 99px;
-  background: linear-gradient(90deg, rgba(251,191,36,.25), rgba(251,191,36,.7));
+  margin-top: 4px;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
-.sr-tick {
-  position: absolute;
-  top: 50%;
-  left: var(--pos, 50%);
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--text);
-  border: 2px solid var(--sr);
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 0 3px rgba(10, 14, 23, 0.85);
+.sc-sr-mid {
+  display: grid;
+  place-items: center;
+  color: var(--sr);
+  font-weight: 700;
+  opacity: 0.7;
+  font-size: 1.1rem;
 }
-.ticket-more {
-  display: none;
+.sc-stats {
+  display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  padding: 0 12px 12px;
 }
-.ticket.open .ticket-more { display: flex; }
-.ticket-more span {
+.sc-stats span {
   display: inline-flex;
   align-items: baseline;
   gap: 5px;
-  padding: 7px 9px;
+  padding: 6px 8px;
   border-radius: 8px;
   background: rgba(255,255,255,.03);
   border: 1px solid var(--line);
@@ -400,10 +364,10 @@ body {
   font-weight: 600;
   color: #d5deef;
 }
-.ticket-more i {
+.sc-stats i {
   font-style: normal;
   font-family: var(--font);
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -419,13 +383,13 @@ body {
   font-weight: 700;
   border: 1px solid var(--line);
   white-space: nowrap;
-  flex: 0 0 auto;
 }
 .bias.long { color: #fecdd3; background: var(--up-bg); border-color: rgba(244,63,94,.3); }
 .bias.short { color: #a7f3d0; background: var(--down-bg); border-color: rgba(52,211,153,.3); }
 .bias.mid { color: var(--muted); background: rgba(255,255,255,.03); }
 .sr-val { color: var(--sr); font-weight: 700; }
 
+/* Desktop table hidden on narrow screens */
 .desktop-only { display: none; }
 
 .table-scroll {
@@ -511,143 +475,88 @@ tbody tr:hover { background: rgba(56,189,248,.05); }
 
 :focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
 
-/* —— Phone / tablet: ticket tape, no page H-scroll —— */
+/* —— Phone / tablet: cards only, no horizontal scroll —— */
 @media (max-width: 1100px) {
   body { font-size: 18px; }
-
-  .topbar {
-    flex-wrap: nowrap;
-    min-height: 52px;
-    height: 52px;
-    padding: 0 12px;
-  }
-  .brand-tag,
-  .desktop-inline { display: none !important; }
-  .badge { padding: 5px 9px; }
-
   .ticker {
-    position: sticky;
-    top: 52px;
-    z-index: 19;
     display: flex;
     flex-wrap: nowrap;
-    gap: 10px;
     overflow-x: auto;
     overflow-y: hidden;
-    background: var(--bg-elev);
-    padding: 8px 12px;
-    border-bottom: 1px solid var(--line);
+    gap: 0;
+    background: var(--line);
+    scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
+    grid-template-columns: none;
   }
-  .ticker-item,
-  .ticker-item.grow {
+  .ticker-item.grow { grid-column: auto; min-width: min(72vw, 280px); }
+  .ticker-item {
     flex: 0 0 auto;
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    background: transparent;
-    flex-direction: row;
-    align-items: baseline;
-    gap: 6px;
+    min-width: 36vw;
+    min-height: 56px;
+    padding: 10px 14px;
+    scroll-snap-align: start;
   }
-  .t-k { display: none; }
-  .t-v { font-size: 0.92rem; }
-  .t-v.gate { font-size: 0.95rem; }
+  .t-v { font-size: 1.05rem; }
+  .t-v.gate { font-size: 1rem; }
 
-  .advice-bar {
-    padding: 6px 12px;
-    gap: 8px;
-    cursor: pointer;
+  #search { min-height: 44px; font-size: 1rem; }
+  .date-btn {
+    border-radius: 8px;
+    min-width: min(58vw, 200px);
+    max-width: 220px;
   }
-  .advice-bar p {
-    font-size: 0.92rem;
-    line-height: 1.35;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    overflow: hidden;
-  }
-  .advice-bar.expanded p {
-    display: block;
-    -webkit-line-clamp: unset;
-    line-clamp: unset;
-  }
-  #d-index { display: none; }
 
   .wrap { grid-template-columns: 1fr; }
   .dates-panel {
-    position: relative;
-    top: auto;
+    position: static;
     max-height: none;
     border-right: 0;
     border-bottom: 1px solid var(--line);
-    padding: 8px 12px;
-    gap: 6px;
+    padding: 12px 12px 10px;
   }
-  .dates-head h2 { display: none; }
-  #search { min-height: 36px; font-size: 0.95rem; }
   .dates {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    gap: 6px;
-    padding: 2px 20px 2px 0;
+    gap: 8px;
+    padding-bottom: 6px;
     scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
-    mask-image: linear-gradient(90deg, #000 86%, transparent);
   }
   .date-btn {
     flex: 0 0 auto;
     scroll-snap-align: start;
-    border-radius: 8px;
-    min-width: auto;
-    max-width: none;
-    min-height: 44px;
-    padding: 6px 10px;
-    border-color: var(--line);
-    background: var(--bg-elev);
   }
-  .date-btn .d { font-size: 0.92rem; }
-  .date-btn .g {
-    margin-top: 1px;
-    font-size: 0.75rem;
-    white-space: nowrap;
-  }
-  .date-btn .g-gate { display: none; }
 
   .desktop-only { display: none !important; }
   .cards { display: flex; }
-  .panel-head { display: none; }
 
-  .main-panel { padding: 8px 12px 28px; overflow-x: hidden; }
-  .pool-toolbar { margin-bottom: 6px; }
-  .chip { min-height: 40px; padding: 6px 12px; font-size: 0.9rem; }
+  .main-panel { padding: 12px 12px 28px; overflow-x: hidden; }
+  .panel-head h2 { font-size: 1.2rem; }
+  .advice-bar { padding: 10px 12px; }
+  .advice-bar p { font-size: 1rem; }
 
-  .ticket-main { padding: 8px 10px 10px; }
-  .tk-row1 { margin-bottom: 4px; }
-  .tk-row2 { margin-bottom: 6px; }
-  .tk-close { font-size: 1.35rem; }
-  .tk-chg { font-size: 1.02rem; }
-  .sr-ends { font-size: 1.02rem; margin-bottom: 4px; }
-  .sr-track { height: 6px; }
+  .sc-price-row { grid-template-columns: 1fr 1fr; }
+  .sc-score { grid-column: 1 / -1; }
 }
 
 @media (max-width: 420px) {
   body { font-size: 18.5px; }
-  .brand-name { font-size: 1.08rem; }
-  .tk-code { font-size: 1.2rem; }
-  .tk-name { font-size: 1.1rem; }
+  .brand-name { font-size: 1.15rem; }
+  .sc-code { font-size: 1.3rem; }
+  .sc-name { font-size: 1.2rem; }
+  .sc-close, .sc-chg-v, .sc-score-v, .sc-sr-box .mono { font-size: 1.5rem; }
+  .sc-stats span { font-size: 0.98rem; padding: 8px 10px; }
 }
 
-/* Wide desktop: table, hide tickets */
+/* Wide desktop: show table, hide cards */
 @media (min-width: 1101px) {
   .cards { display: none; }
   .desktop-only { display: block; }
   body { font-size: 16.5px; }
-  .pool-toolbar { margin-bottom: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

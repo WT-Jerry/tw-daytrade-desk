@@ -1,15 +1,7 @@
-/* Daytrade Desk v6 — desktop table + mobile ticket tape */
+/* Daytrade Desk v4 — mobile-first cards + desktop table */
 (function () {
   const $ = (id) => document.getElementById(id);
-  const state = {
-    index: null,
-    selected: null,
-    cache: {},
-    rows: [],
-    sortKey: "i",
-    sortDir: 1,
-    filterBias: "all",
-  };
+  const state = { index: null, selected: null, cache: {}, rows: [], sortKey: "i", sortDir: 1 };
 
   function fmtDate(ymd) {
     if (!ymd || String(ymd).length !== 8) return ymd || "—";
@@ -66,24 +58,6 @@
     return num(n, 0);
   }
 
-  function srMeta(m) {
-    const c = m.closeN;
-    const s = m.supportN;
-    const r = m.resistN;
-    let pos = 50;
-    let tag = "";
-    if (Number.isFinite(c) && Number.isFinite(s) && Number.isFinite(r) && r !== s) {
-      pos = Math.max(0, Math.min(100, ((c - s) / (r - s)) * 100));
-    } else if (Number.isFinite(c) && Number.isFinite(r) && c >= r) {
-      pos = 100;
-    } else if (Number.isFinite(c) && Number.isFinite(s) && c <= s) {
-      pos = 0;
-    }
-    if (Number.isFinite(c) && Number.isFinite(r) && c >= r - 0.011) tag = "貼R";
-    else if (Number.isFinite(c) && Number.isFinite(s) && c <= s + 0.011) tag = "貼S";
-    return { pos: Math.round(pos * 10) / 10, tag };
-  }
-
   async function loadJSON(path) {
     const res = await fetch(path + (path.includes("?") ? "&" : "?") + "t=" + Date.now(), {
       cache: "no-store",
@@ -118,7 +92,7 @@
       btn.setAttribute("aria-selected", state.selected === e.date ? "true" : "false");
       btn.innerHTML = `
         <span class="d">${fmtDate(e.date)}</span>
-        <span class="g"><span class="g-gate">${e.gate_tag || "—"} · </span>${e.count ?? 0}檔</span>
+        <span class="g">${e.gate_tag || "—"} · ${e.count ?? 0}檔</span>
       `;
       btn.addEventListener("click", () => selectDate(e.date));
       box.appendChild(btn);
@@ -178,11 +152,6 @@
     };
   }
 
-  function visibleRows() {
-    if (state.filterBias === "all") return state.rows.slice();
-    return state.rows.filter((r) => r.biasClass === state.filterBias);
-  }
-
   function renderTable(rows) {
     const tbody = $("tbl").querySelector("tbody");
     tbody.innerHTML = "";
@@ -231,35 +200,46 @@
     }
 
     rows.forEach((m) => {
-      const sr = srMeta(m);
       const card = document.createElement("article");
-      card.className = "ticket";
+      card.className = "stock-card";
       card.innerHTML = `
-        <button type="button" class="ticket-main" aria-expanded="false">
-          <div class="tk-row1">
-            <span class="tk-rank">${String(m.i + 1).padStart(2, "0")}</span>
-            <span class="tk-code">${m.code}</span>
-            <span class="tk-name">${m.name}</span>
-            <span class="bias ${m.biasClass}">${m.bias}</span>
+        <header class="sc-head">
+          <div class="sc-id">
+            <span class="sc-rank">${String(m.i + 1).padStart(2, "0")}</span>
+            <span class="sc-code">${m.code}</span>
+            <span class="sc-name">${m.name}</span>
           </div>
-          <div class="tk-row2">
-            <span class="tk-close mono">${m.close}</span>
-            <span class="tk-chg mono ${m.chgClass}">${m.chgSigned}</span>
-            <span class="tk-score mono">分 <b>${m.score}</b></span>
+          <span class="bias ${m.biasClass}">${m.bias}</span>
+        </header>
+
+        <div class="sc-price-row">
+          <div class="sc-price">
+            <span class="sc-k">收盤</span>
+            <span class="sc-close mono">${m.close}</span>
           </div>
-          <div class="sr-rail" style="--pos:${sr.pos}%">
-            <div class="sr-ends">
-              <span>S ${m.support}</span>
-              ${sr.tag ? `<span class="sr-tag">${sr.tag}</span>` : "<span></span>"}
-              <span>R ${m.resistance}</span>
-            </div>
-            <div class="sr-track" aria-hidden="true">
-              <i class="sr-fill"></i>
-              <i class="sr-tick"></i>
-            </div>
+          <div class="sc-chg ${m.chgClass}">
+            <span class="sc-k">漲跌</span>
+            <span class="sc-chg-v mono">${m.chgSigned}</span>
           </div>
-        </button>
-        <div class="ticket-more">
+          <div class="sc-score">
+            <span class="sc-k">品質分</span>
+            <span class="sc-score-v mono">${m.score}</span>
+          </div>
+        </div>
+
+        <div class="sc-sr">
+          <div class="sc-sr-box s">
+            <span class="sc-k">支撐 S</span>
+            <span class="mono sr-val">${m.support}</span>
+          </div>
+          <div class="sc-sr-mid" aria-hidden="true">→</div>
+          <div class="sc-sr-box r">
+            <span class="sc-k">壓力 R</span>
+            <span class="mono sr-val">${m.resistance}</span>
+          </div>
+        </div>
+
+        <div class="sc-stats">
           <span><i>當沖</i>${m.dtr}%</span>
           <span><i>振幅</i>${m.amp}%</span>
           <span><i>量</i>${m.lotsShort}</span>
@@ -268,19 +248,8 @@
           <span><i>量比</i>${m.volRatio}</span>
         </div>
       `;
-      const btn = card.querySelector(".ticket-main");
-      btn.addEventListener("click", () => {
-        const open = card.classList.toggle("open");
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
-      });
       box.appendChild(card);
     });
-  }
-
-  function paint() {
-    const rows = visibleRows();
-    renderTable(rows);
-    renderCards(rows);
   }
 
   async function selectDate(date) {
@@ -377,7 +346,7 @@
     if (toggle && state.sortKey === key) dir = -state.sortDir;
     state.sortKey = key;
     state.sortDir = dir;
-    state.rows = state.rows.slice().sort((a, b) => {
+    const rows = state.rows.slice().sort((a, b) => {
       const va = a[key];
       const vb = b[key];
       if (va == null || va === "" || Number.isNaN(va)) return 1;
@@ -388,26 +357,13 @@
     document.querySelectorAll("#tbl th[data-sort]").forEach((th) => {
       th.classList.toggle("sorted", th.getAttribute("data-sort") === key);
     });
-    paint();
+    renderTable(rows);
+    renderCards(rows);
   }
 
   $("search").addEventListener("input", (e) => renderArchive(e.target.value));
   document.querySelectorAll("#tbl th[data-sort]").forEach((th) => {
     th.addEventListener("click", () => applySort(th.getAttribute("data-sort"), 1, true));
-  });
-  document.querySelectorAll(".bias-filters .chip").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      state.filterBias = btn.getAttribute("data-bias") || "all";
-      document.querySelectorAll(".bias-filters .chip").forEach((b) => {
-        const on = b === btn;
-        b.classList.toggle("on", on);
-        b.setAttribute("aria-selected", on ? "true" : "false");
-      });
-      paint();
-    });
-  });
-  $("advice-bar").addEventListener("click", () => {
-    $("advice-bar").classList.toggle("expanded");
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "/" && document.activeElement !== $("search") && !e.ctrlKey && !e.metaKey) {
