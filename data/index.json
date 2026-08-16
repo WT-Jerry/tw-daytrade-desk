@@ -1,8 +1,27 @@
 {
-  "updated_at": "2026-08-14T08:02:50",
+  "updated_at": "2026-08-17T07:30:27",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "entries": [
+    {
+      "date": "20260814",
+      "generated_at": "2026-08-17T07:30:27",
+      "gate_tag": "中性",
+      "gate_advice": "|Δ|=85<100：中性盤，多空皆可，重個股結構與開盤量能。",
+      "index_change": -85.0,
+      "index_change_pct": "-0.19%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "2324 仁寶",
+        "1810 和成",
+        "2375 凱美",
+        "2634 漢翔",
+        "6155 鈞寶"
+      ],
+      "file": "data/reports/20260814.json"
+    },
     {
       "date": "20260813",
       "generated_at": "2026-08-14T08:02:50",
@@ -80,5 +99,5 @@
       "file": "data/reports/20260810.json"
     }
   ],
-  "count": 4
+  "count": 5
 }
