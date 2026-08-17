@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>TW Daytrade Desk</title>
+  <meta name="description" content="每日 07:30 台股當沖觀察池 · 點位回溯" />
+  <meta name="theme-color" content="#0d1421" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <script>
+    (function () {
+      var p = location.pathname || "";
+      if (p.indexOf("/tw-daytrade-desk") === 0) {
+        var b = document.createElement("base");
+        b.href = "/tw-daytrade-desk/";
+        document.head.appendChild(b);
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,500&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/desk.css?v=6.2" />
+</head>
+<body>
+  <a class="skip" href="#content">跳至內容</a>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">DT</span>
+      <div>
+        <div class="brand-name">Daytrade Desk</div>
+        <div class="brand-tag">07:30 · 台股當沖觀察 · Screener v1</div>
+      </div>
+    </div>
+    <div class="top-actions">
+      <span id="pill-status" class="badge">…</span>
+      <span id="updated-at" class="muted mono desktop-inline">—</span>
+      <a class="link desktop-inline" href="https://github.com/WT-Jerry/tw-daytrade-desk" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <section class="ticker" id="ticker" aria-label="當日情境摘要">
+    <div class="ticker-item">
+      <span class="t-k">資料日</span>
+      <span class="t-v" id="d-date">—</span>
+    </div>
+    <div class="ticker-item grow">
+      <span class="t-k">Night Gate</span>
+      <span class="t-v gate" id="d-gate">—</span>
+    </div>
+    <div class="ticker-item">
+      <span class="t-k">夜盤</span>
+      <span class="t-v mono" id="d-chg">—</span>
+    </div>
+    <div class="ticker-item">
+      <span class="t-k">觀察池</span>
+      <span class="t-v mono" id="d-count">—</span>
+    </div>
+    <div class="ticker-item">
+      <span class="t-k">模式</span>
+      <span class="t-v" id="d-mode">—</span>
+    </div>
+  </section>
+
+  <div class="advice-bar" id="advice-bar">
+    <span class="advice-label">建議</span>
+    <p id="d-advice">載入中…</p>
+    <span class="mono muted" id="d-index"></span>
+  </div>
+
+  <main id="content" class="wrap">
+    <section class="dates-panel">
+      <div class="dates-head">
+        <h2>日期</h2>
+        <label class="sr-only" for="search">搜尋</label>
+        <input id="search" type="search" placeholder="搜尋日期 / 代號…  /" autocomplete="off" enterkeyhint="search" />
+      </div>
+      <div id="archive-list" class="dates" role="listbox" aria-label="報告日期"></div>
+    </section>
+
+    <section class="main-panel">
+      <div id="empty" class="empty hidden">
+        <h2>尚無報告</h2>
+        <p>等待 07:30 排程寫入資料。</p>
+      </div>
+
+      <article id="detail" class="detail hidden">
+        <div class="panel-head">
+          <div>
+            <h2>觀察池 · 點位</h2>
+            <p class="sub" id="d-generated">—</p>
+          </div>
+          <div class="legend">
+            <span class="lg up">紅漲</span>
+            <span class="lg down">綠跌</span>
+            <span class="lg sr">S/R 點位</span>
+          </div>
+        </div>
+
+        <div class="pool-toolbar" id="pool-toolbar">
+          <div class="bias-filters" role="tablist" aria-label="偏向篩選">
+            <button type="button" class="chip on" data-bias="all" role="tab" aria-selected="true">全部</button>
+            <button type="button" class="chip" data-bias="long" role="tab" aria-selected="false">偏多</button>
+            <button type="button" class="chip" data-bias="mid" role="tab" aria-selected="false">中性</button>
+            <button type="button" class="chip" data-bias="short" role="tab" aria-selected="false">偏空</button>
+          </div>
+        </div>
+
+        <div id="cards" class="cards" aria-label="觀察池票帶"></div>
+
+        <div class="table-scroll desktop-only">
+          <table id="tbl">
+            <thead>
+              <tr>
+                <th data-sort="i">#</th>
+                <th data-sort="code">名稱</th>
+                <th class="num" data-sort="closeN">收盤</th>
+                <th class="num" data-sort="chgN">漲跌%</th>
+                <th class="num" data-sort="ampN">振幅%</th>
+                <th class="num" data-sort="lotsN">量(張)</th>
+                <th class="num" data-sort="tvN">額(億)</th>
+                <th class="num" data-sort="dtrN">當沖%</th>
+                <th class="num" data-sort="turnN">週轉%</th>
+                <th class="num" data-sort="volN">量比</th>
+                <th class="num" data-sort="scoreN">分</th>
+                <th data-sort="bias">偏向</th>
+                <th class="sr num" data-sort="supportN">支撐</th>
+                <th class="sr num" data-sort="resistN">壓力</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="tops mono muted" id="d-top-codes"></div>
+
+        <details class="raw">
+          <summary>原文報告</summary>
+          <pre id="d-md"></pre>
+        </details>
+      </article>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>非投資建議 · 觀察池 ≠ 進場單</span>
+    <span class="mono">wt-jerry.github.io/tw-daytrade-desk</span>
+  </footer>
+
+  <script src="assets/desk.js?v=6.3"></script>
+</body>
+</html>
