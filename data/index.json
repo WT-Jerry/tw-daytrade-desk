@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-08-17T18:44:21+08:00",
+  "updated_at": "2026-08-18T07:30:55+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260811",
+  "cutoff": "20260812",
   "entries": [
+    {
+      "date": "20260817",
+      "generated_at": "2026-08-18T07:30:55",
+      "gate_tag": "中性",
+      "gate_advice": "|Δ|=56<100：中性盤，多空皆可，重個股結構與開盤量能。",
+      "index_change": -56.0,
+      "index_change_pct": "-0.12%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "2324 仁寶",
+        "1810 和成",
+        "2634 漢翔",
+        "2481 強茂",
+        "2392 正崴"
+      ],
+      "file": "data/reports/20260817.json"
+    },
     {
       "date": "20260814",
       "generated_at": "2026-08-17T07:30:27",
@@ -42,25 +61,6 @@
         "2478 大毅"
       ],
       "file": "data/reports/20260813.json"
-    },
-    {
-      "date": "20260812",
-      "generated_at": "2026-08-13T07:53:57",
-      "gate_tag": "高波動警戒（大漲）",
-      "gate_advice": "|Δ|=601≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
-      "index_change": 601.0,
-      "index_change_pct": "+1.32%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2478 大毅",
-        "6770 力積電",
-        "2465 麗臺",
-        "2426 鼎元",
-        "1717 長興"
-      ],
-      "file": "data/reports/20260812.json"
     }
   ],
   "count": 3
