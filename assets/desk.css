@@ -380,6 +380,37 @@ body {
   transform: translate(-50%, -50%);
   box-shadow: 0 0 0 3px rgba(10, 14, 23, 0.85);
 }
+.tk-chips {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+.tk-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--line);
+}
+.tk-chip i {
+  font-style: normal;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.tk-chip b {
+  font-weight: 700;
+  font-size: 0.98rem;
+  line-height: 1.25;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .ticket-more {
   display: none;
   flex-wrap: wrap;
