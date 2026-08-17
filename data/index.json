@@ -1,7 +1,9 @@
 {
-  "updated_at": "2026-08-17T07:30:27",
+  "updated_at": "2026-08-17T18:21:34+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
+  "keep_days": 6,
+  "cutoff": "20260811",
   "entries": [
     {
       "date": "20260814",
@@ -59,45 +61,7 @@
         "1717 長興"
       ],
       "file": "data/reports/20260812.json"
-    },
-    {
-      "date": "20260811",
-      "generated_at": "2026-08-13T00:49:16",
-      "gate_tag": "高波動警戒（大漲）",
-      "gate_advice": "|Δ|=595≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
-      "index_change": 595.0,
-      "index_change_pct": "+1.31%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "8150 南茂",
-        "2375 凱美",
-        "2409 友達",
-        "8112 至上",
-        "6456 GIS-KY"
-      ],
-      "file": "data/reports/20260811.json"
-    },
-    {
-      "date": "20260810",
-      "generated_at": "2026-08-11T22:46:57",
-      "gate_tag": "高波動警戒（大漲）",
-      "gate_advice": "|Δ|=366≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
-      "index_change": 366.0,
-      "index_change_pct": "+0.81%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2484 希華",
-        "2337 旺宏",
-        "8150 南茂",
-        "2332 友訊",
-        "4916 事欣科"
-      ],
-      "file": "data/reports/20260810.json"
     }
   ],
-  "count": 5
+  "count": 3
 }
