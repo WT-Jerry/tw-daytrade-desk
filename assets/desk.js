@@ -167,6 +167,17 @@
       turnN,
       volRatio: r.volume_ratio != null ? num(r.volume_ratio, 2) : "—",
       volN: r.volume_ratio != null ? Number(r.volume_ratio) : NaN,
+      pos: r.close_pos_pct != null ? Number(r.close_pos_pct).toFixed(0) : (r.close_position != null ? (Number(r.close_position) * 100).toFixed(0) : "—"),
+      posN: r.close_pos_pct != null ? Number(r.close_pos_pct) : (r.close_position != null ? Number(r.close_position) * 100 : NaN),
+      vwap: r.vwap != null ? num(r.vwap, 2) : "—",
+      vwapN: r.vwap != null ? Number(r.vwap) : NaN,
+      wick: r.wick_tag || r.near_limit || "—",
+      inst: r.inst_net_ratio != null ? ((Number(r.inst_net_ratio) * 100).toFixed(1)) : "—",
+      instN: r.inst_net_ratio != null ? Number(r.inst_net_ratio) * 100 : NaN,
+      broker: (r.broker_top5_buy_ratio != null || r.broker_top5_sell_ratio != null)
+        ? ("B" + ((Number(r.broker_top5_buy_ratio) || 0) * 100).toFixed(0) + "/S" + ((Number(r.broker_top5_sell_ratio) || 0) * 100).toFixed(0))
+        : "—",
+      night: (r.night_flags && r.night_flags.length) ? r.night_flags.join(" ") : "",
       score: num(r.quality_score, 0),
       scoreN: Number(r.quality_score),
       bias,
@@ -188,7 +199,7 @@
     tbody.innerHTML = "";
     const labels = [
       "#", "名稱", "收盤", "漲跌%", "振幅%", "量(張)", "額(億)",
-      "當沖%", "週轉%", "量比", "分", "偏向", "支撐", "壓力",
+      "當沖%", "週轉%", "量比", "收位", "均價", "影", "法人", "分點", "分", "偏向", "支撐", "壓力",
     ];
 
     rows.forEach((m) => {
@@ -206,6 +217,11 @@
         { html: m.dtr, cls: "num" },
         { html: m.turn, cls: "num" },
         { html: m.volRatio, cls: "num" },
+        { html: m.pos, cls: "num" },
+        { html: m.vwap, cls: "num" },
+        { html: m.wick },
+        { html: m.inst, cls: "num " + (m.instN > 0 ? "up" : m.instN < 0 ? "down" : "") },
+        { html: m.broker, cls: "num" },
         { html: m.score, cls: "num" },
         { html: `<span class="bias ${m.biasClass}">${m.bias}</span>` },
         { html: m.support, cls: "sr-val sr-col num" },
@@ -266,6 +282,12 @@
           <span><i>額</i>${m.tvYi}億</span>
           <span><i>週轉</i>${m.turn}%</span>
           <span><i>量比</i>${m.volRatio}</span>
+          <span><i>收位</i>${m.pos}%</span>
+          <span><i>均價</i>${m.vwap}</span>
+          <span><i>影</i>${m.wick}</span>
+          <span><i>法人</i>${m.inst}${m.inst==="—"?"":"%"}</span>
+          <span><i>分點</i>${m.broker}</span>
+          ${m.night ? `<span><i>夜盤</i>${m.night}</span>` : ""}
         </div>
       `;
       const btn = card.querySelector(".ticket-main");

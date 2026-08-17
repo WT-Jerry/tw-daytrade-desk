@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T18:21:34+08:00",
+  "updated_at": "2026-08-17T18:44:21+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
@@ -17,10 +17,10 @@
       "relaxed": false,
       "top_codes": [
         "2324 仁寶",
+        "3605 宏致",
         "1810 和成",
-        "2375 凱美",
-        "2634 漢翔",
-        "6155 鈞寶"
+        "4916 事欣科",
+        "2375 凱美"
       ],
       "file": "data/reports/20260814.json"
     },
