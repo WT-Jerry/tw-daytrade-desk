@@ -118,6 +118,17 @@
     return res.json();
   }
 
+  function latestEntry(entries) {
+    const list = (entries || []).slice();
+    list.sort((a, b) => {
+      const ga = String(a.generated_at || "");
+      const gb = String(b.generated_at || "");
+      if (ga !== gb) return gb.localeCompare(ga);
+      return String(b.date || "").localeCompare(String(a.date || ""));
+    });
+    return list[0] || null;
+  }
+
   function renderArchive(filter = "") {
     const box = $("archive-list");
     box.innerHTML = "";
@@ -424,10 +435,8 @@
         return;
       }
       renderArchive();
-      const fromHash = (location.hash || "").replace(/^#/, "");
-      const initial =
-        fromHash && entries.some((e) => e.date === fromHash) ? fromHash : entries[0].date;
-      await selectDate(initial);
+      const newest = latestEntry(entries);
+      await selectDate(newest.date);
     } catch (err) {
       $("pill-status").textContent = "NO DATA";
       $("pill-status").className = "badge err";
