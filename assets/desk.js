@@ -215,7 +215,7 @@
     tbody.innerHTML = "";
     const labels = [
       "#", "名稱", "收盤", "漲跌%", "振幅%", "量(張)", "額(億)",
-      "當沖%", "週轉%", "量比", "收位", "均價", "影", "法人", "分點", "分", "偏向", "支撐", "壓力",
+      "當沖%", "週轉%", "量比", "收位", "均價", "影", "法人", "分點", "綜評分", "偏向", "支撐", "壓力",
     ];
 
     rows.forEach((m) => {
@@ -277,7 +277,7 @@
           <div class="tk-row2">
             <span class="tk-close mono">${m.close}</span>
             <span class="tk-chg mono ${m.chgClass}">${m.chgSigned}</span>
-            <span class="tk-score mono">分 <b>${m.score}</b></span>
+            <span class="tk-score mono">綜評分 <b>${m.score}</b></span>
           </div>
           <div class="sr-rail" style="--pos:${sr.pos}%">
             <div class="sr-ends">

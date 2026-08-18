@@ -39,7 +39,7 @@
     "sources": [
       {
         "name": "STOCK_DAY_ALL",
-        "date": "20260814",
+        "date": "20260817",
         "n": 1378
       },
       {
@@ -150,7 +150,7 @@
       "turnover_rate": 0.091271,
       "avg_volume_5d_lots": 93632.07,
       "volume_ratio": 4.296,
-      "quality_score": 112.0,
+      "quality_score": 100.0,
       "score_breakdown": {
         "turnover_rate": 15.0,
         "rel_volume": 10.0,
@@ -158,10 +158,10 @@
         "close_pos_strong": 7.0,
         "daytrade_rate": 15.0,
         "daytrade_amount": 5.0,
-        "inst_buy": 15.0,
-        "broker_buy": 15.0,
-        "broker_sell": 15.0,
-        "broker_daytrade": 7.0
+        "inst_buy": 12.0,
+        "broker_buy": 10.0,
+        "broker_sell": 10.0,
+        "broker_daytrade": 8.0
       },
       "bias_hint": "偏多",
       "support_obs": 40.3,
@@ -223,17 +223,17 @@
       "turnover_rate": 0.107727,
       "avg_volume_5d_lots": 11818.35,
       "volume_ratio": 1.592,
-      "quality_score": 104.0,
+      "quality_score": 92.0,
       "score_breakdown": {
         "turnover_rate": 15.0,
         "rel_volume": 10.0,
         "close_pos_weak": 7.0,
         "daytrade_rate": 15.0,
         "daytrade_amount": 5.0,
-        "inst_buy": 15.0,
-        "broker_buy": 15.0,
-        "broker_sell": 15.0,
-        "broker_daytrade": 7.0
+        "inst_buy": 12.0,
+        "broker_buy": 10.0,
+        "broker_sell": 10.0,
+        "broker_daytrade": 8.0
       },
       "bias_hint": "偏多",
       "support_obs": 128.0,
@@ -294,7 +294,7 @@
       "turnover_rate": 0.08053,
       "avg_volume_5d_lots": 5583.0,
       "volume_ratio": 4.36,
-      "quality_score": 102.0,
+      "quality_score": 92.0,
       "score_breakdown": {
         "turnover_rate": 15.0,
         "rel_volume": 10.0,
@@ -302,10 +302,10 @@
         "close_pos_strong": 7.0,
         "daytrade_rate": 15.0,
         "daytrade_amount": 5.0,
-        "inst_buy": 10.0,
-        "broker_buy": 15.0,
-        "broker_sell": 10.0,
-        "broker_daytrade": 7.0
+        "inst_buy": 8.0,
+        "broker_buy": 10.0,
+        "broker_sell": 6.0,
+        "broker_daytrade": 8.0
       },
       "bias_hint": "偏多",
       "support_obs": 24.3,
@@ -367,17 +367,17 @@
       "turnover_rate": 0.061854,
       "avg_volume_5d_lots": 5180.19,
       "volume_ratio": 1.477,
-      "quality_score": 102.0,
+      "quality_score": 90.0,
       "score_breakdown": {
         "turnover_rate": 15.0,
         "abs_change": 8.0,
         "close_pos_strong": 7.0,
         "daytrade_rate": 15.0,
         "daytrade_amount": 5.0,
-        "inst_buy": 15.0,
-        "broker_buy": 15.0,
-        "broker_sell": 15.0,
-        "broker_daytrade": 7.0
+        "inst_buy": 12.0,
+        "broker_buy": 10.0,
+        "broker_sell": 10.0,
+        "broker_daytrade": 8.0
       },
       "bias_hint": "偏多",
       "support_obs": 101.0,
@@ -437,7 +437,7 @@
       "turnover_rate": 0.106199,
       "avg_volume_5d_lots": 7510.64,
       "volume_ratio": 1.537,
-      "quality_score": 100.0,
+      "quality_score": 88.0,
       "score_breakdown": {
         "turnover_rate": 15.0,
         "rel_volume": 10.0,
@@ -445,9 +445,9 @@
         "close_pos_weak": 7.0,
         "daytrade_rate": 15.0,
         "daytrade_amount": 5.0,
-        "inst_sell": 15.0,
-        "broker_buy": 10.0,
-        "broker_sell": 15.0
+        "inst_sell": 12.0,
+        "broker_buy": 6.0,
+        "broker_sell": 10.0
       },
       "bias_hint": "偏空",
       "support_obs": 128.5,
@@ -507,7 +507,7 @@
       "turnover_rate": 0.084296,
       "avg_volume_5d_lots": 20376.15,
       "volume_ratio": 3.896,
-      "quality_score": 100.0,
+      "quality_score": 87.0,
       "score_breakdown": {
         "turnover_rate": 15.0,
         "rel_volume": 10.0,
@@ -515,9 +515,9 @@
         "close_pos_strong": 7.0,
         "daytrade_rate": 10.0,
         "daytrade_amount": 5.0,
-        "inst_buy": 15.0,
-        "broker_buy": 15.0,
-        "broker_sell": 15.0
+        "inst_buy": 12.0,
+        "broker_buy": 10.0,
+        "broker_sell": 10.0
       },
       "bias_hint": "偏多",
       "support_obs": 63.2,
@@ -578,17 +578,17 @@
       "turnover_rate": 0.008399,
       "avg_volume_5d_lots": 20777.67,
       "volume_ratio": 2.573,
-      "quality_score": 97.0,
+      "quality_score": 85.0,
       "score_breakdown": {
         "rel_volume": 10.0,
         "abs_change": 8.0,
         "close_pos_strong": 7.0,
         "daytrade_rate": 15.0,
         "daytrade_amount": 5.0,
-        "inst_buy": 15.0,
-        "broker_buy": 15.0,
-        "broker_sell": 15.0,
-        "broker_daytrade": 7.0
+        "inst_buy": 12.0,
+        "broker_buy": 10.0,
+        "broker_sell": 10.0,
+        "broker_daytrade": 8.0
       },
       "bias_hint": "偏多",
       "support_obs": 57.6,
@@ -648,17 +648,17 @@
       "turnover_rate": 0.043515,
       "avg_volume_5d_lots": 20988.9,
       "volume_ratio": 0.792,
-      "quality_score": 95.0,
+      "quality_score": 83.0,
       "score_breakdown": {
         "turnover_rate": 8.0,
         "abs_change": 8.0,
         "close_pos_weak": 7.0,
         "daytrade_rate": 15.0,
         "daytrade_amount": 5.0,
-        "inst_sell": 15.0,
-        "broker_buy": 15.0,
-        "broker_sell": 15.0,
-        "broker_daytrade": 7.0
+        "inst_sell": 12.0,
+        "broker_buy": 10.0,
+        "broker_sell": 10.0,
+        "broker_daytrade": 8.0
       },
       "bias_hint": "偏空",
       "support_obs": 136.0,
@@ -718,16 +718,16 @@
       "turnover_rate": 0.094577,
       "avg_volume_5d_lots": 7237.16,
       "volume_ratio": 1.228,
-      "quality_score": 95.0,
+      "quality_score": 82.0,
       "score_breakdown": {
         "turnover_rate": 15.0,
         "abs_change": 8.0,
         "close_pos_weak": 7.0,
         "daytrade_rate": 15.0,
         "daytrade_amount": 5.0,
-        "inst_sell": 15.0,
-        "broker_buy": 15.0,
-        "broker_sell": 15.0
+        "inst_sell": 12.0,
+        "broker_buy": 10.0,
+        "broker_sell": 10.0
       },
       "bias_hint": "偏空",
       "support_obs": 95.8,
@@ -787,17 +787,17 @@
       "turnover_rate": 0.014196,
       "avg_volume_5d_lots": 23853.0,
       "volume_ratio": 1.538,
-      "quality_score": 92.0,
+      "quality_score": 80.0,
       "score_breakdown": {
         "rel_volume": 10.0,
         "abs_change": 8.0,
         "close_pos_weak": 7.0,
         "daytrade_rate": 10.0,
         "daytrade_amount": 5.0,
-        "inst_sell": 15.0,
-        "broker_buy": 15.0,
-        "broker_sell": 15.0,
-        "broker_daytrade": 7.0
+        "inst_sell": 12.0,
+        "broker_buy": 10.0,
+        "broker_sell": 10.0,
+        "broker_daytrade": 8.0
       },
       "bias_hint": "偏空",
       "support_obs": 46.85,
@@ -836,10 +836,10 @@
       "night_flags": []
     }
   ],
-  "report_text": "[FINANCE]\n**每日當沖觀察報告（07:30）** · 資料日 `D=20260814`\n產出時間：2026-08-17 18:44:21\n\n### 1. 大盤／夜盤情境\n- 來源：台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）\n- 參考價：45,722｜昨收：45,812｜漲跌：**-85**（-0.19%）\n- 區間：開 45,852／高 45,968／低 45,551\n- 情境標籤：**中性**\n- 操作建議：|Δ|=85<100：中性盤，多空皆可，重個股結構與開盤量能。\n\n### 2. 選股規則（v1 硬性）\n- 價 10.0–150.0｜量≥6000 張｜額≥5 億｜當沖≥25%｜振幅≥5%（前收）\n- 排除：注意股 10／處置 19\n- 觀察池檔數：10（top 輸出）\n\n### 3. 觀察池（含點位）\n| 代號 | 名稱 | 收盤 | 漲跌% | 收位 | 均價 | 影 | 法人 | 分點 | 分 | 偏向 | S | R | 註 |\n|---|---|---:|---:|---:|---:|---|---:|---|---:|---|---:|---:|---|\n| 2324 | 仁寶 | 43.20 | 9.92 | 100 | 43.03 | 近漲停 | +12.9% | B23/S7 | 112 | 偏多 | 40.30 | 43.20 | 近漲停 |\n| 3605 | 宏致 | 131.50 | 0.38 | 37 | 132.76 | - | +12.9% | B13/S15 | 104 | 偏多 | 128.00 | 137.50 | - |\n| 1810 | 和成 | 27.55 | 9.98 | 100 | 26.79 | 近漲停 | +3.6% | B13/S4 | 102 | 偏多 | 24.30 | 27.55 | 近漲停 |\n| 4916 | 事欣科 | 106.00 | 4.43 | 71 | 105.32 | - | +11.3% | B12/S6 | 102 | 偏多 | 101.00 | 108.00 | - |\n| 2375 | 凱美 | 130.50 | 7.41 | 18 | 133.07 | - | -26.2% | B5/S28 | 100 | 偏空 | 128.50 | 139.50 | - |\n| 2634 | 漢翔 | 70.60 | 9.97 | 100 | 68.41 | 近漲停 | +9.7% | B32/S6 | 100 | 偏多 | 63.20 | 70.60 | 近漲停 |\n| 1301 | 台塑 | 60.00 | 4.35 | 80 | 59.57 | - | +24.6% | B20/S6 | 97 | 偏多 | 57.60 | 60.60 | - |\n| 2481 | 強茂 | 138.00 | 3.76 | 20 | 139.47 | - | -10.6% | B8/S19 | 95 | 偏空 | 136.00 | 146.00 | - |\n| 2465 | 麗臺 | 95.90 | 10.48 | 1 | 100.04 | 近漲停 | -15.6% | B6/S15 | 95 | 偏空 | 95.80 | 106.50 | 近漲停 |\n| 2027 | 大成鋼 | 47.60 | 6.25 | 24 | 47.95 | - | -33.7% | B17/S39 | 92 | 偏空 | 46.85 | 50.00 | - |\n\n**點位口徑**：壓力＝昨高、支撐＝昨低；均價＝成交額÷成交股數，可當箱內中軸。\n**法人**＝三大法人淨買佔成交%；**分點**＝前5買超／賣超佔比。偏向 `*`＝夜盤微調。\n\n### 4. 操作紀律\n- 只做觀察池，不保證方向；開盤 15 分鐘量能不足則降倉。\n- 當沖嚴設停損；高當沖率＋高振幅常為隔日沖雜訊。\n- 本報告不構成投資建議。\n\n_engine: twse_screener v1 + daytrade_report_0730 · deliver ready_",
+  "report_text": "[FINANCE]\n**每日當沖觀察報告（07:30）** · 資料日 `D=20260814`\n產出時間：2026-08-18 12:14:36\n\n### 1. 大盤／夜盤情境\n- 來源：台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）\n- 參考價：45,722｜昨收：45,812｜漲跌：**-85**（-0.19%）\n- 區間：開 45,852／高 45,968／低 45,551\n- 情境標籤：**中性**\n- 操作建議：|Δ|=85<100：中性盤，多空皆可，重個股結構與開盤量能。\n\n### 2. 選股規則（v1 硬性）\n- 價 10.0–150.0｜量≥6000 張｜額≥5 億｜當沖≥25%｜振幅≥5%（前收）\n- 排除：注意股 10／處置 19\n- 觀察池檔數：10（top 輸出）\n\n### 3. 觀察池（含點位）\n| 代號 | 名稱 | 收盤 | 漲跌% | 收位 | 均價 | 影 | 法人 | 分點 | 綜評分 | 偏向 | S | R | 註 |\n|---|---|---:|---:|---:|---:|---|---:|---|---:|---|---:|---:|---|\n| 2324 | 仁寶 | 43.20 | 9.92 | 100 | 43.03 | 近漲停 | +12.9% | B23/S7 | 100 | 偏多 | 40.30 | 43.20 | 近漲停 |\n| 3605 | 宏致 | 131.50 | 0.38 | 37 | 132.76 | - | +12.9% | B13/S15 | 92 | 偏多 | 128.00 | 137.50 | - |\n| 1810 | 和成 | 27.55 | 9.98 | 100 | 26.79 | 近漲停 | +3.6% | B13/S4 | 92 | 偏多 | 24.30 | 27.55 | 近漲停 |\n| 4916 | 事欣科 | 106.00 | 4.43 | 71 | 105.32 | - | +11.3% | B12/S6 | 90 | 偏多 | 101.00 | 108.00 | - |\n| 2375 | 凱美 | 130.50 | 7.41 | 18 | 133.07 | - | -26.2% | B5/S28 | 88 | 偏空 | 128.50 | 139.50 | - |\n| 2634 | 漢翔 | 70.60 | 9.97 | 100 | 68.41 | 近漲停 | +9.7% | B32/S6 | 87 | 偏多 | 63.20 | 70.60 | 近漲停 |\n| 1301 | 台塑 | 60.00 | 4.35 | 80 | 59.57 | - | +24.6% | B20/S6 | 85 | 偏多 | 57.60 | 60.60 | - |\n| 2481 | 強茂 | 138.00 | 3.76 | 20 | 139.47 | - | -10.6% | B8/S19 | 83 | 偏空 | 136.00 | 146.00 | - |\n| 2465 | 麗臺 | 95.90 | 10.48 | 1 | 100.04 | 近漲停 | -15.6% | B6/S15 | 82 | 偏空 | 95.80 | 106.50 | 近漲停 |\n| 2027 | 大成鋼 | 47.60 | 6.25 | 24 | 47.95 | - | -33.7% | B17/S39 | 80 | 偏空 | 46.85 | 50.00 | - |\n\n**點位口徑**：壓力＝昨高、支撐＝昨低；均價＝成交額÷成交股數，可當箱內中軸。\n**法人**＝三大法人淨買佔成交%；**分點**＝前5買超／賣超佔比。偏向 `*`＝夜盤微調。\n\n### 4. 操作紀律\n- 只做觀察池，不保證方向；開盤 15 分鐘量能不足則降倉。\n- 當沖嚴設停損；高當沖率＋高振幅常為隔日沖雜訊。\n- 本報告不構成投資建議。\n\n_engine: twse_screener v1 + daytrade_report_0730 · deliver ready_",
   "tracker": {
     "id": "20260814",
-    "updated_at": "2026-08-17T18:44:21",
+    "updated_at": "2026-08-18T12:14:36",
     "source": "daytrade_report_0730"
   }
 }
