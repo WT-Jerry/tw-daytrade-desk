@@ -223,7 +223,7 @@
     tbody.innerHTML = "";
     const labels = [
       "#", "名稱", "收盤", "漲跌%", "振幅%", "量(張)", "額(億)",
-      "當沖%", "週轉%", "量比", "收位", "均價", "影", "法人", "分點", "綜評分", "偏向", "支撐", "壓力",
+      "當沖%", "週轉%", "量比", "收位", "均價", "K棒", "法人", "分點", "綜評分", "偏向", "支撐", "壓力",
     ];
 
     rows.forEach((m) => {
@@ -318,7 +318,7 @@
           <span><i>量比</i>${m.volRatio}</span>
           <span><i>收位</i>${m.pos}%</span>
           <span><i>均價</i>${m.vwap}</span>
-          <span><i>影</i>${m.wick}</span>
+          <span><i>K棒</i>${m.wick}</span>
           ${m.night ? `<span><i>夜盤</i>${m.night}</span>` : ""}
         </div>
       `;
