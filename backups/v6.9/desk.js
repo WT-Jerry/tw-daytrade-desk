@@ -83,15 +83,6 @@
     return "買 " + b + "% / 賣 " + s + "%";
   }
 
-  function brokerHtml(buyR, sellR) {
-    const hasB = buyR != null && !Number.isNaN(Number(buyR));
-    const hasS = sellR != null && !Number.isNaN(Number(sellR));
-    if (!hasB && !hasS) return "—";
-    const b = hasB ? (Number(buyR) * (Math.abs(Number(buyR)) <= 1 ? 100 : 1)).toFixed(0) : "—";
-    const s = hasS ? (Number(sellR) * (Math.abs(Number(sellR)) <= 1 ? 100 : 1)).toFixed(0) : "—";
-    return `<span class="up">買 ${b}%</span> / <span class="down">賣 ${s}%</span>`;
-  }
-
   function srMeta(m) {
     const c = m.closeN;
     const s = m.supportN;
@@ -143,7 +134,7 @@
       btn.setAttribute("role", "option");
       btn.setAttribute("aria-selected", state.selected === e.date ? "true" : "false");
       btn.innerHTML = `
-        <span class="d"><span class="d-full">${fmtDate(e.date)}</span><span class="d-day">${String(e.date).slice(6, 8)}</span></span>
+        <span class="d">${fmtDate(e.date)}</span>
         <span class="g"><span class="g-gate">${e.gate_tag || "—"} · </span>${e.count ?? 0}檔</span>
       `;
       btn.addEventListener("click", () => selectDate(e.date));
@@ -202,7 +193,6 @@
       instN: r.inst_net_ratio != null ? Number(r.inst_net_ratio) * (Math.abs(Number(r.inst_net_ratio)) <= 1 ? 100 : 1) : NaN,
       instCls: instLabel(r.inst_net_ratio).cls,
       broker: brokerLabel(r.broker_top5_buy_ratio, r.broker_top5_sell_ratio),
-      brokerHtml: brokerHtml(r.broker_top5_buy_ratio, r.broker_top5_sell_ratio),
       night: (r.night_flags && r.night_flags.length) ? r.night_flags.join(" ") : "",
       score: (function () {
         const n = Number(r.quality_score);
@@ -280,39 +270,28 @@
       return;
     }
 
-    rows.forEach((m, idx) => {
+    rows.forEach((m) => {
       const sr = srMeta(m);
       const card = document.createElement("article");
-      card.className = "ticket ticket-" + m.biasClass + (idx % 2 ? " ticket-alt" : "");
-      const instText = m.inst && m.inst !== "—" ? m.inst : "—";
-      const brokerInner = m.brokerHtml && m.brokerHtml !== "—" ? m.brokerHtml : "—";
+      card.className = "ticket";
       card.innerHTML = `
         <button type="button" class="ticket-main" aria-expanded="false">
-          <div class="tk-head">
+          <div class="tk-row1">
             <span class="tk-rank">${String(m.i + 1).padStart(2, "0")}</span>
             <span class="tk-code">${m.code}</span>
             <span class="tk-name">${m.name}</span>
             <span class="bias ${m.biasClass}">${m.bias}</span>
           </div>
-          <div class="tk-price">
-            <div class="tk-metric">
-              <i>收盤</i>
-              <b class="tk-close mono">${m.close}</b>
-            </div>
-            <div class="tk-metric">
-              <i>漲跌</i>
-              <b class="tk-chg mono ${m.chgClass}">${m.chgSigned}</b>
-            </div>
-            <div class="tk-metric">
-              <i>綜評分</i>
-              <b class="tk-score mono">${m.score}</b>
-            </div>
+          <div class="tk-row2">
+            <span class="tk-close mono">${m.close}</span>
+            <span class="tk-chg mono ${m.chgClass}">${m.chgSigned}</span>
+            <span class="tk-score mono">綜評分 <b>${m.score}</b></span>
           </div>
           <div class="sr-rail" style="--pos:${sr.pos}%">
             <div class="sr-ends">
-              <span class="sr-s"><i>支撐</i><b class="mono">${m.support}</b></span>
-              ${sr.tag ? `<span class="sr-tag">${sr.tag}</span>` : `<span class="sr-tag-spacer"></span>`}
-              <span class="sr-r"><i>壓力</i><b class="mono">${m.resistance}</b></span>
+              <span>S ${m.support}</span>
+              ${sr.tag ? `<span class="sr-tag">${sr.tag}</span>` : "<span></span>"}
+              <span>R ${m.resistance}</span>
             </div>
             <div class="sr-track" aria-hidden="true">
               <i class="sr-fill"></i>
@@ -322,11 +301,11 @@
           <div class="tk-chips" aria-label="籌碼">
             <span class="tk-chip">
               <i>法人</i>
-              <b class="mono ${m.instCls}">${instText}</b>
+              <b class="mono ${m.instCls}">${m.inst}</b>
             </span>
             <span class="tk-chip">
               <i>分點</i>
-              <b class="mono">${brokerInner}</b>
+              <b class="mono">${m.broker}</b>
             </span>
           </div>
         </button>
@@ -345,16 +324,8 @@
       `;
       const btn = card.querySelector(".ticket-main");
       btn.addEventListener("click", () => {
-        const wasOpen = card.classList.contains("open");
-        box.querySelectorAll(".ticket.open").forEach((t) => {
-          t.classList.remove("open");
-          const b = t.querySelector(".ticket-main");
-          if (b) b.setAttribute("aria-expanded", "false");
-        });
-        if (!wasOpen) {
-          card.classList.add("open");
-          btn.setAttribute("aria-expanded", "true");
-        }
+        const open = card.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
       });
       box.appendChild(card);
     });
@@ -425,23 +396,6 @@
     applySort(state.sortKey, state.sortDir, false);
 
     $("d-md").textContent = report.report_text || "(no markdown)";
-    const risk = $("risk-strip");
-    const alerts = [];
-    if (meta.relaxed) alerts.push("寬鬆模式");
-    if (gate.extreme || /高波動|≥300|>=300/.test(String(gate.advice || "") + String(gate.tag || ""))) {
-      alerts.push(gate.tag || "高波動警戒");
-    }
-    const nightHits = rawRows.some((r) => Array.isArray(r.night_flags) && r.night_flags.length);
-    if (nightHits) alerts.push("夜盤背離／缺口風險見展開");
-    if (risk) {
-      if (alerts.length) {
-        risk.textContent = alerts.join(" · ");
-        risk.classList.remove("hidden");
-      } else {
-        risk.textContent = "";
-        risk.classList.add("hidden");
-      }
-    }
     if (location.hash !== "#" + date) history.replaceState(null, "", "#" + date);
   }
 
