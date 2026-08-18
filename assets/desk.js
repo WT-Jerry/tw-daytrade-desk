@@ -194,8 +194,16 @@
       instCls: instLabel(r.inst_net_ratio).cls,
       broker: brokerLabel(r.broker_top5_buy_ratio, r.broker_top5_sell_ratio),
       night: (r.night_flags && r.night_flags.length) ? r.night_flags.join(" ") : "",
-      score: num(r.quality_score, 0),
-      scoreN: Number(r.quality_score),
+      score: (function () {
+        const n = Number(r.quality_score);
+        if (Number.isNaN(n)) return "—";
+        return num(Math.max(0, Math.min(100, n)), 0);
+      })(),
+      scoreN: (function () {
+        const n = Number(r.quality_score);
+        if (Number.isNaN(n)) return NaN;
+        return Math.max(0, Math.min(100, n));
+      })(),
       bias,
       biasClass: biasClass(bias),
       support: num(r.support_obs, 2),
