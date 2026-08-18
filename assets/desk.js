@@ -420,23 +420,37 @@
     if (location.hash !== "#" + date) history.replaceState(null, "", "#" + date);
   }
 
+  async function showLatest() {
+    const idx = await loadJSON("data/index.json");
+    state.index = idx;
+    $("updated-at").textContent = idx.updated_at ? `updated ${idx.updated_at}` : "—";
+    $("pill-status").textContent = "READY";
+    $("pill-status").className = "badge ok";
+    const entries = idx.entries || [];
+    if (!entries.length) {
+      $("empty").classList.remove("hidden");
+      $("detail").classList.add("hidden");
+      renderArchive();
+      return;
+    }
+    $("empty").classList.add("hidden");
+    $("detail").classList.remove("hidden");
+    let date = latestEntry(entries) && latestEntry(entries).date;
+    try {
+      const latest = await loadJSON("data/reports/latest.json");
+      const d = latest && (latest.screen_date || latest.date);
+      if (d) {
+        date = String(d);
+        state.cache[date] = latest;
+      }
+    } catch (_) {}
+    renderArchive();
+    if (date) await selectDate(date);
+  }
+
   async function boot() {
     try {
-      const idx = await loadJSON("data/index.json");
-      state.index = idx;
-      $("updated-at").textContent = idx.updated_at ? `updated ${idx.updated_at}` : "—";
-      $("pill-status").textContent = "READY";
-      $("pill-status").className = "badge ok";
-      const entries = idx.entries || [];
-      if (!entries.length) {
-        $("empty").classList.remove("hidden");
-        $("detail").classList.add("hidden");
-        renderArchive();
-        return;
-      }
-      renderArchive();
-      const newest = latestEntry(entries);
-      await selectDate(newest.date);
+      await showLatest();
     } catch (err) {
       $("pill-status").textContent = "NO DATA";
       $("pill-status").className = "badge err";
@@ -445,6 +459,10 @@
         "讀不到 data/index.json，請先跑 07:30 報告。 (" + err + ")";
     }
   }
+
+  window.addEventListener("pageshow", () => {
+    showLatest().catch(() => {});
+  });
 
   function applySort(key, dir, toggle) {
     if (toggle && state.sortKey === key) dir = -state.sortDir;
