@@ -243,7 +243,7 @@
         { html: m.volRatio, cls: "num" },
         { html: m.pos, cls: "num" },
         { html: m.vwap, cls: "num" },
-        { html: m.wick },
+        { html: m.wick, cls: "num" },
         { html: m.inst, cls: "num " + (m.instCls || "") },
         { html: m.broker, cls: "num" },
         { html: m.score, cls: "num" },
