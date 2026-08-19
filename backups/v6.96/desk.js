@@ -204,17 +204,6 @@
       turnN,
       volRatio: r.volume_ratio != null ? num(r.volume_ratio, 2) : "—",
       volN: r.volume_ratio != null ? Number(r.volume_ratio) : NaN,
-      surge: r.surge_volume_label || "n/a",
-      surgeDir: r.surge_volume_dir || "",
-      surgeHit: !!r.surge_volume,
-      surgeN: r.volume_ratio_15d != null ? Number(r.volume_ratio_15d) : (r.surge_volume ? 2 : 0),
-      surgeCls: (function () {
-        const dir = r.surge_volume_dir;
-        if (dir === "up") return "up surge-hit";
-        if (dir === "down") return "down surge-hit";
-        if (r.surge_volume) return "surge-hit";
-        return "surge-na";
-      })(),
       pos: r.close_pos_pct != null ? Number(r.close_pos_pct).toFixed(0) : (r.close_position != null ? (Number(r.close_position) * 100).toFixed(0) : "—"),
       posN: r.close_pos_pct != null ? Number(r.close_pos_pct) : (r.close_position != null ? Number(r.close_position) * 100 : NaN),
       vwap: r.vwap != null ? num(r.vwap, 2) : "—",
@@ -255,7 +244,7 @@
     tbody.innerHTML = "";
     const labels = [
       "#", "名稱", "收盤", "漲跌%", "振幅%", "量(張)", "額(億)",
-      "當沖%", "週轉%", "量比", "爆大量", "均價", "K棒", "法人", "分點", "綜評分", "偏向", "支撐", "壓力",
+      "當沖%", "週轉%", "量比", "收位", "均價", "K棒", "法人", "分點", "綜評分", "偏向", "支撐", "壓力",
     ];
 
     rows.forEach((m) => {
@@ -273,7 +262,7 @@
         { html: m.dtr, cls: "num" },
         { html: m.turn, cls: "num" },
         { html: m.volRatio, cls: "num" },
-        { html: m.surge, cls: "num " + (m.surgeCls || "") },
+        { html: m.pos, cls: "num" },
         { html: m.vwap, cls: "num" },
         { html: m.wick, cls: "num" },
         { html: m.inst, cls: "num " + (m.instCls || "") },
@@ -338,10 +327,6 @@
             <span class="tk-chip">
               <i>分點</i>
               <b class="mono">${m.brokerHtml}</b>
-            </span>
-            <span class="tk-chip tk-surge">
-              <i>爆大量</i>
-              <b class="mono ${m.surgeCls}">${m.surge}</b>
             </span>
           </div>
         </button>
