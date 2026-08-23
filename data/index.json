@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-08-21T07:31:43+08:00",
+  "updated_at": "2026-08-24T07:31:54+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260815",
+  "cutoff": "20260818",
   "entries": [
+    {
+      "date": "20260821",
+      "generated_at": "2026-08-24T07:31:54",
+      "gate_tag": "中性",
+      "gate_advice": "|Δ|=64<100：中性盤，多空皆可，重個股結構與開盤量能。｜週一：那指週末 +0.05%（NQ）、費半週五 -0.51%（否決資料），未達大幅、不改夜盤。",
+      "index_change": -64.0,
+      "index_change_pct": "-0.14%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "2489 瑞軒",
+        "2609 陽明",
+        "2637 慧洋-KY",
+        "2851 中再保",
+        "8103 瀚荃"
+      ],
+      "file": "data/reports/20260821.json"
+    },
     {
       "date": "20260820",
       "generated_at": "2026-08-21T07:31:43",
@@ -42,45 +61,7 @@
         "2634 漢翔"
       ],
       "file": "data/reports/20260819.json"
-    },
-    {
-      "date": "20260818",
-      "generated_at": "2026-08-19T07:30:35",
-      "gate_tag": "高波動警戒（大跌）",
-      "gate_advice": "|Δ|=561≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
-      "index_change": -561.0,
-      "index_change_pct": "-1.24%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2634 漢翔",
-        "2337 旺宏",
-        "3605 宏致",
-        "2481 強茂",
-        "2426 鼎元"
-      ],
-      "file": "data/reports/20260818.json"
-    },
-    {
-      "date": "20260817",
-      "generated_at": "2026-08-18T07:30:55",
-      "gate_tag": "中性",
-      "gate_advice": "|Δ|=56<100：中性盤，多空皆可，重個股結構與開盤量能。",
-      "index_change": -56.0,
-      "index_change_pct": "-0.12%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2324 仁寶",
-        "2634 漢翔",
-        "1810 和成",
-        "2481 強茂",
-        "2426 鼎元"
-      ],
-      "file": "data/reports/20260817.json"
     }
   ],
-  "count": 4
+  "count": 3
 }
