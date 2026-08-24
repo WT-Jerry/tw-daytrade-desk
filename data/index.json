@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-08-24T07:31:54+08:00",
+  "updated_at": "2026-08-25T07:31:15+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260818",
+  "cutoff": "20260819",
   "entries": [
+    {
+      "date": "20260824",
+      "generated_at": "2026-08-25T07:31:15",
+      "gate_tag": "偏空",
+      "gate_advice": "夜盤／參考 -208（−300–−100）：提高偏空池權重；慎追昨強勢高位。",
+      "index_change": -208.0,
+      "index_change_pct": "-0.46%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "3605 宏致",
+        "2399 映泰",
+        "2489 瑞軒",
+        "8103 瀚荃",
+        "1709 和益"
+      ],
+      "file": "data/reports/20260824.json"
+    },
     {
       "date": "20260821",
       "generated_at": "2026-08-24T07:31:54",
@@ -42,25 +61,6 @@
         "3605 宏致"
       ],
       "file": "data/reports/20260820.json"
-    },
-    {
-      "date": "20260819",
-      "generated_at": "2026-08-20T07:31:28",
-      "gate_tag": "高波動警戒（大漲）",
-      "gate_advice": "|Δ|=302≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
-      "index_change": 302.0,
-      "index_change_pct": "+0.68%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "1727 中華化",
-        "5608 四維航",
-        "2478 大毅",
-        "2605 新興",
-        "2634 漢翔"
-      ],
-      "file": "data/reports/20260819.json"
     }
   ],
   "count": 3
