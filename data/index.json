@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-08-25T07:31:15+08:00",
+  "updated_at": "2026-08-26T07:31:28+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260819",
+  "cutoff": "20260820",
   "entries": [
+    {
+      "date": "20260825",
+      "generated_at": "2026-08-26T07:31:28",
+      "gate_tag": "高波動警戒（大漲）",
+      "gate_advice": "|Δ|=405≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
+      "index_change": 405.0,
+      "index_change_pct": "+0.90%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "2426 鼎元",
+        "2606 裕民",
+        "2489 瑞軒",
+        "3049 精金",
+        "2484 希華"
+      ],
+      "file": "data/reports/20260825.json"
+    },
     {
       "date": "20260824",
       "generated_at": "2026-08-25T07:31:15",
@@ -42,25 +61,6 @@
         "8103 瀚荃"
       ],
       "file": "data/reports/20260821.json"
-    },
-    {
-      "date": "20260820",
-      "generated_at": "2026-08-21T07:31:43",
-      "gate_tag": "中性",
-      "gate_advice": "|Δ|=99<100：中性盤，多空皆可，重個股結構與開盤量能。",
-      "index_change": -99.0,
-      "index_change_pct": "-0.22%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "3673 TPK-KY",
-        "2630 亞航",
-        "2478 大毅",
-        "2634 漢翔",
-        "3605 宏致"
-      ],
-      "file": "data/reports/20260820.json"
     }
   ],
   "count": 3
