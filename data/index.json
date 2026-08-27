@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-08-26T07:31:28+08:00",
+  "updated_at": "2026-08-28T07:31:36+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260820",
+  "cutoff": "20260822",
   "entries": [
+    {
+      "date": "20260827",
+      "generated_at": "2026-08-28T07:31:36",
+      "gate_tag": "高波動警戒（大漲）",
+      "gate_advice": "|Δ|=324≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
+      "index_change": 324.0,
+      "index_change_pct": "+0.70%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "1727 中華化",
+        "2436 偉詮電",
+        "2375 凱美",
+        "6269 台郡",
+        "2630 亞航"
+      ],
+      "file": "data/reports/20260827.json"
+    },
     {
       "date": "20260825",
       "generated_at": "2026-08-26T07:31:28",
@@ -42,25 +61,6 @@
         "1709 和益"
       ],
       "file": "data/reports/20260824.json"
-    },
-    {
-      "date": "20260821",
-      "generated_at": "2026-08-24T07:31:54",
-      "gate_tag": "中性",
-      "gate_advice": "|Δ|=64<100：中性盤，多空皆可，重個股結構與開盤量能。｜週一：那指週末 +0.05%（NQ）、費半週五 -0.51%（否決資料），未達大幅、不改夜盤。",
-      "index_change": -64.0,
-      "index_change_pct": "-0.14%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2489 瑞軒",
-        "2609 陽明",
-        "2637 慧洋-KY",
-        "2851 中再保",
-        "8103 瀚荃"
-      ],
-      "file": "data/reports/20260821.json"
     }
   ],
   "count": 3
