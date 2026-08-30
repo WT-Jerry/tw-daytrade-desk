@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-08-28T07:31:36+08:00",
+  "updated_at": "2026-08-31T07:31:11+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260822",
+  "cutoff": "20260825",
   "entries": [
+    {
+      "date": "20260828",
+      "generated_at": "2026-08-31T07:31:11",
+      "gate_tag": "高波動警戒（大跌）",
+      "gate_advice": "|Δ|=457≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。｜週一：那指週末 -0.28%（NQ）、費半週五 -0.51%（否決資料），未達大幅、不改夜盤。",
+      "index_change": -457.0,
+      "index_change_pct": "-0.99%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "3504 揚明光",
+        "3605 宏致",
+        "3049 精金",
+        "6456 GIS-KY",
+        "2478 大毅"
+      ],
+      "file": "data/reports/20260828.json"
+    },
     {
       "date": "20260827",
       "generated_at": "2026-08-28T07:31:36",
@@ -23,45 +42,7 @@
         "2630 亞航"
       ],
       "file": "data/reports/20260827.json"
-    },
-    {
-      "date": "20260825",
-      "generated_at": "2026-08-26T07:31:28",
-      "gate_tag": "高波動警戒（大漲）",
-      "gate_advice": "|Δ|=405≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
-      "index_change": 405.0,
-      "index_change_pct": "+0.90%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2426 鼎元",
-        "2606 裕民",
-        "2489 瑞軒",
-        "3049 精金",
-        "2484 希華"
-      ],
-      "file": "data/reports/20260825.json"
-    },
-    {
-      "date": "20260824",
-      "generated_at": "2026-08-25T07:31:15",
-      "gate_tag": "偏空",
-      "gate_advice": "夜盤／參考 -208（−300–−100）：提高偏空池權重；慎追昨強勢高位。",
-      "index_change": -208.0,
-      "index_change_pct": "-0.46%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "3605 宏致",
-        "2399 映泰",
-        "2489 瑞軒",
-        "8103 瀚荃",
-        "1709 和益"
-      ],
-      "file": "data/reports/20260824.json"
     }
   ],
-  "count": 3
+  "count": 2
 }
