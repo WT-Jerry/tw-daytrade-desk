@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-08-31T07:31:11+08:00",
+  "updated_at": "2026-09-01T07:31:01+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260825",
+  "cutoff": "20260826",
   "entries": [
+    {
+      "date": "20260831",
+      "generated_at": "2026-09-01T07:31:01",
+      "gate_tag": "中性",
+      "gate_advice": "|Δ|=1<100：中性盤，多空皆可，重個股結構與開盤量能。",
+      "index_change": 1.0,
+      "index_change_pct": "0.00%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "6770 力積電",
+        "1727 中華化",
+        "1717 長興",
+        "6269 台郡",
+        "3543 州巧"
+      ],
+      "file": "data/reports/20260831.json"
+    },
     {
       "date": "20260828",
       "generated_at": "2026-08-31T07:31:11",
@@ -44,5 +63,5 @@
       "file": "data/reports/20260827.json"
     }
   ],
-  "count": 2
+  "count": 3
 }
