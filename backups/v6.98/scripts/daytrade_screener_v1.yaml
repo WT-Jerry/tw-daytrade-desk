@@ -1,0 +1,72 @@
+# 台股當沖觀察池 — 選股規則 v1（與 skills 同步）
+# 修改門檻後請同步：
+#   ~/.hermes/skills/finance/day-trading-report-workflow/SKILL.md
+#   ~/.hermes/skills/finance/twse-daily-screener/SKILL.md
+
+daytrade_screener_v1:
+  price_min: 10.0
+  price_max: 150.0
+  volume_lots_min: 6000          # 張
+  turnover_value_min: 500000000  # 元（5 億）
+  daytrade_rate_min: 0.25
+  amplitude_min: 0.05            # (高-低)/前收
+  output_top_n: 15
+  relax_if_count_lt: 3
+  relax:
+    daytrade_rate_min: 0.20
+    amplitude_min: 0.04
+    turnover_value_min: 300000000
+    price_max: 155.0
+  # 加分門檻（不淘汰）
+  scoring:
+    turnover_rate_bonus_1: 0.03    # 週轉率加分門檻
+    turnover_rate_bonus_2: 0.05
+    daytrade_rate_bonus: 0.30
+    daytrade_rate_bonus_2: 0.40
+    daytrade_amount_bonus: 300000000
+    abs_change_pct_bonus: 0.03
+    rel_volume_mult: 1.5
+    avg_volume_lookback_days: 5    # 前 N 個交易日（不含 D；自動跳過週末與國定假日）
+    avg_volume_min_days: 3
+    surge_volume_lookback_days: 15  # 爆大量：近 15 交易日均量（不含 D）
+    surge_volume_min_days: 10       # 不足則欄位 n/a
+    surge_volume_mult: 2.0          # 當日量 ≥ 均量 × 2
+    inst_net_ratio_min: 0.03       # 三大法人淨買/賣佔成交
+    inst_net_ratio_strong: 0.05
+    broker_top5_ratio_min: 0.03
+    broker_top5_ratio_strong: 0.05
+    broker_daytrade_lots: 300
+    inst_score_strong: 12
+    inst_score_min: 8
+    broker_score_strong: 10
+    broker_score_min: 6
+    broker_daytrade_score: 8
+    score_cap: 100
+  # 排除
+  exclude:
+    etf_and_leverage: true
+    attention_notice: true
+    disposition: true
+    code_suffixes_block:
+      - "L"
+      - "R"
+      - "U"
+      - "K"
+      - "B"
+      - "C"
+      - "T"
+      - "A"
+      - "D"
+  features:
+    auto_shares: true
+    auto_watchlists: true
+    auto_avg_volume: true
+    auto_institutional: true   # TWSE T86 三大法人
+    auto_broker: true          # 分點（指定資料日）
+  request:
+    timeout_sec: 45
+    interval_sec: 1.0   # 每次打 TWSE／OpenAPI 至少隔 1 秒
+    user_agent: "hermes-daytrade-screener/1.0 (+local)"
+  paths:
+    cache_dir: "~/.hermes/cache/finance"
+    output_dir: "~/.hermes/cache/finance"
