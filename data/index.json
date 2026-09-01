@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-09-01T19:00:06+08:00",
+  "updated_at": "2026-09-02T07:31:46+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260826",
+  "cutoff": "20260827",
   "entries": [
+    {
+      "date": "20260901",
+      "generated_at": "2026-09-02T07:31:46",
+      "gate_tag": "高波動警戒（大跌）",
+      "gate_advice": "|Δ|=522≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
+      "index_change": -522.0,
+      "index_change_pct": "-1.11%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "1709 和益",
+        "8150 南茂",
+        "6505 台塑化",
+        "4906 正文",
+        "1717 長興"
+      ],
+      "file": "data/reports/20260901.json"
+    },
     {
       "date": "20260831",
       "generated_at": "2026-09-01T07:31:01",
@@ -42,25 +61,6 @@
         "2478 大毅"
       ],
       "file": "data/reports/20260828.json"
-    },
-    {
-      "date": "20260827",
-      "generated_at": "2026-08-28T07:31:36",
-      "gate_tag": "高波動警戒（大漲）",
-      "gate_advice": "|Δ|=324≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
-      "index_change": 324.0,
-      "index_change_pct": "+0.70%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "1727 中華化",
-        "2436 偉詮電",
-        "2375 凱美",
-        "6269 台郡",
-        "2630 亞航"
-      ],
-      "file": "data/reports/20260827.json"
     }
   ],
   "count": 3
