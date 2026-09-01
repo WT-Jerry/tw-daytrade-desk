@@ -240,14 +240,8 @@
       biasClass: biasClass(bias),
       support: num(r.support_obs, 2),
       supportN: Number(r.support_obs),
-      supportShadow: num(r.support_shadow, 2),
-      supportShadowN: r.support_shadow == null || r.support_shadow === "" ? NaN : Number(r.support_shadow),
-      supportShadowSt: r.support_status || "",
       resistance: num(r.resistance_obs, 2),
       resistN: Number(r.resistance_obs),
-      resistShadow: num(r.resistance_shadow, 2),
-      resistShadowN: r.resistance_shadow == null || r.resistance_shadow === "" ? NaN : Number(r.resistance_shadow),
-      resistShadowSt: r.resistance_status || "",
     };
   }
 
@@ -260,10 +254,8 @@
     const tbody = $("tbl").querySelector("tbody");
     tbody.innerHTML = "";
     const labels = [
-      "#", "名稱", "收盤", "漲跌%",
-      "支撐", "影子支撐", "壓力", "影子壓力",
-      "振幅%", "量(張)", "額(億)",
-      "當沖%", "週轉%", "量比", "爆大量", "均價", "K棒", "法人", "分點", "綜評分", "偏向",
+      "#", "名稱", "收盤", "漲跌%", "振幅%", "量(張)", "額(億)",
+      "當沖%", "週轉%", "量比", "爆大量", "均價", "K棒", "法人", "分點", "綜評分", "偏向", "支撐", "壓力",
     ];
 
     rows.forEach((m) => {
@@ -275,10 +267,6 @@
         },
         { html: m.close, cls: "num" },
         { html: m.chgShow, cls: "num chg-cell " + m.chgClass },
-        { html: m.support, cls: "sr-val sr-col num" },
-        { html: m.supportShadow, cls: "sr-val sr-shadow-col num" },
-        { html: m.resistance, cls: "sr-val sr-col num" },
-        { html: m.resistShadow, cls: "sr-val sr-shadow-col num" },
         { html: m.amp, cls: "num" },
         { html: m.lots, cls: "num" },
         { html: m.tvYi, cls: "num" },
@@ -292,6 +280,8 @@
         { html: m.broker, cls: "num" },
         { html: m.score, cls: "num" },
         { html: `<span class="bias ${m.biasClass}">${m.bias}</span>` },
+        { html: m.support, cls: "sr-val sr-col num" },
+        { html: m.resistance, cls: "sr-val sr-col num" },
       ];
       cells.forEach((c, idx) => {
         const td = document.createElement("td");
@@ -334,11 +324,6 @@
               <span>S ${m.support}</span>
               ${sr.tag ? `<span class="sr-tag">${sr.tag}</span>` : "<span></span>"}
               <span>R ${m.resistance}</span>
-            </div>
-            <div class="sr-shadow-ends">
-              <span>影子 ${m.supportShadow}</span>
-              <span></span>
-              <span>影子 ${m.resistShadow}</span>
             </div>
             <div class="sr-track" aria-hidden="true">
               <i class="sr-fill"></i>
