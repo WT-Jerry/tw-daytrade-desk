@@ -361,27 +361,6 @@ body {
   color: #9ec9d6 !important;
   font-weight: 600;
 }
-.tk-os {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 8px;
-  margin: 6px 0 8px;
-  font-size: 0.98rem;
-}
-.tk-os i {
-  font-style: normal;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--muted);
-}
-.tk-os b { font-size: 1.05rem; }
-.bias.os-na {
-  color: var(--muted);
-  background: transparent;
-  border-color: var(--line);
-}
 .sr-tag {
   font-family: var(--font);
   font-size: 0.72rem;

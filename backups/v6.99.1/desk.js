@@ -32,21 +32,6 @@
     return n > 0 ? "up" : "down";
   }
 
-  function osClass(bias) {
-    const s = String(bias || "");
-    if (s === "bullish_watch") return "long";
-    if (s === "bearish_watch") return "short";
-    if (s === "insufficient_data") return "os-na";
-    if (s === "neutral_watch") return "mid";
-    return "os-na";
-  }
-
-  function osLabel(r) {
-    const z = r && r.open_structure_zh;
-    if (!z) return "—";
-    return String(z);
-  }
-
   function biasClass(b) {
     const s = String(b || "");
     if (s.includes("多")) return "long";
@@ -263,9 +248,6 @@
       resistShadow: num(r.resistance_shadow, 2),
       resistShadowN: r.resistance_shadow == null || r.resistance_shadow === "" ? NaN : Number(r.resistance_shadow),
       resistShadowSt: r.resistance_status || "",
-      osZh: osLabel(r),
-      osClass: osClass(r.open_structure_bias),
-      osReason: r.open_structure_reason || "",
     };
   }
 
@@ -281,7 +263,7 @@
       "#", "名稱", "收盤", "漲跌%",
       "支撐", "影子支撐", "壓力", "影子壓力",
       "振幅%", "量(張)", "額(億)",
-      "當沖%", "週轉%", "量比", "爆大量", "均價", "K棒", "法人", "分點", "綜評分", "開盤結構", "偏向",
+      "當沖%", "週轉%", "量比", "爆大量", "均價", "K棒", "法人", "分點", "綜評分", "偏向",
     ];
 
     rows.forEach((m) => {
@@ -309,7 +291,6 @@
         { html: m.inst, cls: "num " + (m.instCls || "") },
         { html: m.broker, cls: "num" },
         { html: m.score, cls: "num" },
-        { html: `<span class="bias ${m.osClass}" title="${m.osReason || ""}">${m.osZh}</span>` },
         { html: `<span class="bias ${m.biasClass}">${m.bias}</span>` },
       ];
       cells.forEach((c, idx) => {
@@ -359,10 +340,6 @@
               <span></span>
               <span>影子 ${m.resistShadow}</span>
             </div>
-            <div class="tk-os">
-              <i>開盤結構</i>
-              <b class="bias ${m.osClass}">${m.osZh}</b>
-            </div>
             <div class="sr-track" aria-hidden="true">
               <i class="sr-fill"></i>
               <i class="sr-tick"></i>
@@ -393,7 +370,6 @@
           <span><i>收位</i>${m.pos}%</span>
           <span><i>均價</i>${m.vwap}</span>
           <span><i>K棒</i>${m.wick}</span>
-          ${m.osReason ? `<span><i>開盤</i>${m.osReason}</span>` : ""}
           ${m.night ? `<span><i>夜盤</i>${m.night}</span>` : ""}
         </div>
       `;
