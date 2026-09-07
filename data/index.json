@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-09-07T09:06:36+08:00",
+  "updated_at": "2026-09-08T07:31:22+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260901",
+  "cutoff": "20260902",
   "entries": [
+    {
+      "date": "20260907",
+      "generated_at": "2026-09-08T07:31:22",
+      "gate_tag": "偏空",
+      "gate_advice": "夜盤／參考 -133（−300–−100）：提高偏空池權重；慎追昨強勢高位。",
+      "index_change": -133.0,
+      "index_change_pct": "-0.28%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "2409 友達",
+        "6770 力積電",
+        "3094 聯傑",
+        "2303 聯電",
+        "3605 宏致"
+      ],
+      "file": "data/reports/20260907.json"
+    },
     {
       "date": "20260904",
       "generated_at": "2026-09-07T07:31:01",
@@ -42,25 +61,6 @@
         "2465 麗臺"
       ],
       "file": "data/reports/20260903.json"
-    },
-    {
-      "date": "20260902",
-      "generated_at": "2026-09-03T07:31:12",
-      "gate_tag": "偏多",
-      "gate_advice": "夜盤／參考 +171（100–300）：提高偏多池權重；慎追過度延伸。",
-      "index_change": 171.0,
-      "index_change_pct": "+0.37%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2465 麗臺",
-        "3504 揚明光",
-        "6209 今國光",
-        "1714 和桐",
-        "3715 定穎投控"
-      ],
-      "file": "data/reports/20260902.json"
     }
   ],
   "count": 3
