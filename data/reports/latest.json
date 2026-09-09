@@ -339,7 +339,13 @@
             "pivot_r1"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "3715",
@@ -509,7 +515,13 @@
             "rolling_high_15d"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "2436",
@@ -688,7 +700,13 @@
             "pivot_s1"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "2363",
@@ -870,7 +888,13 @@
             "vwap"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "6226",
@@ -1055,7 +1079,13 @@
             "pivot_r1"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "2465",
@@ -1225,7 +1255,13 @@
             "pivot_r1"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "2305",
@@ -1405,7 +1441,13 @@
             "vwap"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "6834",
@@ -1586,7 +1628,13 @@
             "rolling_high_15d"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "3605",
@@ -1762,7 +1810,13 @@
             "pivot_r1"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "3016",
@@ -1937,7 +1991,13 @@
             "pivot_r1"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     }
   ],
   "report_text": "[FINANCE]\n**每日當沖觀察報告（07:30）** · 資料日 `D=20260908`\n產出時間：2026-09-09 07:31:42\n\n### 1. 大盤／夜盤情境\n- 來源：台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）\n- 參考價：47,050｜昨收：46,955｜漲跌：**+100**（+0.21%）\n- 區間：開 46,855／高 47,273／低 46,561\n- 情境標籤：**偏多**\n- 操作建議：夜盤／參考 +100（100–300）：提高偏多池權重；慎追過度延伸。\n\n### 2. 選股規則（v1 硬性）\n- 價 10.0–150.0｜量≥6000 張｜額≥5 億｜當沖≥25%｜振幅≥5%（前收）\n- 排除：注意股 8／處置 6\n- 觀察池檔數：10（top 輸出）\n\n### 3. 觀察池（含點位）\n| 代號 | 名稱 | 收盤 | 漲跌% | 爆大量 | 均價 | K棒 | 法人 | 分點 | 綜評分 | 偏向 | S | R | 註 |\n|---|---|---:|---:|---|---:|---|---:|---|---:|---|---:|---:|---|\n| 2409 | 友達 | 29.60 | 3.14 | 爆大量(漲) | 29.58 | 長上影 | +14.4% | B14/S6 | 100 | 偏多 | 28.20 | 30.70 | 長上影 |\n| 3715 | 定穎投控 | 126.50 | 5.86 | 爆大量(漲) | 127.33 | 長上影 | +10.6% | B14/S4 | 89 | 偏多 | 124.00 | 130.50 | 長上影 |\n| 2436 | 偉詮電 | 67.10 | -6.42 | 爆大量(跌) | 69.15 | - | -29.4% | B4/S27 | 88 | 中性 | 66.70 | 73.00 | 夜盤背離 |\n| 2363 | 矽統 | 51.80 | -1.33 | 爆大量(跌) | 53.77 | 長上影 | -7.8% | B5/S12 | 85 | 中性 | 51.60 | 56.30 | 夜盤背離、長上影 |\n| 6226 | 光鼎 | 29.60 | -8.64 | n/a | 30.53 | - | -4.7% | B7/S12 | 83 | 中性 | 29.60 | 32.70 | 夜盤背離 |\n| 2465 | 麗臺 | 96.90 | -5.46 | n/a | 100.87 | - | -16.0% | B6/S14 | 82 | 中性 | 95.50 | 107.00 | 夜盤背離 |\n| 2305 | 全友 | 33.20 | -0.60 | 爆大量(跌) | 34.10 | 長上影 | -8.1% | B5/S9 | 80 | 中性 | 32.75 | 36.20 | 夜盤背離、長上影 |\n| 6834 | 天二科技 | 98.70 | 1.75 | 爆大量(漲) | 100.73 | 長上影 | +1.9% | B12/S6 | 80 | 偏多* | 97.80 | 105.00 | 長上影 |\n| 3605 | 宏致 | 124.00 | 2.90 | n/a | 127.39 | 長上影 | -6.9% | B15/S8 | 74 | 中性 | 120.00 | 132.50 | 長上影 |\n| 3016 | 嘉晶 | 101.50 | 1.00 | 爆大量(漲) | 104.76 | 長上影 | +0.1% | B7/S6 | 73 | 偏多* | 101.00 | 108.50 | 長上影 |\n\n**點位口徑**：壓力＝昨高、支撐＝昨低；均價＝成交額÷成交股數，可當箱內中軸。\n**爆大量**＝當日量 ≥ 近 15 交易日均量 × 2；否則 n/a。漲紅跌綠。\n**法人**＝三大法人淨買佔成交%；**分點**＝前5買超／賣超佔比。偏向 `*`＝夜盤微調。\n\n### 4. 操作紀律\n- 只做觀察池，不保證方向；開盤 15 分鐘量能不足則降倉。\n- 當沖嚴設停損；高當沖率＋高振幅常為隔日沖雜訊。\n- 本報告不構成投資建議。\n\n_engine: twse_screener v1 + daytrade_report_0730 · deliver ready_",
@@ -1946,9 +2006,15 @@
     "special_reference_detector": "unavailable",
     "note": "support_obs/resistance_obs 仍為昨低／昨高；影子點位見 support_shadow／resistance_shadow"
   },
+  "open_structure": {
+    "label": "開盤結構偏向",
+    "calculation_version": "open_structure_0905_v1",
+    "session_date": "20260909",
+    "note": "開盤結構偏向；非正式進場單。support_obs／resistance_obs／vwap／綜評分未改"
+  },
   "tracker": {
     "id": "20260908",
-    "updated_at": "2026-09-09T07:31:42",
+    "updated_at": "2026-09-09T09:06:35",
     "source": "daytrade_report_0730"
   }
 }
