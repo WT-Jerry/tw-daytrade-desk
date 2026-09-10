@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-09-10T09:06:35+08:00",
+  "updated_at": "2026-09-11T07:31:17+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260904",
+  "cutoff": "20260905",
   "entries": [
+    {
+      "date": "20260910",
+      "generated_at": "2026-09-11T07:31:17",
+      "gate_tag": "高波動警戒（大跌）",
+      "gate_advice": "|Δ|=797≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
+      "index_change": -797.0,
+      "index_change_pct": "-1.70%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "3016 嘉晶",
+        "2605 新興",
+        "2305 全友",
+        "6949 沛爾生醫*-創",
+        "2615 萬海"
+      ],
+      "file": "data/reports/20260910.json"
+    },
     {
       "date": "20260909",
       "generated_at": "2026-09-10T07:31:11",
@@ -63,5 +82,5 @@
       "file": "data/reports/20260907.json"
     }
   ],
-  "count": 3
+  "count": 4
 }
