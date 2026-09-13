@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-09-11T09:06:33+08:00",
+  "updated_at": "2026-09-14T07:31:33+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260905",
+  "cutoff": "20260908",
   "entries": [
+    {
+      "date": "20260911",
+      "generated_at": "2026-09-14T07:31:33",
+      "gate_tag": "高波動警戒（大漲）",
+      "gate_advice": "|Δ|=401≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。｜週一：那指週末 -1.10%（NQ）、費半週五 +1.81%（否決資料），未達大幅、不改夜盤。",
+      "index_change": 401.0,
+      "index_change_pct": "+0.87%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "6706 惠特",
+        "3016 嘉晶",
+        "6505 台塑化",
+        "1709 和益",
+        "2409 友達"
+      ],
+      "file": "data/reports/20260911.json"
+    },
     {
       "date": "20260910",
       "generated_at": "2026-09-11T07:31:17",
@@ -42,45 +61,7 @@
         "2615 萬海"
       ],
       "file": "data/reports/20260909.json"
-    },
-    {
-      "date": "20260908",
-      "generated_at": "2026-09-09T07:31:42",
-      "gate_tag": "偏多",
-      "gate_advice": "夜盤／參考 +100（100–300）：提高偏多池權重；慎追過度延伸。",
-      "index_change": 100.0,
-      "index_change_pct": "+0.21%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2409 友達",
-        "3715 定穎投控",
-        "2436 偉詮電",
-        "2363 矽統",
-        "6226 光鼎"
-      ],
-      "file": "data/reports/20260908.json"
-    },
-    {
-      "date": "20260907",
-      "generated_at": "2026-09-08T07:31:22",
-      "gate_tag": "偏空",
-      "gate_advice": "夜盤／參考 -133（−300–−100）：提高偏空池權重；慎追昨強勢高位。",
-      "index_change": -133.0,
-      "index_change_pct": "-0.28%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2409 友達",
-        "6770 力積電",
-        "3094 聯傑",
-        "2303 聯電",
-        "3605 宏致"
-      ],
-      "file": "data/reports/20260907.json"
     }
   ],
-  "count": 4
+  "count": 3
 }
