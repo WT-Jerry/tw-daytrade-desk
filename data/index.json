@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-09-14T09:06:35+08:00",
+  "updated_at": "2026-09-15T07:31:35+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260908",
+  "cutoff": "20260909",
   "entries": [
+    {
+      "date": "20260914",
+      "generated_at": "2026-09-15T07:31:35",
+      "gate_tag": "偏空",
+      "gate_advice": "夜盤／參考 -221（−300–−100）：提高偏空池權重；慎追昨強勢高位。",
+      "index_change": -221.0,
+      "index_change_pct": "-0.48%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "6226 光鼎",
+        "6112 邁達特",
+        "3016 嘉晶",
+        "3605 宏致",
+        "6209 今國光"
+      ],
+      "file": "data/reports/20260914.json"
+    },
     {
       "date": "20260911",
       "generated_at": "2026-09-14T07:31:33",
@@ -42,25 +61,6 @@
         "2615 萬海"
       ],
       "file": "data/reports/20260910.json"
-    },
-    {
-      "date": "20260909",
-      "generated_at": "2026-09-10T07:31:11",
-      "gate_tag": "偏空",
-      "gate_advice": "夜盤／參考 -194（−300–−100）：提高偏空池權重；慎追昨強勢高位。",
-      "index_change": -194.0,
-      "index_change_pct": "-0.41%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2409 友達",
-        "3715 定穎投控",
-        "1409 新纖",
-        "8150 南茂",
-        "2615 萬海"
-      ],
-      "file": "data/reports/20260909.json"
     }
   ],
   "count": 3
