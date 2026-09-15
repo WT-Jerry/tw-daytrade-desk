@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-09-15T09:06:31+08:00",
+  "updated_at": "2026-09-16T07:31:48+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260909",
+  "cutoff": "20260910",
   "entries": [
+    {
+      "date": "20260915",
+      "generated_at": "2026-09-16T07:31:48",
+      "gate_tag": "中性",
+      "gate_advice": "|Δ|=63<100：中性盤，多空皆可，重個股結構與開盤量能。",
+      "index_change": -63.0,
+      "index_change_pct": "-0.14%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 6,
+      "relaxed": false,
+      "top_codes": [
+        "3016 嘉晶",
+        "2338 光罩",
+        "3029 零壹",
+        "2489 瑞軒",
+        "3605 宏致"
+      ],
+      "file": "data/reports/20260915.json"
+    },
     {
       "date": "20260914",
       "generated_at": "2026-09-15T07:31:35",
@@ -42,25 +61,6 @@
         "2409 友達"
       ],
       "file": "data/reports/20260911.json"
-    },
-    {
-      "date": "20260910",
-      "generated_at": "2026-09-11T07:31:17",
-      "gate_tag": "高波動警戒（大跌）",
-      "gate_advice": "|Δ|=797≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
-      "index_change": -797.0,
-      "index_change_pct": "-1.70%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "3016 嘉晶",
-        "2605 新興",
-        "2305 全友",
-        "6949 沛爾生醫*-創",
-        "2615 萬海"
-      ],
-      "file": "data/reports/20260910.json"
     }
   ],
   "count": 3
