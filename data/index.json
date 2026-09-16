@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-09-16T09:06:34+08:00",
+  "updated_at": "2026-09-17T07:32:00+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260910",
+  "cutoff": "20260911",
   "entries": [
+    {
+      "date": "20260916",
+      "generated_at": "2026-09-17T07:32:00",
+      "gate_tag": "高波動警戒（大漲）",
+      "gate_advice": "|Δ|=322≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
+      "index_change": 322.0,
+      "index_change_pct": "+0.70%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "1727 中華化",
+        "3605 宏致",
+        "2489 瑞軒",
+        "6168 宏齊",
+        "2484 希華"
+      ],
+      "file": "data/reports/20260916.json"
+    },
     {
       "date": "20260915",
       "generated_at": "2026-09-16T07:31:48",
@@ -42,25 +61,6 @@
         "6209 今國光"
       ],
       "file": "data/reports/20260914.json"
-    },
-    {
-      "date": "20260911",
-      "generated_at": "2026-09-14T07:31:33",
-      "gate_tag": "高波動警戒（大漲）",
-      "gate_advice": "|Δ|=401≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。｜週一：那指週末 -1.10%（NQ）、費半週五 +1.81%（否決資料），未達大幅、不改夜盤。",
-      "index_change": 401.0,
-      "index_change_pct": "+0.87%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "6706 惠特",
-        "3016 嘉晶",
-        "6505 台塑化",
-        "1709 和益",
-        "2409 友達"
-      ],
-      "file": "data/reports/20260911.json"
     }
   ],
   "count": 3
