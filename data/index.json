@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-09-18T09:06:37+08:00",
+  "updated_at": "2026-09-21T07:31:37+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260912",
+  "cutoff": "20260915",
   "entries": [
+    {
+      "date": "20260918",
+      "generated_at": "2026-09-21T07:31:37",
+      "gate_tag": "週一警戒（美股週末大幅）",
+      "gate_advice": "|Δ|=23<100：中性盤，多空皆可，重個股結構與開盤量能。｜週一：那指週末 +1.36%（NQ）、費半週五 +2.78%（否決資料、不作主資料）；美股週末大幅，提高警戒、開盤前不追。",
+      "index_change": -23.0,
+      "index_change_pct": "-0.05%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "1727 中華化",
+        "8150 南茂",
+        "1709 和益",
+        "6834 天二科技",
+        "4956 光鋐"
+      ],
+      "file": "data/reports/20260918.json"
+    },
     {
       "date": "20260917",
       "generated_at": "2026-09-18T07:31:21",
@@ -42,45 +61,7 @@
         "2484 希華"
       ],
       "file": "data/reports/20260916.json"
-    },
-    {
-      "date": "20260915",
-      "generated_at": "2026-09-16T07:31:48",
-      "gate_tag": "中性",
-      "gate_advice": "|Δ|=63<100：中性盤，多空皆可，重個股結構與開盤量能。",
-      "index_change": -63.0,
-      "index_change_pct": "-0.14%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 6,
-      "relaxed": false,
-      "top_codes": [
-        "3016 嘉晶",
-        "2338 光罩",
-        "3029 零壹",
-        "2489 瑞軒",
-        "3605 宏致"
-      ],
-      "file": "data/reports/20260915.json"
-    },
-    {
-      "date": "20260914",
-      "generated_at": "2026-09-15T07:31:35",
-      "gate_tag": "偏空",
-      "gate_advice": "夜盤／參考 -221（−300–−100）：提高偏空池權重；慎追昨強勢高位。",
-      "index_change": -221.0,
-      "index_change_pct": "-0.48%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "6226 光鼎",
-        "6112 邁達特",
-        "3016 嘉晶",
-        "3605 宏致",
-        "6209 今國光"
-      ],
-      "file": "data/reports/20260914.json"
     }
   ],
-  "count": 4
+  "count": 3
 }
