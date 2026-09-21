@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-09-21T09:06:34+08:00",
+  "updated_at": "2026-09-22T07:31:41+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260915",
+  "cutoff": "20260916",
   "entries": [
+    {
+      "date": "20260921",
+      "generated_at": "2026-09-22T07:31:41",
+      "gate_tag": "高波動警戒（大漲）",
+      "gate_advice": "|Δ|=728≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
+      "index_change": 728.0,
+      "index_change_pct": "+1.51%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "6834 天二科技",
+        "2369 菱生",
+        "8150 南茂",
+        "8110 華東",
+        "2409 友達"
+      ],
+      "file": "data/reports/20260921.json"
+    },
     {
       "date": "20260918",
       "generated_at": "2026-09-21T07:31:37",
@@ -42,25 +61,6 @@
         "8103 瀚荃"
       ],
       "file": "data/reports/20260917.json"
-    },
-    {
-      "date": "20260916",
-      "generated_at": "2026-09-17T07:32:00",
-      "gate_tag": "高波動警戒（大漲）",
-      "gate_advice": "|Δ|=322≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
-      "index_change": 322.0,
-      "index_change_pct": "+0.70%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "1727 中華化",
-        "3605 宏致",
-        "2489 瑞軒",
-        "6168 宏齊",
-        "2484 希華"
-      ],
-      "file": "data/reports/20260916.json"
     }
   ],
   "count": 3
