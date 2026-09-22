@@ -325,7 +325,13 @@
             "rolling_high_15d"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "2369",
@@ -522,7 +528,13 @@
             "pivot_r1"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "8150",
@@ -688,7 +700,13 @@
             "vwap"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "8110",
@@ -862,7 +880,13 @@
             "rolling_high_15d"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "2409",
@@ -1041,7 +1065,13 @@
             "rolling_high_15d"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "3714",
@@ -1193,7 +1223,13 @@
           "price": 60.0,
           "reason": "outside_estimated_limit"
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "6456",
@@ -1364,7 +1400,13 @@
             "rolling_high_15d"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "3717",
@@ -1541,7 +1583,13 @@
             "previous_day_low"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "4919",
@@ -1726,7 +1774,13 @@
             "rolling_high_15d"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "3016",
@@ -1910,7 +1964,13 @@
             "rolling_high_15d"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "insufficient_data",
+      "open_structure_zh": "資料不足",
+      "open_structure_event": "none",
+      "open_structure_reason": "抓取失敗",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     }
   ],
   "report_text": "[FINANCE]\n**每日當沖觀察報告（07:30）** · 資料日 `D=20260921`\n產出時間：2026-09-22 07:31:41\n\n### 1. 大盤／夜盤情境\n- 來源：台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）\n- 參考價：48,778｜昨收：48,053｜漲跌：**+728**（+1.51%）\n- 區間：開 48,121／高 48,805／低 48,105\n- 情境標籤：**高波動警戒（大漲）**\n- 操作建議：|Δ|=728≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。\n- 🚨 **|夜盤|≥300**：置頂高波動警戒，降低強進場語氣\n\n### 2. 選股規則（v1 硬性）\n- 價 10.0–150.0｜量≥6000 張｜額≥5 億｜當沖≥25%｜振幅≥5%（前收）\n- 排除：注意股 16／處置 3\n- 觀察池檔數：10（top 輸出）\n\n### 3. 觀察池（含點位）\n| 代號 | 名稱 | 收盤 | 漲跌% | 爆大量 | 均價 | K棒 | 法人 | 分點 | 綜評分 | 偏向 | S | R | 註 |\n|---|---|---:|---:|---|---:|---|---:|---|---:|---|---:|---:|---|\n| 6834 | 天二科技 | 115.00 | 4.07 | 爆大量(漲) | 114.95 | 長上影 | -7.2% | B6/S10 | 100 | 偏多* | 109.50 | 119.50 | 長上影 |\n| 2369 | 菱生 | 32.25 | 4.03 | 爆大量(漲) | 32.60 | 長上影 | -8.5% | B5/S10 | 100 | 中性 | 31.55 | 33.60 | 長上影 |\n| 8150 | 南茂 | 103.00 | 9.57 | 爆大量(漲) | 101.70 | 近漲停 | +24.2% | B33/S5 | 95 | 偏多 | 94.80 | 103.00 | 近漲停 |\n| 8110 | 華東 | 52.10 | 9.92 | 爆大量(漲) | 50.78 | 近漲停 | -8.4% | B18/S10 | 92 | 偏多* | 48.55 | 52.10 | 近漲停 |\n| 2409 | 友達 | 33.35 | 9.88 | 爆大量(漲) | 32.76 | 近漲停 | +31.4% | B37/S3 | 91 | 偏多 | 31.80 | 33.35 | 近漲停 |\n| 3714 | 富采 | 68.80 | 2.08 | n/a | 68.79 | 長上影 | -11.7% | B4/S13 | 88 | 中性 | 67.10 | 70.80 | 長上影 |\n| 6456 | GIS-KY | 71.90 | 9.94 | 爆大量(漲) | 71.23 | 近漲停 | +28.4% | B31/S7 | 88 | 偏多 | 65.90 | 71.90 | 近漲停 |\n| 3717 | 聯嘉投控 | 24.90 | -0.80 | 爆大量(跌) | 26.18 | 長上影 | +4.1% | B11/S13 | 83 | 偏多* | 24.80 | 27.60 | 夜盤背離、缺口反轉風險、長上影 |\n| 4919 | 新唐 | 125.50 | -0.79 | 爆大量(跌) | 128.41 | - | -30.5% | B5/S39 | 80 | 中性 | 125.00 | 135.00 | 夜盤背離、缺口反轉風險 |\n| 3016 | 嘉晶 | 120.50 | 3.43 | n/a | 119.23 | - | +21.5% | B20/S4 | 79 | 偏多 | 115.50 | 123.00 | - |\n\n**點位口徑**：壓力＝昨高、支撐＝昨低；均價＝成交額÷成交股數，可當箱內中軸。\n**爆大量**＝當日量 ≥ 近 15 交易日均量 × 2；否則 n/a。漲紅跌綠。\n**法人**＝三大法人淨買佔成交%；**分點**＝前5買超／賣超佔比。偏向 `*`＝夜盤微調。\n\n### 4. 操作紀律\n- 只做觀察池，不保證方向；開盤 15 分鐘量能不足則降倉。\n- 當沖嚴設停損；高當沖率＋高振幅常為隔日沖雜訊。\n- 本報告不構成投資建議。\n\n_engine: twse_screener v1 + daytrade_report_0730 · deliver ready_",
@@ -1919,9 +1979,15 @@
     "special_reference_detector": "unavailable",
     "note": "support_obs/resistance_obs 仍為昨低／昨高；影子點位見 support_shadow／resistance_shadow"
   },
+  "open_structure": {
+    "label": "開盤結構偏向",
+    "calculation_version": "open_structure_0905_v1",
+    "session_date": "20260922",
+    "note": "開盤結構偏向；非正式進場單。support_obs／resistance_obs／vwap／綜評分未改"
+  },
   "tracker": {
     "id": "20260921",
-    "updated_at": "2026-09-22T07:31:41",
+    "updated_at": "2026-09-22T09:06:33",
     "source": "daytrade_report_0730"
   }
 }
