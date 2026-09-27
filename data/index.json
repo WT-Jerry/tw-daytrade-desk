@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-09-25T09:06:36+08:00",
+  "updated_at": "2026-09-28T07:31:44+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260919",
+  "cutoff": "20260922",
   "entries": [
     {
       "date": "20260924",
-      "generated_at": "2026-09-25T07:31:57",
+      "generated_at": "2026-09-28T07:31:44",
       "gate_tag": "偏空",
-      "gate_advice": "夜盤／參考 -169（−300–−100）：提高偏空池權重；慎追昨強勢高位。",
+      "gate_advice": "夜盤／參考 -169（−300–−100）：提高偏空池權重；慎追昨強勢高位。｜週一：那指週末 -0.22%（NQ）、費半週五 +1.41%（否決資料），未達大幅、不改夜盤。",
       "index_change": -169.0,
       "index_change_pct": "-0.35%",
       "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
@@ -42,45 +42,7 @@
         "2030 彰源"
       ],
       "file": "data/reports/20260923.json"
-    },
-    {
-      "date": "20260922",
-      "generated_at": "2026-09-23T07:31:29",
-      "gate_tag": "偏多",
-      "gate_advice": "夜盤／參考 +272（100–300）：提高偏多池權重；慎追過度延伸。",
-      "index_change": 272.0,
-      "index_change_pct": "+0.56%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "3016 嘉晶",
-        "3715 定穎投控",
-        "8150 南茂",
-        "1528 恩德",
-        "6456 GIS-KY"
-      ],
-      "file": "data/reports/20260922.json"
-    },
-    {
-      "date": "20260921",
-      "generated_at": "2026-09-22T07:31:41",
-      "gate_tag": "高波動警戒（大漲）",
-      "gate_advice": "|Δ|=728≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
-      "index_change": 728.0,
-      "index_change_pct": "+1.51%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "6834 天二科技",
-        "2369 菱生",
-        "8150 南茂",
-        "8110 華東",
-        "2409 友達"
-      ],
-      "file": "data/reports/20260921.json"
     }
   ],
-  "count": 4
+  "count": 2
 }
