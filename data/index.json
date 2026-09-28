@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-09-28T09:06:36+08:00",
+  "updated_at": "2026-09-29T07:31:46+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260922",
+  "cutoff": "20260923",
   "entries": [
     {
       "date": "20260924",
-      "generated_at": "2026-09-28T07:31:44",
+      "generated_at": "2026-09-29T07:31:46",
       "gate_tag": "偏空",
-      "gate_advice": "夜盤／參考 -169（−300–−100）：提高偏空池權重；慎追昨強勢高位。｜週一：那指週末 -0.22%（NQ）、費半週五 +1.41%（否決資料），未達大幅、不改夜盤。",
+      "gate_advice": "夜盤／參考 -169（−300–−100）：提高偏空池權重；慎追昨強勢高位。",
       "index_change": -169.0,
       "index_change_pct": "-0.35%",
       "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
@@ -23,26 +23,7 @@
         "1727 中華化"
       ],
       "file": "data/reports/20260924.json"
-    },
-    {
-      "date": "20260923",
-      "generated_at": "2026-09-24T07:30:53",
-      "gate_tag": "高波動警戒（大跌）",
-      "gate_advice": "|Δ|=403≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
-      "index_change": -403.0,
-      "index_change_pct": "-0.83%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2302 麗正",
-        "2409 友達",
-        "2484 希華",
-        "3645 達邁",
-        "2030 彰源"
-      ],
-      "file": "data/reports/20260923.json"
     }
   ],
-  "count": 2
+  "count": 1
 }
