@@ -1,28 +1,28 @@
 {
-  "updated_at": "2026-09-29T09:06:37+08:00",
+  "updated_at": "2026-09-30T07:30:56+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260923",
+  "cutoff": "20260924",
   "entries": [
     {
-      "date": "20260924",
-      "generated_at": "2026-09-29T07:31:46",
-      "gate_tag": "偏空",
-      "gate_advice": "夜盤／參考 -169（−300–−100）：提高偏空池權重；慎追昨強勢高位。",
-      "index_change": -169.0,
-      "index_change_pct": "-0.35%",
+      "date": "20260929",
+      "generated_at": "2026-09-30T07:30:56",
+      "gate_tag": "高波動警戒（大漲）",
+      "gate_advice": "|Δ|=698≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
+      "index_change": 698.0,
+      "index_change_pct": "+1.46%",
       "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
       "count": 10,
       "relaxed": false,
       "top_codes": [
-        "4566 時碩工業",
-        "2342 茂矽",
-        "6205 詮欣",
-        "6456 GIS-KY",
-        "1727 中華化"
+        "2436 偉詮電",
+        "4956 光鋐",
+        "2484 希華",
+        "6209 今國光",
+        "3149 正達"
       ],
-      "file": "data/reports/20260924.json"
+      "file": "data/reports/20260929.json"
     }
   ],
   "count": 1
