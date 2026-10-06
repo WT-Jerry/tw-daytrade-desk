@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-10-06T09:05:25+08:00",
+  "updated_at": "2026-10-07T07:32:16+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20260930",
+  "cutoff": "20261001",
   "entries": [
+    {
+      "date": "20261006",
+      "generated_at": "2026-10-07T07:32:16",
+      "gate_tag": "中性",
+      "gate_advice": "|Δ|=31<100：中性盤，多空皆可，重個股結構與開盤量能。",
+      "index_change": -31.0,
+      "index_change_pct": "-0.06%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "4927 泰鼎-KY",
+        "2484 希華",
+        "1711 永光",
+        "6168 宏齊",
+        "2485 兆赫"
+      ],
+      "file": "data/reports/20261006.json"
+    },
     {
       "date": "20261005",
       "generated_at": "2026-10-06T07:32:33",
@@ -42,25 +61,6 @@
         "6834 天二科技"
       ],
       "file": "data/reports/20261002.json"
-    },
-    {
-      "date": "20261001",
-      "generated_at": "2026-10-02T07:32:08",
-      "gate_tag": "偏空",
-      "gate_advice": "夜盤／參考 -223（−300–−100）：提高偏空池權重；慎追昨強勢高位。",
-      "index_change": -223.0,
-      "index_change_pct": "-0.46%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2340 台亞",
-        "2399 映泰",
-        "3673 TPK-KY",
-        "2484 希華",
-        "2478 大毅"
-      ],
-      "file": "data/reports/20261001.json"
     }
   ],
   "count": 3
