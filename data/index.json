@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-10-07T09:05:27+08:00",
+  "updated_at": "2026-10-08T07:32:34+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261001",
+  "cutoff": "20261002",
   "entries": [
+    {
+      "date": "20261007",
+      "generated_at": "2026-10-08T07:32:34",
+      "gate_tag": "高波動警戒（大跌）",
+      "gate_advice": "|Δ|=375≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
+      "index_change": -375.0,
+      "index_change_pct": "-0.75%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "3715 定穎投控",
+        "6456 GIS-KY",
+        "2375 凱美",
+        "2478 大毅",
+        "1711 永光"
+      ],
+      "file": "data/reports/20261007.json"
+    },
     {
       "date": "20261006",
       "generated_at": "2026-10-07T07:32:16",
@@ -42,25 +61,6 @@
         "2485 兆赫"
       ],
       "file": "data/reports/20261005.json"
-    },
-    {
-      "date": "20261002",
-      "generated_at": "2026-10-05T07:31:39",
-      "gate_tag": "高波動警戒（大漲）",
-      "gate_advice": "|Δ|=677≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。｜週一：那指週末 +0.33%（NQ）、費半週五 +2.40%（否決資料、不作主資料）；美股週末大幅，提高警戒、開盤前不追。",
-      "index_change": 677.0,
-      "index_change_pct": "+1.39%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "3673 TPK-KY",
-        "4927 泰鼎-KY",
-        "2305 全友",
-        "6226 光鼎",
-        "6834 天二科技"
-      ],
-      "file": "data/reports/20261002.json"
     }
   ],
   "count": 3
