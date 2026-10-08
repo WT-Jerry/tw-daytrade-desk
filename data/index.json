@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-10-08T09:05:24+08:00",
+  "updated_at": "2026-10-09T07:31:46+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261002",
+  "cutoff": "20261003",
   "entries": [
+    {
+      "date": "20261008",
+      "generated_at": "2026-10-09T07:31:46",
+      "gate_tag": "高波動警戒（大跌）",
+      "gate_advice": "|Δ|=652≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
+      "index_change": -652.0,
+      "index_change_pct": "-1.32%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "1301 台塑",
+        "1718 中纖",
+        "2241 艾姆勒",
+        "6834 天二科技",
+        "1802 台玻"
+      ],
+      "file": "data/reports/20261008.json"
+    },
     {
       "date": "20261007",
       "generated_at": "2026-10-08T07:32:34",
@@ -63,5 +82,5 @@
       "file": "data/reports/20261005.json"
     }
   ],
-  "count": 3
+  "count": 4
 }
