@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-10-09T09:06:38+08:00",
+  "updated_at": "2026-10-12T07:31:48+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261003",
+  "cutoff": "20261006",
   "entries": [
     {
       "date": "20261008",
-      "generated_at": "2026-10-09T07:31:46",
+      "generated_at": "2026-10-12T07:31:48",
       "gate_tag": "高波動警戒（大跌）",
-      "gate_advice": "|Δ|=652≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
+      "gate_advice": "|Δ|=652≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。｜週一：那指週末 +0.42%（NQ）、費半週五 -0.41%（否決資料），未達大幅、不改夜盤。",
       "index_change": -652.0,
       "index_change_pct": "-1.32%",
       "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
@@ -42,45 +42,7 @@
         "1711 永光"
       ],
       "file": "data/reports/20261007.json"
-    },
-    {
-      "date": "20261006",
-      "generated_at": "2026-10-07T07:32:16",
-      "gate_tag": "中性",
-      "gate_advice": "|Δ|=31<100：中性盤，多空皆可，重個股結構與開盤量能。",
-      "index_change": -31.0,
-      "index_change_pct": "-0.06%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "4927 泰鼎-KY",
-        "2484 希華",
-        "1711 永光",
-        "6168 宏齊",
-        "2485 兆赫"
-      ],
-      "file": "data/reports/20261006.json"
-    },
-    {
-      "date": "20261005",
-      "generated_at": "2026-10-06T07:32:33",
-      "gate_tag": "偏多",
-      "gate_advice": "夜盤／參考 +174（100–300）：提高偏多池權重；慎追過度延伸。",
-      "index_change": 174.0,
-      "index_change_pct": "+0.35%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "6209 今國光",
-        "4989 榮科",
-        "6168 宏齊",
-        "2305 全友",
-        "2485 兆赫"
-      ],
-      "file": "data/reports/20261005.json"
     }
   ],
-  "count": 4
+  "count": 2
 }
