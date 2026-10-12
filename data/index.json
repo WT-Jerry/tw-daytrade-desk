@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-10-12T09:06:05+08:00",
+  "updated_at": "2026-10-13T07:32:31+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261006",
+  "cutoff": "20261007",
   "entries": [
+    {
+      "date": "20261012",
+      "generated_at": "2026-10-13T07:32:31",
+      "gate_tag": "高波動警戒（大跌）",
+      "gate_advice": "|Δ|=399≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
+      "index_change": -399.0,
+      "index_change_pct": "-0.81%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "6834 天二科技",
+        "1312 國喬",
+        "6668 中揚光",
+        "2609 陽明",
+        "6282 康舒"
+      ],
+      "file": "data/reports/20261012.json"
+    },
     {
       "date": "20261008",
       "generated_at": "2026-10-12T07:31:48",
@@ -23,25 +42,6 @@
         "1802 台玻"
       ],
       "file": "data/reports/20261008.json"
-    },
-    {
-      "date": "20261007",
-      "generated_at": "2026-10-08T07:32:34",
-      "gate_tag": "高波動警戒（大跌）",
-      "gate_advice": "|Δ|=375≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
-      "index_change": -375.0,
-      "index_change_pct": "-0.75%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "3715 定穎投控",
-        "6456 GIS-KY",
-        "2375 凱美",
-        "2478 大毅",
-        "1711 永光"
-      ],
-      "file": "data/reports/20261007.json"
     }
   ],
   "count": 2
