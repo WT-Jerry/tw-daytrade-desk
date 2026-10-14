@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-10-14T09:05:23+08:00",
+  "updated_at": "2026-10-15T07:30:55+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261008",
+  "cutoff": "20261009",
   "entries": [
+    {
+      "date": "20261014",
+      "generated_at": "2026-10-15T07:30:55",
+      "gate_tag": "高波動警戒（大跌）",
+      "gate_advice": "|Δ|=853≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
+      "index_change": -853.0,
+      "index_change_pct": "-1.75%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "1802 台玻",
+        "2402 毅嘉",
+        "3311 閎暉",
+        "4927 泰鼎-KY",
+        "1718 中纖"
+      ],
+      "file": "data/reports/20261014.json"
+    },
     {
       "date": "20261013",
       "generated_at": "2026-10-14T07:31:59",
@@ -44,5 +63,5 @@
       "file": "data/reports/20261012.json"
     }
   ],
-  "count": 2
+  "count": 3
 }
