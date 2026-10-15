@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-10-15T09:05:25+08:00",
+  "updated_at": "2026-10-16T07:31:51+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261009",
+  "cutoff": "20261010",
   "entries": [
+    {
+      "date": "20261015",
+      "generated_at": "2026-10-16T07:31:51",
+      "gate_tag": "高波動警戒（大漲）",
+      "gate_advice": "|Δ|=435≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
+      "index_change": 435.0,
+      "index_change_pct": "+0.93%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "2355 敬鵬",
+        "6209 今國光",
+        "2305 全友",
+        "4927 泰鼎-KY",
+        "2468 華經"
+      ],
+      "file": "data/reports/20261015.json"
+    },
     {
       "date": "20261014",
       "generated_at": "2026-10-15T07:30:55",
@@ -63,5 +82,5 @@
       "file": "data/reports/20261012.json"
     }
   ],
-  "count": 3
+  "count": 4
 }
