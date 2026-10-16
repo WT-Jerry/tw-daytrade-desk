@@ -344,7 +344,13 @@
             "pivot_r1"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "bearish_watch",
+      "open_structure_zh": "偏空觀察",
+      "open_structure_event": "false_breakout",
+      "open_structure_reason": "第一根假突破53.6後收在下方，偏空觀察；量能無同時段可比；先賣後買未核",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "6209",
@@ -516,7 +522,13 @@
             "rolling_high_15d"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "bearish_watch",
+      "open_structure_zh": "偏空觀察",
+      "open_structure_event": "false_breakout",
+      "open_structure_reason": "第一根假突破93後收在下方，偏空觀察；量能無同時段可比；先賣後買未核",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "2305",
@@ -690,7 +702,13 @@
             "pivot_r1"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "neutral_watch",
+      "open_structure_zh": "先觀望",
+      "open_structure_event": "gap_up_hold",
+      "open_structure_reason": "跳空站上57.8，偏多觀察；距離下一層不足，改先觀望",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": true
     },
     {
       "code": "4927",
@@ -882,7 +900,13 @@
             "pivot_r1"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "neutral_watch",
+      "open_structure_zh": "先觀望",
+      "open_structure_event": "false_breakout",
+      "open_structure_reason": "第一根假突破56.7後收在下方，偏空觀察；距離下一層不足，改先觀望",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": true
     },
     {
       "code": "2468",
@@ -1065,7 +1089,13 @@
             "rolling_high_15d"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "bearish_watch",
+      "open_structure_zh": "偏空觀察",
+      "open_structure_event": "false_breakout",
+      "open_structure_reason": "第一根假突破47.5後收在下方，偏空觀察；量能無同時段可比；先賣後買未核",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "2375",
@@ -1252,7 +1282,13 @@
             "rolling_high_15d"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "neutral_watch",
+      "open_structure_zh": "先觀望",
+      "open_structure_event": "gap_up_hold",
+      "open_structure_reason": "跳空站上131，偏多觀察；距離下一層不足，改先觀望",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": true
     },
     {
       "code": "6668",
@@ -1426,7 +1462,13 @@
             "vwap"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "bullish_watch",
+      "open_structure_zh": "偏多觀察",
+      "open_structure_event": "false_breakdown",
+      "open_structure_reason": "第一根假跌破65後收在上方，偏多觀察；量能無同時段可比",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "6456",
@@ -1623,7 +1665,13 @@
             "pivot_r1"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "neutral_watch",
+      "open_structure_zh": "先觀望",
+      "open_structure_event": "false_breakout",
+      "open_structure_reason": "第一根假突破88.7後收在下方，偏空觀察；距離下一層不足，改先觀望",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": true
     },
     {
       "code": "1312",
@@ -1796,7 +1844,13 @@
             "pivot_r1"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "bullish_watch",
+      "open_structure_zh": "偏多觀察",
+      "open_structure_event": "false_breakdown",
+      "open_structure_reason": "第一根假跌破16.35後收在上方，偏多觀察；量能無同時段可比",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     },
     {
       "code": "3045",
@@ -1958,7 +2012,13 @@
             "vwap"
           ]
         }
-      ]
+      ],
+      "open_structure_bias": "bullish_watch",
+      "open_structure_zh": "偏多觀察",
+      "open_structure_event": "gap_up_hold",
+      "open_structure_reason": "跳空站上126.5，偏多觀察；量能無同時段可比",
+      "open_structure_confidence": "low",
+      "open_structure_space_insufficient": false
     }
   ],
   "report_text": "[FINANCE]\n**每日當沖觀察報告（07:30）** · 資料日 `D=20261015`\n產出時間：2026-10-16 07:31:51\n\n### 1. 大盤／夜盤情境\n- 來源：台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）\n- 參考價：47,347｜昨收：46,931｜漲跌：**+435**（+0.93%）\n- 區間：開 46,926／高 47,417／低 46,456\n- 情境標籤：**高波動警戒（大漲）**\n- 操作建議：|Δ|=435≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。\n- 🚨 **|夜盤|≥300**：置頂高波動警戒，降低強進場語氣\n\n### 2. 選股規則（v1 硬性）\n- 價 10.0–150.0｜量≥6000 張｜額≥5 億｜當沖≥25%｜振幅≥5%（前收）\n- 排除：注意股 16／處置 9\n- 觀察池檔數：10（top 輸出）\n\n### 3. 觀察池（含點位）\n| 代號 | 名稱 | 收盤 | 漲跌% | 爆大量 | 均價 | K棒 | 法人 | 分點 | 綜評分 | 偏向 | S | R | 註 |\n|---|---|---:|---:|---|---:|---|---:|---|---:|---|---:|---:|---|\n| 2355 | 敬鵬 | 53.60 | 3.28 | 爆大量(漲) | 54.08 | - | +8.7% | B18/S4 | 96 | 偏多 | 50.50 | 56.00 | - |\n| 6209 | 今國光 | 93.00 | 3.56 | 爆大量(漲) | 94.10 | - | +29.3% | B26/S3 | 90 | 偏多 | 86.40 | 98.00 | - |\n| 2305 | 全友 | 57.80 | -9.12 | n/a | 60.27 | 長上影 | +12.5% | B13/S8 | 90 | 偏多* | 57.80 | 63.70 | 夜盤背離、缺口反轉風險、長上影 |\n| 4927 | 泰鼎-KY | 56.00 | -6.04 | n/a | 56.72 | - | +14.6% | B15/S17 | 90 | 偏多* | 55.00 | 59.30 | 夜盤背離、缺口反轉風險 |\n| 2468 | 華經 | 46.50 | 0.76 | 爆大量(漲) | 47.49 | 長上影 | -5.5% | B4/S5 | 88 | 中性 | 44.85 | 49.60 | 長上影 |\n| 2375 | 凱美 | 131.00 | -4.03 | 爆大量(跌) | 135.02 | 長上影 | -9.5% | B4/S16 | 88 | 中性 | 130.00 | 141.50 | 夜盤背離、缺口反轉風險、長上影 |\n| 6668 | 中揚光 | 62.10 | -4.17 | 爆大量(跌) | 65.02 | 長上影 | -5.3% | B3/S12 | 82 | 中性 | 61.20 | 68.30 | 夜盤背離、缺口反轉風險、長上影 |\n| 6456 | GIS-KY | 88.70 | -2.74 | n/a | 91.65 | 長上影 | +12.0% | B13/S12 | 82 | 偏多* | 87.10 | 96.40 | 夜盤背離、缺口反轉風險、長上影 |\n| 1312 | 國喬 | 17.05 | -9.79 | 爆大量(跌) | 17.52 | 近跌停 | -38.6% | B4/S33 | 81 | 中性 | 17.05 | 19.10 | 夜盤背離、缺口反轉風險、近跌停 |\n| 3045 | 台灣大 | 131.00 | 3.56 | 爆大量(漲) | 130.63 | - | +53.3% | B46/S27 | 80 | 偏多 | 126.50 | 133.00 | - |\n\n**點位口徑**：壓力＝昨高、支撐＝昨低；均價＝成交額÷成交股數，可當箱內中軸。\n**爆大量**＝當日量 ≥ 近 15 交易日均量 × 2；否則 n/a。漲紅跌綠。\n**法人**＝三大法人淨買佔成交%；**分點**＝前5買超／賣超佔比。偏向 `*`＝夜盤微調。\n\n### 4. 操作紀律\n- 只做觀察池，不保證方向；開盤 15 分鐘量能不足則降倉。\n- 當沖嚴設停損；高當沖率＋高振幅常為隔日沖雜訊。\n- 本報告不構成投資建議。\n\n_engine: twse_screener v1 + daytrade_report_0730 · deliver ready_",
@@ -1967,9 +2027,15 @@
     "special_reference_detector": "unavailable",
     "note": "support_obs/resistance_obs 仍為昨低／昨高；影子點位見 support_shadow／resistance_shadow"
   },
+  "open_structure": {
+    "label": "開盤結構偏向",
+    "calculation_version": "open_structure_0905_v1",
+    "session_date": "20261016",
+    "note": "開盤結構偏向；非正式進場單。support_obs／resistance_obs／vwap／綜評分未改"
+  },
   "tracker": {
     "id": "20261015",
-    "updated_at": "2026-10-16T07:31:51",
+    "updated_at": "2026-10-16T09:05:24",
     "source": "daytrade_report_0730"
   }
 }
