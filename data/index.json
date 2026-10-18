@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-10-16T09:05:24+08:00",
+  "updated_at": "2026-10-19T07:31:19+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261010",
+  "cutoff": "20261013",
   "entries": [
+    {
+      "date": "20261016",
+      "generated_at": "2026-10-19T07:31:19",
+      "gate_tag": "高波動警戒（大跌）",
+      "gate_advice": "|Δ|=1144≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。｜週一：那指週末 +0.67%（NQ）、費半週五 -3.83%（否決資料、不作主資料）；美股週末大幅，提高警戒、開盤前不追。",
+      "index_change": -1144.0,
+      "index_change_pct": "-2.42%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "6153 嘉聯益",
+        "6209 今國光",
+        "2468 華經",
+        "1709 和益",
+        "2340 台亞"
+      ],
+      "file": "data/reports/20261016.json"
+    },
     {
       "date": "20261015",
       "generated_at": "2026-10-16T07:31:51",
@@ -42,45 +61,7 @@
         "1718 中纖"
       ],
       "file": "data/reports/20261014.json"
-    },
-    {
-      "date": "20261013",
-      "generated_at": "2026-10-14T07:31:59",
-      "gate_tag": "高波動警戒（大漲）",
-      "gate_advice": "|Δ|=363≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
-      "index_change": 363.0,
-      "index_change_pct": "+0.75%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "1312 國喬",
-        "2409 友達",
-        "4976 佳凌",
-        "2355 敬鵬",
-        "2484 希華"
-      ],
-      "file": "data/reports/20261013.json"
-    },
-    {
-      "date": "20261012",
-      "generated_at": "2026-10-13T07:32:31",
-      "gate_tag": "高波動警戒（大跌）",
-      "gate_advice": "|Δ|=399≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
-      "index_change": -399.0,
-      "index_change_pct": "-0.81%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "6834 天二科技",
-        "1312 國喬",
-        "6668 中揚光",
-        "2609 陽明",
-        "6282 康舒"
-      ],
-      "file": "data/reports/20261012.json"
     }
   ],
-  "count": 4
+  "count": 3
 }
