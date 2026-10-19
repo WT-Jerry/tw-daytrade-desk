@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-10-19T09:05:44+08:00",
+  "updated_at": "2026-10-20T07:31:24+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261013",
+  "cutoff": "20261014",
   "entries": [
+    {
+      "date": "20261019",
+      "generated_at": "2026-10-20T07:31:24",
+      "gate_tag": "中性",
+      "gate_advice": "|Δ|=78<100：中性盤，多空皆可，重個股結構與開盤量能。",
+      "index_change": -78.0,
+      "index_change_pct": "-0.17%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "4906 正文",
+        "3701 大眾控",
+        "6834 天二科技",
+        "4927 泰鼎-KY",
+        "3535 晶彩科"
+      ],
+      "file": "data/reports/20261019.json"
+    },
     {
       "date": "20261016",
       "generated_at": "2026-10-19T07:31:19",
@@ -42,25 +61,6 @@
         "2468 華經"
       ],
       "file": "data/reports/20261015.json"
-    },
-    {
-      "date": "20261014",
-      "generated_at": "2026-10-15T07:30:55",
-      "gate_tag": "高波動警戒（大跌）",
-      "gate_advice": "|Δ|=853≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
-      "index_change": -853.0,
-      "index_change_pct": "-1.75%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "1802 台玻",
-        "2402 毅嘉",
-        "3311 閎暉",
-        "4927 泰鼎-KY",
-        "1718 中纖"
-      ],
-      "file": "data/reports/20261014.json"
     }
   ],
   "count": 3
