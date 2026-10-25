@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-10-23T09:06:35+08:00",
+  "updated_at": "2026-10-26T07:31:43+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261017",
+  "cutoff": "20261020",
   "entries": [
     {
       "date": "20261022",
-      "generated_at": "2026-10-23T07:31:03",
+      "generated_at": "2026-10-26T07:31:43",
       "gate_tag": "高波動警戒（大跌）",
-      "gate_advice": "|Δ|=580≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
+      "gate_advice": "|Δ|=580≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。｜週一：那指週末 +0.28%（NQ）、費半週五 +0.44%（否決資料），未達大幅、不改夜盤。",
       "index_change": -580.0,
       "index_change_pct": "-1.25%",
       "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
@@ -42,45 +42,7 @@
         "1709 和益"
       ],
       "file": "data/reports/20261021.json"
-    },
-    {
-      "date": "20261020",
-      "generated_at": "2026-10-21T07:30:45",
-      "gate_tag": "高波動警戒（大漲）",
-      "gate_advice": "|Δ|=634≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
-      "index_change": 634.0,
-      "index_change_pct": "+1.37%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "4927 泰鼎-KY",
-        "1809 中釉",
-        "4566 時碩工業",
-        "6456 GIS-KY",
-        "1709 和益"
-      ],
-      "file": "data/reports/20261020.json"
-    },
-    {
-      "date": "20261019",
-      "generated_at": "2026-10-20T07:31:24",
-      "gate_tag": "中性",
-      "gate_advice": "|Δ|=78<100：中性盤，多空皆可，重個股結構與開盤量能。",
-      "index_change": -78.0,
-      "index_change_pct": "-0.17%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "4906 正文",
-        "3701 大眾控",
-        "6834 天二科技",
-        "4927 泰鼎-KY",
-        "3535 晶彩科"
-      ],
-      "file": "data/reports/20261019.json"
     }
   ],
-  "count": 4
+  "count": 2
 }
