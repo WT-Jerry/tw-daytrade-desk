@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-10-26T09:06:35+08:00",
+  "updated_at": "2026-10-27T07:31:26+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261020",
+  "cutoff": "20261021",
   "entries": [
     {
       "date": "20261022",
-      "generated_at": "2026-10-26T07:31:43",
+      "generated_at": "2026-10-27T07:31:26",
       "gate_tag": "高波動警戒（大跌）",
-      "gate_advice": "|Δ|=580≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。｜週一：那指週末 +0.28%（NQ）、費半週五 +0.44%（否決資料），未達大幅、不改夜盤。",
+      "gate_advice": "|Δ|=580≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
       "index_change": -580.0,
       "index_change_pct": "-1.25%",
       "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
@@ -23,26 +23,7 @@
         "4989 榮科"
       ],
       "file": "data/reports/20261022.json"
-    },
-    {
-      "date": "20261021",
-      "generated_at": "2026-10-22T07:32:15",
-      "gate_tag": "高波動警戒（大漲）",
-      "gate_advice": "|Δ|=469≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
-      "index_change": 469.0,
-      "index_change_pct": "+1.00%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2328 廣宇",
-        "2478 大毅",
-        "6456 GIS-KY",
-        "8213 志超",
-        "1709 和益"
-      ],
-      "file": "data/reports/20261021.json"
     }
   ],
-  "count": 2
+  "count": 1
 }
