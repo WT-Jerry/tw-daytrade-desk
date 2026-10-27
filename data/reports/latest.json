@@ -1,29 +1,29 @@
 {
   "ok": true,
-  "generated_at": "2026-10-27T07:31:26",
-  "screen_date": "20261022",
+  "generated_at": "2026-10-28T07:31:42",
+  "screen_date": "20261027",
   "index": {
     "ok": true,
     "source": "cmoney_txf1",
     "url": "https://www.cmoney.tw/forum/futures/TXF1?s=p",
-    "fetched_at": "2026-10-27T07:31:24",
-    "open": 46270.0,
-    "high": 46399.0,
-    "low": 45523.0,
-    "avg": 46020.98,
-    "prev_close": 46234.0,
-    "change": -580.0,
-    "change_pct": "-1.25%",
-    "bid": 45655.0,
-    "ask": 45665.0,
-    "last": 45660.0,
+    "fetched_at": "2026-10-28T07:31:38",
+    "open": 46080.0,
+    "high": 47000.0,
+    "low": 46006.0,
+    "avg": 46592.73,
+    "prev_close": 46106.0,
+    "change": 774.0,
+    "change_pct": "+1.68%",
+    "bid": 46875.0,
+    "ask": 46880.0,
+    "last": 46877.5,
     "label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-    "gate_input": -580.0
+    "gate_input": 774.0
   },
   "gate": {
-    "tag": "高波動警戒（大跌）",
-    "advice": "|Δ|=580≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
-    "bias_boost": "short",
+    "tag": "高波動警戒（大漲）",
+    "advice": "|Δ|=774≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
+    "bias_boost": "long",
     "extreme": true
   },
   "screen_meta": {
@@ -40,36 +40,37 @@
     "sources": [
       {
         "name": "STOCK_DAY_ALL",
-        "date": "20261022",
-        "n": 1383
+        "date": "20261027",
+        "n": 1386
       },
       {
         "name": "TWTB4U",
-        "date": "20261022",
+        "date": "20261027",
         "n": 1239
       },
       {
         "name": "t187ap03_L_shares",
-        "n": 1097
+        "n": 1098
       },
       {
         "name": "avg_volume_5d_prior",
-        "date": "20261022",
-        "n": 29853,
+        "date": "20261027",
+        "n": 29892,
         "days_used": [
+          "20261022",
           "20261021",
           "20261020",
           "20261019",
-          "20261016",
-          "20261015"
+          "20261016"
         ],
         "n_days": 5
       },
       {
         "name": "avg_volume_15d_prior",
-        "date": "20261022",
-        "n": 16303,
+        "date": "20261027",
+        "n": 16218,
         "days_used": [
+          "20261022",
           "20261021",
           "20261020",
           "20261019",
@@ -83,8 +84,7 @@
           "20261006",
           "20261005",
           "20261002",
-          "20261001",
-          "20260930"
+          "20261001"
         ],
         "n_days": 15,
         "lookback_days": 15,
@@ -93,32 +93,33 @@
       },
       {
         "name": "notice_attention",
-        "date": "20261022",
-        "n": 14
+        "date": "20261027",
+        "n": 18
       },
       {
         "name": "punish_disposition",
-        "date": "20261022",
-        "n": 3
+        "date": "20261027",
+        "n": 2
       },
       {
         "name": "T86_institutional",
-        "date": "20261022",
-        "n": 1080,
-        "merged": 1080
+        "date": "20261027",
+        "n": 1091,
+        "merged": 1091
       },
       {
         "name": "broker_branch_top",
-        "date": "20261022",
-        "n": 20
+        "date": "20261027",
+        "n": 19
       }
     ],
     "excluded_in_universe": {
-      "attention": 14,
-      "disposition": 3
+      "attention": 18,
+      "disposition": 2
     },
     "avg_volume": {
       "days_used": [
+        "20261022",
         "20261021",
         "20261020",
         "20261019",
@@ -132,14 +133,15 @@
         "20261006",
         "20261005",
         "20261002",
-        "20261001",
-        "20260930"
+        "20261001"
       ],
       "n_days": 15,
       "lookback_days": 15,
       "min_days": 1,
-      "n_codes": 35116,
+      "n_codes": 35142,
       "skipped_weekend": [
+        "20261025",
+        "20261024",
         "20261018",
         "20261017",
         "20261011",
@@ -147,13 +149,16 @@
         "20261004",
         "20261003"
       ],
-      "skipped_weekend_n": 6,
+      "skipped_weekend_n": 8,
       "skipped_holiday": [
+        "20261026",
         "20261009"
       ],
-      "skipped_holiday_n": 1,
-      "skipped_no_session": [],
-      "skipped_no_session_n": 0,
+      "skipped_holiday_n": 2,
+      "skipped_no_session": [
+        "20261023"
+      ],
+      "skipped_no_session_n": 1,
       "holiday_calendar": {
         "source": "holidaySchedule",
         "years": [
@@ -161,467 +166,95 @@
         ],
         "n": 24
       },
-      "errors_n": 0,
-      "note": "均量僅含實際有 MI_INDEX 行情之交易日；已排除週末與證交所休市曆"
+      "errors_n": 1,
+      "note": "均量僅含實際有 MI_INDEX 行情之交易日；已排除週末與證交所休市曆",
+      "errors_sample": [
+        "20261023:MI_INDEX stat=很抱歉，沒有符合條件的資料! date=20261023"
+      ]
     }
   },
   "results": [
     {
-      "code": "4526",
-      "name": "東台",
-      "date": "20261022",
+      "code": "1709",
+      "name": "和益",
+      "date": "20261027",
       "market": "TWSE",
-      "close": 41.05,
-      "open": 39.25,
-      "high": 41.85,
-      "low": 38.8,
-      "prev_close": 38.05,
-      "change_pct": 0.0788,
-      "amplitude": 0.0802,
-      "volume_lots": 56896.42,
-      "turnover_value": 2343162317,
-      "daytrade_rate": 0.5804,
-      "daytrade_shares": 33024000,
-      "daytrade_buy_value": 1356940550.0,
-      "daytrade_sell_value": 1358310700.0,
-      "close_position": 0.7377,
-      "turnover_rate": 0.223275,
-      "avg_volume_5d_lots": 7125.33,
-      "volume_ratio": 7.985,
-      "quality_score": 100.0,
+      "close": 52.0,
+      "open": 55.5,
+      "high": 58.2,
+      "low": 51.5,
+      "prev_close": 55.3,
+      "change_pct": -0.0597,
+      "amplitude": 0.1212,
+      "volume_lots": 24393.8,
+      "turnover_value": 1327339809,
+      "daytrade_rate": 0.5496,
+      "daytrade_shares": 13408000,
+      "daytrade_buy_value": 732007600.0,
+      "daytrade_sell_value": 729151300.0,
+      "close_position": 0.0746,
+      "turnover_rate": 0.051138,
+      "avg_volume_5d_lots": 29189.78,
+      "volume_ratio": 0.836,
+      "quality_score": 90.0,
       "score_breakdown": {
         "turnover_rate": 15.0,
-        "rel_volume": 10.0,
-        "abs_change": 8.0,
-        "close_pos_strong": 7.0,
-        "daytrade_rate": 15.0,
-        "daytrade_amount": 5.0,
-        "inst_buy": 12.0,
-        "broker_buy": 10.0,
-        "broker_sell": 10.0,
-        "broker_daytrade": 8.0
-      },
-      "bias_hint": "中性",
-      "support_obs": 38.8,
-      "resistance_obs": 41.85,
-      "notes": [
-        "週轉率22.33%",
-        "量比7.99x",
-        "法人買超18.2%",
-        "爆大量(漲)",
-        "分點買超16.1%",
-        "分點賣超7.5%",
-        "隔日沖券商:摩根大通",
-        "缺口反轉風險"
-      ],
-      "relaxed": false,
-      "shares_outstanding": 254826461.0,
-      "vwap": 41.18,
-      "upper_wick_frac": 0.262,
-      "lower_wick_frac": 0.148,
-      "body_frac": 0.59,
-      "wick_tag": "",
-      "near_limit": "",
-      "inst_net_lots": 10369.77,
-      "inst_net_ratio": 0.182,
-      "inst_foreign_lots": 9977.61,
-      "inst_trust_lots": 0.0,
-      "broker_top5_buy_lots": 9177.0,
-      "broker_top5_buy_ratio": 0.161,
-      "broker_top5_sell_lots": 4261.0,
-      "broker_top5_sell_ratio": 0.075,
-      "broker_top_buy": "摩根大通",
-      "broker_top_sell": "凱基-城中",
-      "broker_daytrade_hint": true,
-      "avg_volume_15d_lots": 4447.79,
-      "volume_ratio_15d": 12.792,
-      "surge_volume": true,
-      "surge_volume_label": "爆大量(漲)",
-      "surge_volume_dir": "up",
-      "daytrade_rate_pct": 58.04,
-      "amplitude_pct": 8.02,
-      "change_pct_display": 7.88,
-      "close_pos_pct": 73.8,
-      "turnover_rate_pct": 22.328,
-      "night_flags": [
-        "夜盤背離",
-        "缺口反轉風險"
-      ],
-      "support_shadow": 39.3,
-      "resistance_shadow": 41.85,
-      "support_status": "ok",
-      "resistance_status": "ok",
-      "support_shadow_meta": {
-        "source": "pivot_s1",
-        "role": "derived",
-        "raw_sources": [
-          "pivot_s1"
-        ],
-        "unique_families": [
-          "prev_day_structure"
-        ],
-        "family_count": 1,
-        "distance_band": "far",
-        "distance": 1.75,
-        "normalized_distance": 1.012397,
-        "consumed": false,
-        "confirmation_tags": [],
-        "selection_reason": "best_valid_candidate"
-      },
-      "resistance_shadow_meta": {
-        "source": "previous_day_high",
-        "role": "boundary",
-        "raw_sources": [
-          "previous_day_high"
-        ],
-        "unique_families": [
-          "prev_day_structure"
-        ],
-        "family_count": 1,
-        "distance_band": "medium",
-        "distance": 0.8,
-        "normalized_distance": 0.46281,
-        "consumed": false,
-        "confirmation_tags": [],
-        "selection_reason": "best_valid_candidate"
-      },
-      "engine_status": "completed",
-      "calculation_version": "sr_shadow_v1",
-      "volatility_source": "atr14_sma",
-      "volatility_value": 1.72857142857143,
-      "sample_count": 14,
-      "estimated_upper_limit": 45.15,
-      "estimated_lower_limit": 36.95,
-      "price_limit_source": "calculated_from_previous_close",
-      "price_limit_verified": false,
-      "special_reference_detector": "unavailable",
-      "evaluation_eligible": true,
-      "fallback_used": false,
-      "pivot_p": 40.566667,
-      "risk_tags": [],
-      "merge_distance": 0.061575,
-      "consumed_threshold": 0.15000000000000002,
-      "excluded_candidates_and_reasons": [
-        {
-          "source": "rolling_low_15d",
-          "price": 31.8,
-          "reason": "outside_estimated_limit"
-        },
-        {
-          "source": "previous_day_low",
-          "price": 38.8,
-          "reason": "out_of_range",
-          "raw_sources": [
-            "previous_day_low",
-            "unfilled_gap_near_edge"
-          ]
-        },
-        {
-          "source": "rolling_high_15d",
-          "price": 38.05,
-          "reason": "out_of_range",
-          "raw_sources": [
-            "rolling_high_15d"
-          ]
-        },
-        {
-          "source": "pivot_r1",
-          "price": 42.35,
-          "reason": "not_selected",
-          "side": "resistance",
-          "band": "far",
-          "consumed": false,
-          "raw_sources": [
-            "pivot_r1"
-          ]
-        },
-        {
-          "source": "vwap",
-          "price": 41.2,
-          "reason": "consumed",
-          "side": "resistance",
-          "band": "consumed",
-          "consumed": true,
-          "raw_sources": [
-            "vwap"
-          ]
-        }
-      ],
-      "open_structure_bias": "bullish_watch",
-      "open_structure_zh": "偏多觀察",
-      "open_structure_event": "false_breakdown",
-      "open_structure_reason": "第一根假跌破41.85後收在上方，偏多觀察；量能無同時段可比",
-      "open_structure_confidence": "low",
-      "open_structure_space_insufficient": false
-    },
-    {
-      "code": "4720",
-      "name": "德淵",
-      "date": "20261022",
-      "market": "TWSE",
-      "close": 30.95,
-      "open": 31.4,
-      "high": 32.15,
-      "low": 29.55,
-      "prev_close": 29.25,
-      "change_pct": 0.0581,
-      "amplitude": 0.0889,
-      "volume_lots": 21819.85,
-      "turnover_value": 688513378,
-      "daytrade_rate": 0.5187,
-      "daytrade_shares": 11319000,
-      "daytrade_buy_value": 356701000.0,
-      "daytrade_sell_value": 356390500.0,
-      "close_position": 0.5385,
-      "turnover_rate": 0.19054,
-      "avg_volume_5d_lots": 12636.83,
-      "volume_ratio": 1.727,
-      "quality_score": 100.0,
-      "score_breakdown": {
-        "turnover_rate": 15.0,
-        "rel_volume": 10.0,
-        "abs_change": 8.0,
-        "close_pos_strong": 7.0,
-        "daytrade_rate": 15.0,
-        "daytrade_amount": 5.0,
-        "inst_buy": 12.0,
-        "broker_buy": 10.0,
-        "broker_sell": 10.0,
-        "broker_daytrade": 8.0
-      },
-      "bias_hint": "中性",
-      "support_obs": 29.55,
-      "resistance_obs": 32.15,
-      "notes": [
-        "週轉率19.05%",
-        "量比1.73x",
-        "法人買超6.9%",
-        "長下影",
-        "爆大量(漲)",
-        "分點買超16.1%",
-        "分點賣超6.9%",
-        "隔日沖券商:富邦-南屯",
-        "缺口反轉風險"
-      ],
-      "relaxed": false,
-      "shares_outstanding": 114516037.0,
-      "vwap": 31.55,
-      "upper_wick_frac": 0.288,
-      "lower_wick_frac": 0.538,
-      "body_frac": 0.173,
-      "wick_tag": "長下影",
-      "near_limit": "",
-      "inst_net_lots": 1510.11,
-      "inst_net_ratio": 0.069,
-      "inst_foreign_lots": 1511.92,
-      "inst_trust_lots": 0.0,
-      "broker_top5_buy_lots": 3516.0,
-      "broker_top5_buy_ratio": 0.161,
-      "broker_top5_sell_lots": 1505.0,
-      "broker_top5_sell_ratio": 0.069,
-      "broker_top_buy": "富邦-南屯",
-      "broker_top_sell": "元大-大安",
-      "broker_daytrade_hint": true,
-      "avg_volume_15d_lots": 8973.21,
-      "volume_ratio_15d": 2.432,
-      "surge_volume": true,
-      "surge_volume_label": "爆大量(漲)",
-      "surge_volume_dir": "up",
-      "daytrade_rate_pct": 51.87,
-      "amplitude_pct": 8.89,
-      "change_pct_display": 5.81,
-      "close_pos_pct": 53.8,
-      "turnover_rate_pct": 19.054,
-      "night_flags": [
-        "缺口反轉風險"
-      ],
-      "support_shadow": 29.55,
-      "resistance_shadow": 31.55,
-      "support_status": "ok",
-      "resistance_status": "ok",
-      "support_shadow_meta": {
-        "source": "previous_day_low",
-        "role": "boundary",
-        "raw_sources": [
-          "previous_day_low",
-          "unfilled_gap_near_edge",
-          "pivot_s1"
-        ],
-        "unique_families": [
-          "prev_day_structure",
-          "multi_day"
-        ],
-        "family_count": 2,
-        "distance_band": "medium",
-        "distance": 1.4,
-        "normalized_distance": 0.605873,
-        "consumed": false,
-        "confirmation_tags": [],
-        "selection_reason": "best_valid_candidate"
-      },
-      "resistance_shadow_meta": {
-        "source": "vwap",
-        "role": "cost",
-        "raw_sources": [
-          "vwap"
-        ],
-        "unique_families": [
-          "cost"
-        ],
-        "family_count": 1,
-        "distance_band": "near",
-        "distance": 0.6,
-        "normalized_distance": 0.25966,
-        "consumed": false,
-        "confirmation_tags": [],
-        "selection_reason": "best_valid_candidate"
-      },
-      "engine_status": "completed",
-      "calculation_version": "sr_shadow_v1",
-      "volatility_source": "atr14_sma",
-      "volatility_value": 2.3107142857142855,
-      "sample_count": 14,
-      "estimated_upper_limit": 34.05,
-      "estimated_lower_limit": 27.85,
-      "price_limit_source": "calculated_from_previous_close",
-      "price_limit_verified": false,
-      "special_reference_detector": "unavailable",
-      "evaluation_eligible": true,
-      "fallback_used": false,
-      "pivot_p": 30.883333,
-      "risk_tags": [],
-      "merge_distance": 0.05,
-      "consumed_threshold": 0.18485714285714283,
-      "excluded_candidates_and_reasons": [
-        {
-          "source": "rolling_low_15d",
-          "price": 19.0,
-          "reason": "outside_estimated_limit"
-        },
-        {
-          "source": "unfilled_gap_near_edge",
-          "price": 24.8,
-          "reason": "outside_estimated_limit"
-        },
-        {
-          "source": "unfilled_gap_near_edge",
-          "price": 27.85,
-          "reason": "out_of_range",
-          "raw_sources": [
-            "unfilled_gap_near_edge"
-          ]
-        },
-        {
-          "source": "rolling_high_15d",
-          "price": 29.25,
-          "reason": "not_selected",
-          "side": "support",
-          "band": "far",
-          "consumed": false,
-          "raw_sources": [
-            "rolling_high_15d"
-          ]
-        },
-        {
-          "source": "previous_day_high",
-          "price": 32.15,
-          "reason": "not_selected",
-          "side": "resistance",
-          "band": "medium",
-          "consumed": false,
-          "raw_sources": [
-            "previous_day_high",
-            "pivot_r1"
-          ]
-        }
-      ],
-      "open_structure_bias": "neutral_watch",
-      "open_structure_zh": "先觀望",
-      "open_structure_event": "false_breakdown",
-      "open_structure_reason": "第一根假跌破32.15後收在上方，偏多觀察；距離下一層不足，改先觀望",
-      "open_structure_confidence": "low",
-      "open_structure_space_insufficient": true
-    },
-    {
-      "code": "2413",
-      "name": "環科",
-      "date": "20261022",
-      "market": "TWSE",
-      "close": 54.9,
-      "open": 59.5,
-      "high": 61.5,
-      "low": 54.2,
-      "prev_close": 57.6,
-      "change_pct": -0.0469,
-      "amplitude": 0.1267,
-      "volume_lots": 12800.77,
-      "turnover_value": 748417393,
-      "daytrade_rate": 0.5814,
-      "daytrade_shares": 7443000,
-      "daytrade_buy_value": 435761700.0,
-      "daytrade_sell_value": 431630300.0,
-      "close_position": 0.0959,
-      "turnover_rate": 0.100509,
-      "avg_volume_5d_lots": 2636.59,
-      "volume_ratio": 4.855,
-      "quality_score": 96.0,
-      "score_breakdown": {
-        "turnover_rate": 15.0,
-        "rel_volume": 10.0,
         "abs_change": 8.0,
         "close_pos_weak": 7.0,
         "daytrade_rate": 15.0,
         "daytrade_amount": 5.0,
-        "inst_buy": 8.0,
+        "inst_buy": 12.0,
         "broker_buy": 10.0,
         "broker_sell": 10.0,
         "broker_daytrade": 8.0
       },
-      "bias_hint": "偏空*",
-      "support_obs": 54.2,
-      "resistance_obs": 61.5,
+      "bias_hint": "偏多*",
+      "support_obs": 51.5,
+      "resistance_obs": 58.2,
       "notes": [
-        "週轉率10.05%",
-        "量比4.86x",
-        "法人買超3.8%",
-        "爆大量(跌)",
-        "分點買超9.7%",
-        "分點賣超10.1%",
-        "隔日沖券商:台灣摩根士丹利",
-        "法人買超對沖偏空"
+        "週轉率5.11%",
+        "法人買超12.7%",
+        "分點買超13.1%",
+        "分點賣超12.1%",
+        "隔日沖券商:新加坡商瑞銀",
+        "法人買超對沖偏空",
+        "缺口反轉風險"
       ],
       "relaxed": false,
-      "shares_outstanding": 127359200.0,
-      "vwap": 58.47,
-      "upper_wick_frac": 0.274,
-      "lower_wick_frac": 0.096,
-      "body_frac": 0.63,
+      "shares_outstanding": 477016272.0,
+      "vwap": 54.41,
+      "upper_wick_frac": 0.403,
+      "lower_wick_frac": 0.075,
+      "body_frac": 0.522,
       "wick_tag": "",
       "near_limit": "",
-      "inst_net_lots": 490.49,
-      "inst_net_ratio": 0.038,
-      "inst_foreign_lots": 464.02,
-      "inst_trust_lots": 61.0,
-      "broker_top5_buy_lots": 1248.0,
-      "broker_top5_buy_ratio": 0.097,
-      "broker_top5_sell_lots": 1294.0,
-      "broker_top5_sell_ratio": 0.101,
-      "broker_top_buy": "台灣摩根士丹利",
-      "broker_top_sell": "元大-竹科",
+      "inst_net_lots": 3096.54,
+      "inst_net_ratio": 0.127,
+      "inst_foreign_lots": 2928.54,
+      "inst_trust_lots": 190.0,
+      "broker_top5_buy_lots": 3200.0,
+      "broker_top5_buy_ratio": 0.131,
+      "broker_top5_sell_lots": 2954.0,
+      "broker_top5_sell_ratio": 0.121,
+      "broker_top_buy": "新加坡商瑞銀",
+      "broker_top_sell": "兆豐-新竹",
       "broker_daytrade_hint": true,
-      "avg_volume_15d_lots": 5731.87,
-      "volume_ratio_15d": 2.233,
-      "surge_volume": true,
-      "surge_volume_label": "爆大量(跌)",
-      "surge_volume_dir": "down",
-      "daytrade_rate_pct": 58.14,
-      "amplitude_pct": 12.67,
-      "change_pct_display": -4.69,
-      "close_pos_pct": 9.6,
-      "turnover_rate_pct": 10.051,
-      "night_flags": [],
-      "support_shadow": 54.2,
-      "resistance_shadow": 58.5,
+      "avg_volume_15d_lots": 26378.03,
+      "volume_ratio_15d": 0.925,
+      "surge_volume": false,
+      "surge_volume_label": "n/a",
+      "surge_volume_dir": "",
+      "daytrade_rate_pct": 54.96,
+      "amplitude_pct": 12.12,
+      "change_pct_display": -5.97,
+      "close_pos_pct": 7.5,
+      "turnover_rate_pct": 5.114,
+      "night_flags": [
+        "夜盤背離",
+        "缺口反轉風險"
+      ],
+      "support_shadow": 51.5,
+      "resistance_shadow": 54.4,
       "support_status": "ok",
       "resistance_status": "ok",
       "support_shadow_meta": {
@@ -635,8 +268,8 @@
         ],
         "family_count": 1,
         "distance_band": "near",
-        "distance": 0.7,
-        "normalized_distance": 0.20332,
+        "distance": 0.5,
+        "normalized_distance": 0.097222,
         "consumed": false,
         "confirmation_tags": [],
         "selection_reason": "best_valid_candidate"
@@ -651,9 +284,9 @@
           "cost"
         ],
         "family_count": 1,
-        "distance_band": "far",
-        "distance": 3.6,
-        "normalized_distance": 1.045643,
+        "distance_band": "medium",
+        "distance": 2.4,
+        "normalized_distance": 0.466667,
         "consumed": false,
         "confirmation_tags": [],
         "selection_reason": "best_valid_candidate"
@@ -661,49 +294,216 @@
       "engine_status": "completed",
       "calculation_version": "sr_shadow_v1",
       "volatility_source": "atr14_sma",
-      "volatility_value": 3.4428571428571426,
+      "volatility_value": 5.1428571428571415,
       "sample_count": 14,
-      "estimated_upper_limit": 60.4,
-      "estimated_lower_limit": 49.4,
+      "estimated_upper_limit": 57.2,
+      "estimated_lower_limit": 46.8,
       "price_limit_source": "calculated_from_previous_close",
       "price_limit_verified": false,
       "special_reference_detector": "unavailable",
       "evaluation_eligible": true,
       "fallback_used": false,
-      "pivot_p": 56.866667,
+      "pivot_p": 53.9,
       "risk_tags": [],
       "merge_distance": 0.1,
-      "consumed_threshold": 0.30000000000000004,
+      "consumed_threshold": 0.4114285714285713,
       "excluded_candidates_and_reasons": [
         {
           "source": "previous_day_high",
-          "price": 61.5,
+          "price": 58.2,
           "reason": "outside_estimated_limit"
         },
         {
           "source": "rolling_high_15d",
-          "price": 60.8,
+          "price": 66.3,
           "reason": "outside_estimated_limit"
         },
         {
+          "source": "pivot_s1",
+          "price": 49.6,
+          "reason": "not_selected",
+          "side": "support",
+          "band": "medium",
+          "consumed": false,
+          "raw_sources": [
+            "pivot_s1"
+          ]
+        },
+        {
           "source": "rolling_low_15d",
-          "price": 50.7,
-          "reason": "out_of_range",
+          "price": 50.4,
+          "reason": "not_selected",
+          "side": "support",
+          "band": "near",
+          "consumed": false,
           "raw_sources": [
             "rolling_low_15d"
           ]
         },
         {
           "source": "pivot_r1",
-          "price": 59.5,
-          "reason": "out_of_range",
+          "price": 56.3,
+          "reason": "not_selected",
+          "side": "resistance",
+          "band": "far",
+          "consumed": false,
           "raw_sources": [
             "pivot_r1"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "2465",
+      "name": "麗臺",
+      "date": "20261027",
+      "market": "TWSE",
+      "close": 93.9,
+      "open": 97.0,
+      "high": 99.9,
+      "low": 91.8,
+      "prev_close": 96.2,
+      "change_pct": -0.0239,
+      "amplitude": 0.0842,
+      "volume_lots": 11878.22,
+      "turnover_value": 1139038959,
+      "daytrade_rate": 0.7517,
+      "daytrade_shares": 8929000,
+      "daytrade_buy_value": 856627600.0,
+      "daytrade_sell_value": 855190100.0,
+      "close_position": 0.2593,
+      "turnover_rate": 0.126437,
+      "avg_volume_5d_lots": 2976.18,
+      "volume_ratio": 3.991,
+      "quality_score": 88.0,
+      "score_breakdown": {
+        "turnover_rate": 15.0,
+        "rel_volume": 10.0,
+        "close_pos_weak": 7.0,
+        "daytrade_rate": 15.0,
+        "daytrade_amount": 5.0,
+        "inst_sell": 12.0,
+        "broker_buy": 6.0,
+        "broker_sell": 10.0,
+        "broker_daytrade": 8.0
+      },
+      "bias_hint": "中性",
+      "support_obs": 91.8,
+      "resistance_obs": 99.9,
+      "notes": [
+        "週轉率12.64%",
+        "量比3.99x",
+        "法人賣超5.9%",
+        "爆大量(跌)",
+        "分點買超3.9%",
+        "分點賣超11.3%",
+        "隔日沖券商:美林",
+        "缺口反轉風險"
+      ],
+      "relaxed": false,
+      "shares_outstanding": 93946031.0,
+      "vwap": 95.89,
+      "upper_wick_frac": 0.358,
+      "lower_wick_frac": 0.259,
+      "body_frac": 0.383,
+      "wick_tag": "",
+      "near_limit": "",
+      "inst_net_lots": -705.84,
+      "inst_net_ratio": -0.059,
+      "inst_foreign_lots": -657.42,
+      "inst_trust_lots": 0.0,
+      "broker_top5_buy_lots": 466.0,
+      "broker_top5_buy_ratio": 0.039,
+      "broker_top5_sell_lots": 1339.0,
+      "broker_top5_sell_ratio": 0.113,
+      "broker_top_buy": "美林",
+      "broker_top_sell": "凱基-台北",
+      "broker_daytrade_hint": true,
+      "avg_volume_15d_lots": 2131.85,
+      "volume_ratio_15d": 5.572,
+      "surge_volume": true,
+      "surge_volume_label": "爆大量(跌)",
+      "surge_volume_dir": "down",
+      "daytrade_rate_pct": 75.17,
+      "amplitude_pct": 8.42,
+      "change_pct_display": -2.39,
+      "close_pos_pct": 25.9,
+      "turnover_rate_pct": 12.644,
+      "night_flags": [
+        "夜盤背離",
+        "缺口反轉風險"
+      ],
+      "support_shadow": 91.8,
+      "resistance_shadow": 96.2,
+      "support_status": "ok",
+      "resistance_status": "ok",
+      "support_shadow_meta": {
+        "source": "previous_day_low",
+        "role": "boundary",
+        "raw_sources": [
+          "previous_day_low"
+        ],
+        "unique_families": [
+          "prev_day_structure"
+        ],
+        "family_count": 1,
+        "distance_band": "medium",
+        "distance": 2.1,
+        "normalized_distance": 0.46519,
+        "consumed": false,
+        "confirmation_tags": [],
+        "selection_reason": "best_valid_candidate"
+      },
+      "resistance_shadow_meta": {
+        "source": "rolling_high_15d",
+        "role": "boundary",
+        "raw_sources": [
+          "rolling_high_15d"
+        ],
+        "unique_families": [
+          "multi_day"
+        ],
+        "family_count": 1,
+        "distance_band": "medium",
+        "distance": 2.3,
+        "normalized_distance": 0.509494,
+        "consumed": false,
+        "confirmation_tags": [],
+        "selection_reason": "best_valid_candidate"
+      },
+      "engine_status": "completed",
+      "calculation_version": "sr_shadow_v1",
+      "volatility_source": "atr14_sma",
+      "volatility_value": 4.514285714285717,
+      "sample_count": 14,
+      "estimated_upper_limit": 103.5,
+      "estimated_lower_limit": 84.5,
+      "price_limit_source": "calculated_from_previous_close",
+      "price_limit_verified": false,
+      "special_reference_detector": "unavailable",
+      "evaluation_eligible": true,
+      "fallback_used": false,
+      "pivot_p": 95.2,
+      "risk_tags": [],
+      "merge_distance": 0.14085,
+      "consumed_threshold": 0.3611428571428574,
+      "excluded_candidates_and_reasons": [
+        {
+          "source": "rolling_low_15d",
+          "price": 82.2,
+          "reason": "outside_estimated_limit"
+        },
+        {
+          "source": "previous_day_high",
+          "price": 99.9,
+          "reason": "out_of_range",
+          "raw_sources": [
+            "previous_day_high"
           ]
         },
         {
           "source": "pivot_s1",
-          "price": 52.2,
+          "price": 90.5,
           "reason": "not_selected",
           "side": "support",
           "band": "far",
@@ -711,99 +511,119 @@
           "raw_sources": [
             "pivot_s1"
           ]
+        },
+        {
+          "source": "unfilled_gap_near_edge",
+          "price": 89.0,
+          "reason": "not_selected",
+          "side": "support",
+          "band": "far",
+          "consumed": false,
+          "raw_sources": [
+            "unfilled_gap_near_edge"
+          ]
+        },
+        {
+          "source": "pivot_r1",
+          "price": 98.6,
+          "reason": "not_selected",
+          "side": "resistance",
+          "band": "far",
+          "consumed": false,
+          "raw_sources": [
+            "pivot_r1"
+          ]
+        },
+        {
+          "source": "vwap",
+          "price": 95.9,
+          "reason": "not_selected",
+          "side": "resistance",
+          "band": "medium",
+          "consumed": false,
+          "raw_sources": [
+            "vwap"
+          ]
         }
-      ],
-      "open_structure_bias": "neutral_watch",
-      "open_structure_zh": "先觀望",
-      "open_structure_event": "false_breakout",
-      "open_structure_reason": "第一根假突破54.9後收在下方，偏空觀察；距離下一層不足，改先觀望",
-      "open_structure_confidence": "low",
-      "open_structure_space_insufficient": true
+      ]
     },
     {
-      "code": "2465",
-      "name": "麗臺",
-      "date": "20261022",
+      "code": "3029",
+      "name": "零壹",
+      "date": "20261027",
       "market": "TWSE",
-      "close": 96.2,
-      "open": 89.0,
-      "high": 96.2,
-      "low": 89.0,
-      "prev_close": 87.5,
-      "change_pct": 0.0994,
-      "amplitude": 0.0823,
-      "volume_lots": 10480.81,
-      "turnover_value": 1000993349,
-      "daytrade_rate": 0.3026,
-      "daytrade_shares": 3171000,
-      "daytrade_buy_value": 301098400.0,
-      "daytrade_sell_value": 302826600.0,
-      "close_position": 1.0,
-      "turnover_rate": 0.111562,
-      "avg_volume_5d_lots": 1160.9,
-      "volume_ratio": 9.028,
-      "quality_score": 95.0,
+      "close": 129.0,
+      "open": 122.0,
+      "high": 129.5,
+      "low": 121.5,
+      "prev_close": 122.5,
+      "change_pct": 0.0531,
+      "amplitude": 0.0653,
+      "volume_lots": 7263.75,
+      "turnover_value": 914486319,
+      "daytrade_rate": 0.4204,
+      "daytrade_shares": 3054000,
+      "daytrade_buy_value": 381810000.0,
+      "daytrade_sell_value": 383732000.0,
+      "close_position": 0.9375,
+      "turnover_rate": 0.043494,
+      "avg_volume_5d_lots": 1339.65,
+      "volume_ratio": 5.422,
+      "quality_score": 81.0,
       "score_breakdown": {
-        "turnover_rate": 15.0,
+        "turnover_rate": 8.0,
         "rel_volume": 10.0,
         "abs_change": 8.0,
         "close_pos_strong": 7.0,
-        "daytrade_rate": 10.0,
+        "daytrade_rate": 15.0,
         "daytrade_amount": 5.0,
-        "inst_buy": 12.0,
         "broker_buy": 10.0,
         "broker_sell": 10.0,
         "broker_daytrade": 8.0
       },
-      "bias_hint": "中性",
-      "support_obs": 89.0,
-      "resistance_obs": 96.2,
+      "bias_hint": "偏多",
+      "support_obs": 121.5,
+      "resistance_obs": 129.5,
       "notes": [
-        "週轉率11.16%",
-        "量比9.03x",
-        "法人買超30.5%",
-        "近漲停",
+        "週轉率4.35%",
+        "量比5.42x",
         "爆大量(漲)",
-        "分點買超31.0%",
-        "分點賣超9.8%",
-        "隔日沖券商:台灣摩根士丹利",
-        "缺口反轉風險"
+        "分點買超15.6%",
+        "分點賣超12.3%",
+        "隔日沖券商:元大-松江"
       ],
       "relaxed": false,
-      "shares_outstanding": 93946031.0,
-      "vwap": 95.51,
-      "upper_wick_frac": 0.0,
-      "lower_wick_frac": 0.0,
-      "body_frac": 1.0,
+      "shares_outstanding": 167005212.0,
+      "vwap": 125.9,
+      "upper_wick_frac": 0.062,
+      "lower_wick_frac": 0.062,
+      "body_frac": 0.875,
       "wick_tag": "",
-      "near_limit": "近漲停",
-      "inst_net_lots": 3195.25,
-      "inst_net_ratio": 0.305,
-      "inst_foreign_lots": 3142.52,
+      "near_limit": "",
+      "inst_net_lots": -166.58,
+      "inst_net_ratio": -0.023,
+      "inst_foreign_lots": -528.0,
       "inst_trust_lots": 0.0,
-      "broker_top5_buy_lots": 3246.0,
-      "broker_top5_buy_ratio": 0.31,
-      "broker_top5_sell_lots": 1028.0,
-      "broker_top5_sell_ratio": 0.098,
-      "broker_top_buy": "台灣摩根士丹利",
-      "broker_top_sell": "國泰-敦南",
+      "broker_top5_buy_lots": 1136.0,
+      "broker_top5_buy_ratio": 0.156,
+      "broker_top5_sell_lots": 897.0,
+      "broker_top5_sell_ratio": 0.123,
+      "broker_top_buy": "元大-松江",
+      "broker_top_sell": "美商高盛",
       "broker_daytrade_hint": true,
-      "avg_volume_15d_lots": 1515.6,
-      "volume_ratio_15d": 6.915,
+      "avg_volume_15d_lots": 1430.68,
+      "volume_ratio_15d": 5.077,
       "surge_volume": true,
       "surge_volume_label": "爆大量(漲)",
       "surge_volume_dir": "up",
-      "daytrade_rate_pct": 30.26,
-      "amplitude_pct": 8.23,
-      "change_pct_display": 9.94,
-      "close_pos_pct": 100.0,
-      "turnover_rate_pct": 11.156,
-      "night_flags": [
-        "夜盤背離",
-        "缺口反轉風險"
-      ],
-      "support_shadow": 95.5,
-      "resistance_shadow": 98.6,
+      "daytrade_rate_pct": 42.04,
+      "amplitude_pct": 6.53,
+      "change_pct_display": 5.31,
+      "close_pos_pct": 93.8,
+      "turnover_rate_pct": 4.349,
+      "night_flags": [],
+      "support_shadow": 126.0,
+      "resistance_shadow": 132.0,
       "support_status": "ok",
       "resistance_status": "ok",
       "support_shadow_meta": {
@@ -816,11 +636,13 @@
           "cost"
         ],
         "family_count": 1,
-        "distance_band": "near",
-        "distance": 0.7,
-        "normalized_distance": 0.173145,
+        "distance_band": "far",
+        "distance": 3.0,
+        "normalized_distance": 0.743363,
         "consumed": false,
-        "confirmation_tags": [],
+        "confirmation_tags": [
+          "126"
+        ],
         "selection_reason": "best_valid_candidate"
       },
       "resistance_shadow_meta": {
@@ -833,9 +655,176 @@
           "prev_day_structure"
         ],
         "family_count": 1,
+        "distance_band": "far",
+        "distance": 3.0,
+        "normalized_distance": 0.743363,
+        "consumed": false,
+        "confirmation_tags": [
+          "132"
+        ],
+        "selection_reason": "best_valid_candidate"
+      },
+      "engine_status": "completed",
+      "calculation_version": "sr_shadow_v1",
+      "volatility_source": "atr14_sma",
+      "volatility_value": 4.035714285714286,
+      "sample_count": 14,
+      "estimated_upper_limit": 142.0,
+      "estimated_lower_limit": 116.0,
+      "price_limit_source": "calculated_from_previous_close",
+      "price_limit_verified": false,
+      "special_reference_detector": "unavailable",
+      "evaluation_eligible": true,
+      "fallback_used": false,
+      "pivot_p": 126.666667,
+      "risk_tags": [],
+      "merge_distance": 0.5,
+      "consumed_threshold": 1.5,
+      "excluded_candidates_and_reasons": [
+        {
+          "source": "rolling_low_15d",
+          "price": 110.5,
+          "reason": "outside_estimated_limit"
+        },
+        {
+          "source": "previous_day_low",
+          "price": 121.5,
+          "reason": "out_of_range",
+          "raw_sources": [
+            "previous_day_low"
+          ]
+        },
+        {
+          "source": "rolling_high_15d",
+          "price": 123.5,
+          "reason": "out_of_range",
+          "raw_sources": [
+            "rolling_high_15d",
+            "pivot_s1"
+          ]
+        },
+        {
+          "source": "previous_day_high",
+          "price": 129.5,
+          "reason": "consumed",
+          "side": "resistance",
+          "band": "consumed",
+          "consumed": true,
+          "raw_sources": [
+            "previous_day_high"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "4566",
+      "name": "時碩工業",
+      "date": "20261027",
+      "market": "TWSE",
+      "close": 87.2,
+      "open": 84.4,
+      "high": 90.6,
+      "low": 81.7,
+      "prev_close": 84.4,
+      "change_pct": 0.0332,
+      "amplitude": 0.1055,
+      "volume_lots": 10872.89,
+      "turnover_value": 947171364,
+      "daytrade_rate": 0.6297,
+      "daytrade_shares": 6847000,
+      "daytrade_buy_value": 595390500.0,
+      "daytrade_sell_value": 596453600.0,
+      "close_position": 0.618,
+      "turnover_rate": 0.098503,
+      "avg_volume_5d_lots": 9783.35,
+      "volume_ratio": 1.111,
+      "quality_score": 78.0,
+      "score_breakdown": {
+        "turnover_rate": 15.0,
+        "abs_change": 8.0,
+        "close_pos_strong": 7.0,
+        "daytrade_rate": 15.0,
+        "daytrade_amount": 5.0,
+        "broker_buy": 10.0,
+        "broker_sell": 10.0,
+        "broker_daytrade": 8.0
+      },
+      "bias_hint": "偏多",
+      "support_obs": 81.7,
+      "resistance_obs": 90.6,
+      "notes": [
+        "週轉率9.85%",
+        "爆大量(漲)",
+        "分點買超10.7%",
+        "分點賣超7.7%",
+        "隔日沖券商:美商高盛"
+      ],
+      "relaxed": false,
+      "shares_outstanding": 110381002.0,
+      "vwap": 87.11,
+      "upper_wick_frac": 0.382,
+      "lower_wick_frac": 0.303,
+      "body_frac": 0.315,
+      "wick_tag": "",
+      "near_limit": "",
+      "inst_net_lots": 11.28,
+      "inst_net_ratio": 0.001,
+      "inst_foreign_lots": -18.72,
+      "inst_trust_lots": 42.0,
+      "broker_top5_buy_lots": 1162.0,
+      "broker_top5_buy_ratio": 0.107,
+      "broker_top5_sell_lots": 841.0,
+      "broker_top5_sell_ratio": 0.077,
+      "broker_top_buy": "美商高盛",
+      "broker_top_sell": "港商野村",
+      "broker_daytrade_hint": true,
+      "avg_volume_15d_lots": 5045.0,
+      "volume_ratio_15d": 2.155,
+      "surge_volume": true,
+      "surge_volume_label": "爆大量(漲)",
+      "surge_volume_dir": "up",
+      "daytrade_rate_pct": 62.97,
+      "amplitude_pct": 10.55,
+      "change_pct_display": 3.32,
+      "close_pos_pct": 61.8,
+      "turnover_rate_pct": 9.85,
+      "night_flags": [],
+      "support_shadow": 81.7,
+      "resistance_shadow": 90.6,
+      "support_status": "ok",
+      "resistance_status": "ok",
+      "support_shadow_meta": {
+        "source": "previous_day_low",
+        "role": "boundary",
+        "raw_sources": [
+          "previous_day_low"
+        ],
+        "unique_families": [
+          "prev_day_structure"
+        ],
+        "family_count": 1,
+        "distance_band": "far",
+        "distance": 5.5,
+        "normalized_distance": 1.09375,
+        "consumed": false,
+        "confirmation_tags": [],
+        "selection_reason": "best_valid_candidate"
+      },
+      "resistance_shadow_meta": {
+        "source": "previous_day_high",
+        "role": "boundary",
+        "raw_sources": [
+          "previous_day_high",
+          "rolling_high_15d"
+        ],
+        "unique_families": [
+          "prev_day_structure",
+          "multi_day"
+        ],
+        "family_count": 2,
         "distance_band": "medium",
-        "distance": 2.4,
-        "normalized_distance": 0.59364,
+        "distance": 3.4,
+        "normalized_distance": 0.676136,
         "consumed": false,
         "confirmation_tags": [],
         "selection_reason": "best_valid_candidate"
@@ -843,42 +832,28 @@
       "engine_status": "completed",
       "calculation_version": "sr_shadow_v1",
       "volatility_source": "atr14_sma",
-      "volatility_value": 4.0428571428571445,
+      "volatility_value": 5.028571428571427,
       "sample_count": 14,
-      "estimated_upper_limit": 106.0,
-      "estimated_lower_limit": 86.6,
+      "estimated_upper_limit": 95.9,
+      "estimated_lower_limit": 78.5,
       "price_limit_source": "calculated_from_previous_close",
       "price_limit_verified": false,
       "special_reference_detector": "unavailable",
       "evaluation_eligible": true,
       "fallback_used": false,
-      "pivot_p": 93.8,
+      "pivot_p": 86.5,
       "risk_tags": [],
-      "merge_distance": 0.1443,
-      "consumed_threshold": 0.32342857142857157,
+      "merge_distance": 0.1308,
+      "consumed_threshold": 0.40228571428571414,
       "excluded_candidates_and_reasons": [
         {
-          "source": "previous_day_high",
-          "price": 96.2,
-          "reason": "equal_reference"
-        },
-        {
           "source": "rolling_low_15d",
-          "price": 82.2,
+          "price": 73.6,
           "reason": "outside_estimated_limit"
         },
         {
-          "source": "previous_day_low",
-          "price": 89.0,
-          "reason": "out_of_range",
-          "raw_sources": [
-            "previous_day_low",
-            "unfilled_gap_near_edge"
-          ]
-        },
-        {
           "source": "pivot_s1",
-          "price": 91.4,
+          "price": 82.4,
           "reason": "not_selected",
           "side": "support",
           "band": "far",
@@ -888,105 +863,106 @@
           ]
         },
         {
-          "source": "rolling_high_15d",
-          "price": 94.2,
-          "reason": "not_selected",
+          "source": "vwap",
+          "price": 87.1,
+          "reason": "consumed",
           "side": "support",
-          "band": "medium",
+          "band": "consumed",
+          "consumed": true,
+          "raw_sources": [
+            "vwap"
+          ]
+        },
+        {
+          "source": "pivot_r1",
+          "price": 91.3,
+          "reason": "not_selected",
+          "side": "resistance",
+          "band": "far",
           "consumed": false,
           "raw_sources": [
-            "rolling_high_15d"
+            "pivot_r1"
           ]
         }
-      ],
-      "open_structure_bias": "bearish_watch",
-      "open_structure_zh": "偏空觀察",
-      "open_structure_event": "false_breakout",
-      "open_structure_reason": "第一根假突破95.5後收在下方，偏空觀察；量能無同時段可比；先賣後買未核",
-      "open_structure_confidence": "low",
-      "open_structure_space_insufficient": false
+      ]
     },
     {
-      "code": "4989",
-      "name": "榮科",
-      "date": "20261022",
+      "code": "2353",
+      "name": "宏碁",
+      "date": "20261027",
       "market": "TWSE",
-      "close": 71.0,
-      "open": 69.6,
-      "high": 75.4,
-      "low": 69.1,
-      "prev_close": 68.9,
-      "change_pct": 0.0305,
-      "amplitude": 0.0914,
-      "volume_lots": 29834.65,
-      "turnover_value": 2162613609,
-      "daytrade_rate": 0.5961,
-      "daytrade_shares": 17785000,
-      "daytrade_buy_value": 1286816700.0,
-      "daytrade_sell_value": 1288276100.0,
-      "close_position": 0.3016,
-      "turnover_rate": 0.172678,
-      "avg_volume_5d_lots": 9052.28,
-      "volume_ratio": 3.296,
-      "quality_score": 90.0,
+      "close": 33.15,
+      "open": 32.85,
+      "high": 34.45,
+      "low": 32.65,
+      "prev_close": 32.45,
+      "change_pct": 0.0216,
+      "amplitude": 0.0555,
+      "volume_lots": 61830.6,
+      "turnover_value": 2067502663,
+      "daytrade_rate": 0.5018,
+      "daytrade_shares": 31024000,
+      "daytrade_buy_value": 1037664750.0,
+      "daytrade_sell_value": 1036632650.0,
+      "close_position": 0.2778,
+      "turnover_rate": 0.020287,
+      "avg_volume_5d_lots": 18046.43,
+      "volume_ratio": 3.426,
+      "quality_score": 77.0,
       "score_breakdown": {
-        "turnover_rate": 15.0,
         "rel_volume": 10.0,
-        "abs_change": 8.0,
         "close_pos_weak": 7.0,
         "daytrade_rate": 15.0,
         "daytrade_amount": 5.0,
         "inst_buy": 12.0,
         "broker_buy": 10.0,
+        "broker_sell": 10.0,
         "broker_daytrade": 8.0
       },
-      "bias_hint": "中性",
-      "support_obs": 69.1,
-      "resistance_obs": 75.4,
+      "bias_hint": "偏多",
+      "support_obs": 32.65,
+      "resistance_obs": 34.45,
       "notes": [
-        "週轉率17.27%",
-        "量比3.30x",
-        "法人買超7.8%",
+        "量比3.43x",
+        "法人買超22.9%",
         "長上影",
         "爆大量(漲)",
-        "分點買超13.5%",
-        "隔日沖券商:永豐金證券",
-        "缺口反轉風險"
+        "分點買超19.2%",
+        "分點賣超8.1%",
+        "隔日沖券商:花旗環球"
       ],
       "relaxed": false,
-      "shares_outstanding": 172776500.0,
-      "vwap": 72.49,
-      "upper_wick_frac": 0.698,
-      "lower_wick_frac": 0.079,
-      "body_frac": 0.222,
+      "shares_outstanding": 3047853828.0,
+      "vwap": 33.44,
+      "upper_wick_frac": 0.722,
+      "lower_wick_frac": 0.111,
+      "body_frac": 0.167,
       "wick_tag": "長上影",
       "near_limit": "",
-      "inst_net_lots": 2340.3,
-      "inst_net_ratio": 0.078,
-      "inst_foreign_lots": 2324.43,
-      "inst_trust_lots": 0.0,
-      "broker_top5_buy_lots": 4040.0,
-      "broker_top5_buy_ratio": 0.135,
-      "broker_top5_sell_lots": 768.0,
-      "broker_top5_sell_ratio": 0.026,
-      "broker_top_buy": "永豐金證券",
-      "broker_top_sell": "臺銀-金山",
+      "inst_net_lots": 14153.57,
+      "inst_net_ratio": 0.229,
+      "inst_foreign_lots": 12809.94,
+      "inst_trust_lots": -13.48,
+      "broker_top5_buy_lots": 11882.0,
+      "broker_top5_buy_ratio": 0.192,
+      "broker_top5_sell_lots": 5032.0,
+      "broker_top5_sell_ratio": 0.081,
+      "broker_top_buy": "花旗環球",
+      "broker_top_sell": "彰銀",
       "broker_daytrade_hint": true,
-      "avg_volume_15d_lots": 11993.59,
-      "volume_ratio_15d": 2.488,
+      "avg_volume_15d_lots": 14502.76,
+      "volume_ratio_15d": 4.263,
       "surge_volume": true,
       "surge_volume_label": "爆大量(漲)",
       "surge_volume_dir": "up",
-      "daytrade_rate_pct": 59.61,
-      "amplitude_pct": 9.14,
-      "change_pct_display": 3.05,
-      "close_pos_pct": 30.2,
-      "turnover_rate_pct": 17.268,
-      "night_flags": [
-        "缺口反轉風險"
-      ],
-      "support_shadow": 69.1,
-      "resistance_shadow": 72.5,
+      "daytrade_rate_pct": 50.18,
+      "amplitude_pct": 5.55,
+      "change_pct_display": 2.16,
+      "close_pos_pct": 27.8,
+      "turnover_rate_pct": 2.029,
+      "night_flags": [],
+      "support_shadow": 32.65,
+      "resistance_shadow": 33.45,
       "support_status": "ok",
       "resistance_status": "ok",
       "support_shadow_meta": {
@@ -1000,12 +976,10 @@
         ],
         "family_count": 1,
         "distance_band": "medium",
-        "distance": 1.9,
-        "normalized_distance": 0.368932,
+        "distance": 0.5,
+        "normalized_distance": 0.627803,
         "consumed": false,
-        "confirmation_tags": [
-          "69"
-        ],
+        "confirmation_tags": [],
         "selection_reason": "best_valid_candidate"
       },
       "resistance_shadow_meta": {
@@ -1018,574 +992,9 @@
           "cost"
         ],
         "family_count": 1,
-        "distance_band": "near",
-        "distance": 1.5,
-        "normalized_distance": 0.291262,
-        "consumed": false,
-        "confirmation_tags": [],
-        "selection_reason": "best_valid_candidate"
-      },
-      "engine_status": "completed",
-      "calculation_version": "sr_shadow_v1",
-      "volatility_source": "atr14_sma",
-      "volatility_value": 5.150000000000004,
-      "sample_count": 14,
-      "estimated_upper_limit": 78.1,
-      "estimated_lower_limit": 63.9,
-      "price_limit_source": "calculated_from_previous_close",
-      "price_limit_verified": false,
-      "special_reference_detector": "unavailable",
-      "evaluation_eligible": true,
-      "fallback_used": false,
-      "pivot_p": 71.833333,
-      "risk_tags": [],
-      "merge_distance": 0.1065,
-      "consumed_threshold": 0.4120000000000003,
-      "excluded_candidates_and_reasons": [
-        {
-          "source": "rolling_low_15d",
-          "price": 60.3,
-          "reason": "outside_estimated_limit"
-        },
-        {
-          "source": "pivot_s1",
-          "price": 68.3,
-          "reason": "not_selected",
-          "side": "support",
-          "band": "medium",
-          "consumed": false,
-          "raw_sources": [
-            "pivot_s1"
-          ]
-        },
-        {
-          "source": "previous_day_high",
-          "price": 75.4,
-          "reason": "not_selected",
-          "side": "resistance",
-          "band": "far",
-          "consumed": false,
-          "raw_sources": [
-            "previous_day_high"
-          ]
-        },
-        {
-          "source": "pivot_r1",
-          "price": 74.6,
-          "reason": "not_selected",
-          "side": "resistance",
-          "band": "medium",
-          "consumed": false,
-          "raw_sources": [
-            "pivot_r1"
-          ]
-        },
-        {
-          "source": "rolling_high_15d",
-          "price": 75.9,
-          "reason": "not_selected",
-          "side": "resistance",
-          "band": "far",
-          "consumed": false,
-          "raw_sources": [
-            "rolling_high_15d"
-          ]
-        }
-      ],
-      "open_structure_bias": "bearish_watch",
-      "open_structure_zh": "偏空觀察",
-      "open_structure_event": "false_breakout",
-      "open_structure_reason": "第一根假突破71後收在下方，偏空觀察；量能無同時段可比；先賣後買未核",
-      "open_structure_confidence": "low",
-      "open_structure_space_insufficient": false
-    },
-    {
-      "code": "1802",
-      "name": "台玻",
-      "date": "20261022",
-      "market": "TWSE",
-      "close": 67.1,
-      "open": 67.4,
-      "high": 73.6,
-      "low": 66.3,
-      "prev_close": 67.2,
-      "change_pct": -0.0015,
-      "amplitude": 0.1086,
-      "volume_lots": 266740.89,
-      "turnover_value": 18752356788,
-      "daytrade_rate": 0.6673,
-      "daytrade_shares": 177991000,
-      "daytrade_buy_value": 12499288500.0,
-      "daytrade_sell_value": 12477489800.0,
-      "close_position": 0.1096,
-      "turnover_rate": 0.091725,
-      "avg_volume_5d_lots": 157913.51,
-      "volume_ratio": 1.689,
-      "quality_score": 88.0,
-      "score_breakdown": {
-        "turnover_rate": 15.0,
-        "rel_volume": 10.0,
-        "close_pos_weak": 7.0,
-        "daytrade_rate": 15.0,
-        "daytrade_amount": 5.0,
-        "inst_buy": 12.0,
-        "broker_buy": 10.0,
-        "broker_sell": 6.0,
-        "broker_daytrade": 8.0
-      },
-      "bias_hint": "偏空*",
-      "support_obs": 66.3,
-      "resistance_obs": 73.6,
-      "notes": [
-        "週轉率9.17%",
-        "量比1.69x",
-        "法人買超10.7%",
-        "長上影",
-        "爆大量(跌)",
-        "分點買超12.1%",
-        "分點賣超3.5%",
-        "隔日沖券商:台灣摩根士丹利",
-        "法人買超對沖偏空"
-      ],
-      "relaxed": false,
-      "shares_outstanding": 2908060800.0,
-      "vwap": 70.3,
-      "upper_wick_frac": 0.849,
-      "lower_wick_frac": 0.11,
-      "body_frac": 0.041,
-      "wick_tag": "長上影",
-      "near_limit": "",
-      "inst_net_lots": 28524.47,
-      "inst_net_ratio": 0.107,
-      "inst_foreign_lots": 25235.72,
-      "inst_trust_lots": 2968.0,
-      "broker_top5_buy_lots": 32273.0,
-      "broker_top5_buy_ratio": 0.121,
-      "broker_top5_sell_lots": 9366.0,
-      "broker_top5_sell_ratio": 0.035,
-      "broker_top_buy": "台灣摩根士丹利",
-      "broker_top_sell": "元大-土城永寧",
-      "broker_daytrade_hint": true,
-      "avg_volume_15d_lots": 99147.95,
-      "volume_ratio_15d": 2.69,
-      "surge_volume": true,
-      "surge_volume_label": "爆大量(跌)",
-      "surge_volume_dir": "down",
-      "daytrade_rate_pct": 66.73,
-      "amplitude_pct": 10.86,
-      "change_pct_display": -0.15,
-      "close_pos_pct": 11.0,
-      "turnover_rate_pct": 9.172,
-      "night_flags": [],
-      "support_shadow": 66.3,
-      "resistance_shadow": 70.6,
-      "support_status": "ok",
-      "resistance_status": "ok",
-      "support_shadow_meta": {
-        "source": "previous_day_low",
-        "role": "boundary",
-        "raw_sources": [
-          "previous_day_low"
-        ],
-        "unique_families": [
-          "prev_day_structure"
-        ],
-        "family_count": 1,
-        "distance_band": "near",
-        "distance": 0.8,
-        "normalized_distance": 0.178344,
-        "consumed": false,
-        "confirmation_tags": [],
-        "selection_reason": "best_valid_candidate"
-      },
-      "resistance_shadow_meta": {
-        "source": "rolling_high_15d",
-        "role": "boundary",
-        "raw_sources": [
-          "rolling_high_15d"
-        ],
-        "unique_families": [
-          "multi_day"
-        ],
-        "family_count": 1,
-        "distance_band": "far",
-        "distance": 3.5,
-        "normalized_distance": 0.780255,
-        "consumed": false,
-        "confirmation_tags": [],
-        "selection_reason": "best_valid_candidate"
-      },
-      "engine_status": "completed",
-      "calculation_version": "sr_shadow_v1",
-      "volatility_source": "atr14_sma",
-      "volatility_value": 4.485714285714287,
-      "sample_count": 14,
-      "estimated_upper_limit": 73.8,
-      "estimated_lower_limit": 60.4,
-      "price_limit_source": "calculated_from_previous_close",
-      "price_limit_verified": false,
-      "special_reference_detector": "unavailable",
-      "evaluation_eligible": true,
-      "fallback_used": false,
-      "pivot_p": 69.0,
-      "risk_tags": [],
-      "merge_distance": 0.10064999999999999,
-      "consumed_threshold": 0.35885714285714293,
-      "excluded_candidates_and_reasons": [
-        {
-          "source": "rolling_low_15d",
-          "price": 57.9,
-          "reason": "outside_estimated_limit"
-        },
-        {
-          "source": "previous_day_high",
-          "price": 73.6,
-          "reason": "out_of_range",
-          "raw_sources": [
-            "previous_day_high"
-          ]
-        },
-        {
-          "source": "pivot_s1",
-          "price": 64.4,
-          "reason": "not_selected",
-          "side": "support",
-          "band": "medium",
-          "consumed": false,
-          "raw_sources": [
-            "pivot_s1"
-          ]
-        },
-        {
-          "source": "pivot_r1",
-          "price": 71.7,
-          "reason": "not_selected",
-          "side": "resistance",
-          "band": "far",
-          "consumed": false,
-          "raw_sources": [
-            "pivot_r1"
-          ]
-        },
-        {
-          "source": "vwap",
-          "price": 70.3,
-          "reason": "not_selected",
-          "side": "resistance",
-          "band": "far",
-          "consumed": false,
-          "raw_sources": [
-            "vwap"
-          ]
-        }
-      ],
-      "open_structure_bias": "bullish_watch",
-      "open_structure_zh": "偏多觀察",
-      "open_structure_event": "false_breakdown",
-      "open_structure_reason": "第一根假跌破67.1後收在上方，偏多觀察；量能無同時段可比",
-      "open_structure_confidence": "low",
-      "open_structure_space_insufficient": false
-    },
-    {
-      "code": "2328",
-      "name": "廣宇",
-      "date": "20261022",
-      "market": "TWSE",
-      "close": 53.6,
-      "open": 55.0,
-      "high": 57.9,
-      "low": 53.5,
-      "prev_close": 54.3,
-      "change_pct": -0.0129,
-      "amplitude": 0.081,
-      "volume_lots": 29196.76,
-      "turnover_value": 1631711425,
-      "daytrade_rate": 0.5424,
-      "daytrade_shares": 15835000,
-      "daytrade_buy_value": 882709400.0,
-      "daytrade_sell_value": 882236700.0,
-      "close_position": 0.0227,
-      "turnover_rate": 0.056327,
-      "avg_volume_5d_lots": 9294.94,
-      "volume_ratio": 3.141,
-      "quality_score": 88.0,
-      "score_breakdown": {
-        "turnover_rate": 15.0,
-        "rel_volume": 10.0,
-        "close_pos_weak": 7.0,
-        "daytrade_rate": 15.0,
-        "daytrade_amount": 5.0,
-        "inst_buy": 12.0,
-        "broker_buy": 10.0,
-        "broker_sell": 6.0,
-        "broker_daytrade": 8.0
-      },
-      "bias_hint": "偏空*",
-      "support_obs": 53.5,
-      "resistance_obs": 57.9,
-      "notes": [
-        "週轉率5.63%",
-        "量比3.14x",
-        "法人買超14.6%",
-        "長上影",
-        "爆大量(跌)",
-        "分點買超15.8%",
-        "分點賣超4.3%",
-        "隔日沖券商:新加坡商瑞銀",
-        "法人買超對沖偏空"
-      ],
-      "relaxed": false,
-      "shares_outstanding": 518346282.0,
-      "vwap": 55.89,
-      "upper_wick_frac": 0.659,
-      "lower_wick_frac": 0.023,
-      "body_frac": 0.318,
-      "wick_tag": "長上影",
-      "near_limit": "",
-      "inst_net_lots": 4268.84,
-      "inst_net_ratio": 0.146,
-      "inst_foreign_lots": 4439.49,
-      "inst_trust_lots": 0.0,
-      "broker_top5_buy_lots": 4613.0,
-      "broker_top5_buy_ratio": 0.158,
-      "broker_top5_sell_lots": 1267.0,
-      "broker_top5_sell_ratio": 0.043,
-      "broker_top_buy": "新加坡商瑞銀",
-      "broker_top_sell": "台新-文心",
-      "broker_daytrade_hint": true,
-      "avg_volume_15d_lots": 4369.75,
-      "volume_ratio_15d": 6.682,
-      "surge_volume": true,
-      "surge_volume_label": "爆大量(跌)",
-      "surge_volume_dir": "down",
-      "daytrade_rate_pct": 54.24,
-      "amplitude_pct": 8.1,
-      "change_pct_display": -1.29,
-      "close_pos_pct": 2.3,
-      "turnover_rate_pct": 5.633,
-      "night_flags": [],
-      "support_shadow": 52.1,
-      "resistance_shadow": 55.5,
-      "support_status": "ok",
-      "resistance_status": "ok",
-      "support_shadow_meta": {
-        "source": "pivot_s1",
-        "role": "derived",
-        "raw_sources": [
-          "pivot_s1"
-        ],
-        "unique_families": [
-          "prev_day_structure"
-        ],
-        "family_count": 1,
-        "distance_band": "far",
-        "distance": 1.5,
-        "normalized_distance": 0.739437,
-        "consumed": false,
-        "confirmation_tags": [
-          "52"
-        ],
-        "selection_reason": "best_valid_candidate"
-      },
-      "resistance_shadow_meta": {
-        "source": "rolling_high_15d",
-        "role": "boundary",
-        "raw_sources": [
-          "rolling_high_15d"
-        ],
-        "unique_families": [
-          "multi_day"
-        ],
-        "family_count": 1,
-        "distance_band": "far",
-        "distance": 1.9,
-        "normalized_distance": 0.93662,
-        "consumed": false,
-        "confirmation_tags": [],
-        "selection_reason": "best_valid_candidate"
-      },
-      "engine_status": "completed",
-      "calculation_version": "sr_shadow_v1",
-      "volatility_source": "atr14_sma",
-      "volatility_value": 2.0285714285714285,
-      "sample_count": 14,
-      "estimated_upper_limit": 59.0,
-      "estimated_lower_limit": 48.25,
-      "price_limit_source": "calculated_from_previous_close",
-      "price_limit_verified": false,
-      "special_reference_detector": "unavailable",
-      "evaluation_eligible": true,
-      "fallback_used": false,
-      "pivot_p": 55.0,
-      "risk_tags": [],
-      "merge_distance": 0.1,
-      "consumed_threshold": 0.30000000000000004,
-      "excluded_candidates_and_reasons": [
-        {
-          "source": "rolling_low_15d",
-          "price": 47.2,
-          "reason": "outside_estimated_limit"
-        },
-        {
-          "source": "previous_day_high",
-          "price": 57.9,
-          "reason": "out_of_range",
-          "raw_sources": [
-            "previous_day_high"
-          ]
-        },
-        {
-          "source": "pivot_r1",
-          "price": 56.5,
-          "reason": "out_of_range",
-          "raw_sources": [
-            "pivot_r1"
-          ]
-        },
-        {
-          "source": "previous_day_low",
-          "price": 53.5,
-          "reason": "consumed",
-          "side": "support",
-          "band": "consumed",
-          "consumed": true,
-          "raw_sources": [
-            "previous_day_low"
-          ]
-        },
-        {
-          "source": "vwap",
-          "price": 55.9,
-          "reason": "not_selected",
-          "side": "resistance",
-          "band": "far",
-          "consumed": false,
-          "raw_sources": [
-            "vwap"
-          ]
-        }
-      ],
-      "open_structure_bias": "bullish_watch",
-      "open_structure_zh": "偏多觀察",
-      "open_structure_event": "false_breakdown",
-      "open_structure_reason": "第一根假跌破55.5後收在上方，偏多觀察；量能無同時段可比",
-      "open_structure_confidence": "low",
-      "open_structure_space_insufficient": false
-    },
-    {
-      "code": "1528",
-      "name": "恩德",
-      "date": "20261022",
-      "market": "TWSE",
-      "close": 25.9,
-      "open": 26.15,
-      "high": 27.9,
-      "low": 25.75,
-      "prev_close": 25.4,
-      "change_pct": 0.0197,
-      "amplitude": 0.0846,
-      "volume_lots": 38771.46,
-      "turnover_value": 1046166839,
-      "daytrade_rate": 0.6538,
-      "daytrade_shares": 25349000,
-      "daytrade_buy_value": 685505000.0,
-      "daytrade_sell_value": 680468750.0,
-      "close_position": 0.0698,
-      "turnover_rate": 0.202641,
-      "avg_volume_5d_lots": 10069.69,
-      "volume_ratio": 3.85,
-      "quality_score": 84.0,
-      "score_breakdown": {
-        "turnover_rate": 15.0,
-        "rel_volume": 10.0,
-        "close_pos_weak": 7.0,
-        "daytrade_rate": 15.0,
-        "daytrade_amount": 5.0,
-        "inst_buy": 8.0,
-        "broker_buy": 10.0,
-        "broker_sell": 6.0,
-        "broker_daytrade": 8.0
-      },
-      "bias_hint": "偏空*",
-      "support_obs": 25.75,
-      "resistance_obs": 27.9,
-      "notes": [
-        "週轉率20.26%",
-        "量比3.85x",
-        "法人買超3.5%",
-        "長上影",
-        "爆大量(漲)",
-        "分點買超7.9%",
-        "分點賣超3.0%",
-        "隔日沖券商:日茂",
-        "缺口反轉風險"
-      ],
-      "relaxed": false,
-      "shares_outstanding": 191331000.0,
-      "vwap": 26.98,
-      "upper_wick_frac": 0.814,
-      "lower_wick_frac": 0.07,
-      "body_frac": 0.116,
-      "wick_tag": "長上影",
-      "near_limit": "",
-      "inst_net_lots": 1364.54,
-      "inst_net_ratio": 0.035,
-      "inst_foreign_lots": 1367.54,
-      "inst_trust_lots": 0.0,
-      "broker_top5_buy_lots": 3063.0,
-      "broker_top5_buy_ratio": 0.079,
-      "broker_top5_sell_lots": 1159.0,
-      "broker_top5_sell_ratio": 0.03,
-      "broker_top_buy": "日茂",
-      "broker_top_sell": "台灣摩根士丹利",
-      "broker_daytrade_hint": true,
-      "avg_volume_15d_lots": 5733.92,
-      "volume_ratio_15d": 6.762,
-      "surge_volume": true,
-      "surge_volume_label": "爆大量(漲)",
-      "surge_volume_dir": "up",
-      "daytrade_rate_pct": 65.38,
-      "amplitude_pct": 8.46,
-      "change_pct_display": 1.97,
-      "close_pos_pct": 7.0,
-      "turnover_rate_pct": 20.264,
-      "night_flags": [
-        "缺口反轉風險"
-      ],
-      "support_shadow": 25.15,
-      "resistance_shadow": 26.5,
-      "support_status": "ok",
-      "resistance_status": "ok",
-      "support_shadow_meta": {
-        "source": "pivot_s1",
-        "role": "derived",
-        "raw_sources": [
-          "pivot_s1"
-        ],
-        "unique_families": [
-          "prev_day_structure"
-        ],
-        "family_count": 1,
         "distance_band": "medium",
-        "distance": 0.75,
-        "normalized_distance": 0.544041,
-        "consumed": false,
-        "confirmation_tags": [],
-        "selection_reason": "best_valid_candidate"
-      },
-      "resistance_shadow_meta": {
-        "source": "rolling_high_15d",
-        "role": "boundary",
-        "raw_sources": [
-          "rolling_high_15d"
-        ],
-        "unique_families": [
-          "multi_day"
-        ],
-        "family_count": 1,
-        "distance_band": "medium",
-        "distance": 0.6,
-        "normalized_distance": 0.435233,
+        "distance": 0.3,
+        "normalized_distance": 0.376682,
         "consumed": false,
         "confirmation_tags": [],
         "selection_reason": "best_valid_candidate"
@@ -1593,345 +1002,149 @@
       "engine_status": "completed",
       "calculation_version": "sr_shadow_v1",
       "volatility_source": "atr14_sma",
-      "volatility_value": 1.3785714285714283,
+      "volatility_value": 0.7964285714285714,
       "sample_count": 14,
-      "estimated_upper_limit": 28.5,
-      "estimated_lower_limit": 23.3,
+      "estimated_upper_limit": 36.45,
+      "estimated_lower_limit": 29.85,
       "price_limit_source": "calculated_from_previous_close",
       "price_limit_verified": false,
       "special_reference_detector": "unavailable",
       "evaluation_eligible": true,
       "fallback_used": false,
-      "pivot_p": 26.516667,
+      "pivot_p": 33.416667,
       "risk_tags": [],
       "merge_distance": 0.05,
       "consumed_threshold": 0.15000000000000002,
       "excluded_candidates_and_reasons": [
         {
           "source": "rolling_low_15d",
-          "price": 22.6,
-          "reason": "outside_estimated_limit"
+          "price": 31.05,
+          "reason": "out_of_range",
+          "raw_sources": [
+            "rolling_low_15d"
+          ]
         },
         {
           "source": "previous_day_high",
-          "price": 27.9,
+          "price": 34.45,
           "reason": "out_of_range",
           "raw_sources": [
             "previous_day_high"
           ]
         },
         {
-          "source": "previous_day_low",
-          "price": 25.75,
-          "reason": "consumed",
-          "side": "support",
-          "band": "consumed",
-          "consumed": true,
-          "raw_sources": [
-            "previous_day_low"
-          ]
-        },
-        {
           "source": "pivot_r1",
-          "price": 27.3,
-          "reason": "not_selected",
-          "side": "resistance",
-          "band": "far",
-          "consumed": false,
+          "price": 34.2,
+          "reason": "out_of_range",
           "raw_sources": [
             "pivot_r1"
           ]
         },
         {
-          "source": "vwap",
-          "price": 27.0,
-          "reason": "not_selected",
-          "side": "resistance",
-          "band": "far",
-          "consumed": false,
-          "raw_sources": [
-            "vwap"
-          ]
-        }
-      ],
-      "open_structure_bias": "bearish_watch",
-      "open_structure_zh": "偏空觀察",
-      "open_structure_event": "false_breakout",
-      "open_structure_reason": "第一根假突破25.15後收在下方，偏空觀察；量能無同時段可比；先賣後買未核",
-      "open_structure_confidence": "low",
-      "open_structure_space_insufficient": false
-    },
-    {
-      "code": "3673",
-      "name": "TPK-KY",
-      "date": "20261022",
-      "market": "TWSE",
-      "close": 73.0,
-      "open": 75.8,
-      "high": 78.9,
-      "low": 72.0,
-      "prev_close": 75.8,
-      "change_pct": -0.0369,
-      "amplitude": 0.091,
-      "volume_lots": 36223.05,
-      "turnover_value": 2758956865,
-      "daytrade_rate": 0.6767,
-      "daytrade_shares": 24513000,
-      "daytrade_buy_value": 1868125500.0,
-      "daytrade_sell_value": 1867191300.0,
-      "close_position": 0.1449,
-      "turnover_rate": 0.089074,
-      "avg_volume_5d_lots": 11291.92,
-      "volume_ratio": 3.208,
-      "quality_score": 82.0,
-      "score_breakdown": {
-        "turnover_rate": 15.0,
-        "rel_volume": 10.0,
-        "abs_change": 8.0,
-        "close_pos_weak": 7.0,
-        "daytrade_rate": 15.0,
-        "daytrade_amount": 5.0,
-        "inst_sell": 12.0,
-        "broker_sell": 10.0
-      },
-      "bias_hint": "偏空",
-      "support_obs": 72.0,
-      "resistance_obs": 78.9,
-      "notes": [
-        "週轉率8.91%",
-        "量比3.21x",
-        "法人賣超7.0%",
-        "長上影",
-        "爆大量(跌)",
-        "分點賣超6.2%"
-      ],
-      "relaxed": false,
-      "shares_outstanding": 406663759.0,
-      "vwap": 76.17,
-      "upper_wick_frac": 0.449,
-      "lower_wick_frac": 0.145,
-      "body_frac": 0.406,
-      "wick_tag": "長上影",
-      "near_limit": "",
-      "inst_net_lots": -2541.26,
-      "inst_net_ratio": -0.07,
-      "inst_foreign_lots": -2161.32,
-      "inst_trust_lots": 0.0,
-      "broker_top5_buy_lots": 712.0,
-      "broker_top5_buy_ratio": 0.02,
-      "broker_top5_sell_lots": 2260.0,
-      "broker_top5_sell_ratio": 0.062,
-      "broker_top_buy": "台新-城東",
-      "broker_top_sell": "元大證券",
-      "broker_daytrade_hint": false,
-      "avg_volume_15d_lots": 15103.83,
-      "volume_ratio_15d": 2.398,
-      "surge_volume": true,
-      "surge_volume_label": "爆大量(跌)",
-      "surge_volume_dir": "down",
-      "daytrade_rate_pct": 67.67,
-      "amplitude_pct": 9.1,
-      "change_pct_display": -3.69,
-      "close_pos_pct": 14.5,
-      "turnover_rate_pct": 8.907,
-      "night_flags": [],
-      "support_shadow": 72.2,
-      "resistance_shadow": 76.2,
-      "support_status": "ok",
-      "resistance_status": "ok",
-      "support_shadow_meta": {
-        "source": "unfilled_gap_near_edge",
-        "role": "boundary",
-        "raw_sources": [
-          "unfilled_gap_near_edge"
-        ],
-        "unique_families": [
-          "multi_day"
-        ],
-        "family_count": 1,
-        "distance_band": "near",
-        "distance": 0.8,
-        "normalized_distance": 0.209346,
-        "consumed": false,
-        "confirmation_tags": [],
-        "selection_reason": "best_valid_candidate"
-      },
-      "resistance_shadow_meta": {
-        "source": "vwap",
-        "role": "cost",
-        "raw_sources": [
-          "vwap"
-        ],
-        "unique_families": [
-          "cost"
-        ],
-        "family_count": 1,
-        "distance_band": "far",
-        "distance": 3.2,
-        "normalized_distance": 0.837383,
-        "consumed": false,
-        "confirmation_tags": [],
-        "selection_reason": "best_valid_candidate"
-      },
-      "engine_status": "completed",
-      "calculation_version": "sr_shadow_v1",
-      "volatility_source": "atr14_sma",
-      "volatility_value": 3.8214285714285725,
-      "sample_count": 14,
-      "estimated_upper_limit": 80.3,
-      "estimated_lower_limit": 65.7,
-      "price_limit_source": "calculated_from_previous_close",
-      "price_limit_verified": false,
-      "special_reference_detector": "unavailable",
-      "evaluation_eligible": true,
-      "fallback_used": false,
-      "pivot_p": 74.633333,
-      "risk_tags": [],
-      "merge_distance": 0.1095,
-      "consumed_threshold": 0.3057142857142858,
-      "excluded_candidates_and_reasons": [
-        {
-          "source": "rolling_high_15d",
-          "price": 81.0,
-          "reason": "outside_estimated_limit"
-        },
-        {
-          "source": "previous_day_high",
-          "price": 78.9,
-          "reason": "out_of_range",
-          "raw_sources": [
-            "previous_day_high"
-          ]
-        },
-        {
-          "source": "previous_day_low",
-          "price": 72.0,
-          "reason": "not_selected",
-          "side": "support",
-          "band": "near",
-          "consumed": false,
-          "raw_sources": [
-            "previous_day_low"
-          ]
-        },
-        {
           "source": "pivot_s1",
-          "price": 70.4,
+          "price": 32.4,
           "reason": "not_selected",
           "side": "support",
-          "band": "medium",
+          "band": "far",
           "consumed": false,
           "raw_sources": [
             "pivot_s1"
           ]
         },
         {
-          "source": "rolling_low_15d",
-          "price": 68.5,
-          "reason": "not_selected",
-          "side": "support",
-          "band": "far",
-          "consumed": false,
-          "raw_sources": [
-            "rolling_low_15d"
-          ]
-        },
-        {
-          "source": "pivot_r1",
-          "price": 77.3,
-          "reason": "not_selected",
+          "source": "rolling_high_15d",
+          "price": 33.2,
+          "reason": "consumed",
           "side": "resistance",
-          "band": "far",
-          "consumed": false,
+          "band": "consumed",
+          "consumed": true,
           "raw_sources": [
-            "pivot_r1"
+            "rolling_high_15d"
           ]
         }
-      ],
-      "open_structure_bias": "neutral_watch",
-      "open_structure_zh": "先觀望",
-      "open_structure_event": "false_breakout",
-      "open_structure_reason": "第一根假突破73後收在下方，偏空觀察；距離下一層不足，改先觀望",
-      "open_structure_confidence": "low",
-      "open_structure_space_insufficient": true
+      ]
     },
     {
-      "code": "4566",
-      "name": "時碩工業",
-      "date": "20261022",
+      "code": "6269",
+      "name": "台郡",
+      "date": "20261027",
       "market": "TWSE",
-      "close": 84.4,
-      "open": 86.3,
-      "high": 90.5,
-      "low": 83.3,
-      "prev_close": 85.1,
-      "change_pct": -0.0082,
-      "amplitude": 0.0846,
-      "volume_lots": 9740.99,
-      "turnover_value": 843867272,
-      "daytrade_rate": 0.5898,
-      "daytrade_shares": 5745000,
-      "daytrade_buy_value": 497039100.0,
-      "daytrade_sell_value": 498721700.0,
-      "close_position": 0.1528,
-      "turnover_rate": 0.088249,
-      "avg_volume_5d_lots": 8108.01,
-      "volume_ratio": 1.201,
-      "quality_score": 82.0,
+      "close": 78.4,
+      "open": 79.2,
+      "high": 85.8,
+      "low": 77.5,
+      "prev_close": 78.7,
+      "change_pct": -0.0038,
+      "amplitude": 0.1055,
+      "volume_lots": 73382.06,
+      "turnover_value": 5928115311,
+      "daytrade_rate": 0.8159,
+      "daytrade_shares": 59871000,
+      "daytrade_buy_value": 4838585500.0,
+      "daytrade_sell_value": 4842566100.0,
+      "close_position": 0.1084,
+      "turnover_rate": 0.226606,
+      "avg_volume_5d_lots": 93011.68,
+      "volume_ratio": 0.789,
+      "quality_score": 74.0,
       "score_breakdown": {
         "turnover_rate": 15.0,
         "close_pos_weak": 7.0,
         "daytrade_rate": 15.0,
         "daytrade_amount": 5.0,
-        "inst_sell": 12.0,
-        "broker_buy": 10.0,
+        "inst_sell": 8.0,
+        "broker_buy": 6.0,
         "broker_sell": 10.0,
         "broker_daytrade": 8.0
       },
-      "bias_hint": "偏空",
-      "support_obs": 83.3,
-      "resistance_obs": 90.5,
+      "bias_hint": "中性",
+      "support_obs": 77.5,
+      "resistance_obs": 85.8,
       "notes": [
-        "週轉率8.82%",
-        "法人賣超12.9%",
+        "週轉率22.66%",
+        "法人賣超3.7%",
         "長上影",
         "爆大量(跌)",
-        "分點買超6.5%",
-        "分點賣超13.8%",
-        "隔日沖券商:元大-天母"
+        "分點買超3.0%",
+        "分點賣超5.9%",
+        "隔日沖券商:凱基-台北",
+        "缺口反轉風險"
       ],
       "relaxed": false,
-      "shares_outstanding": 110381002.0,
-      "vwap": 86.63,
-      "upper_wick_frac": 0.583,
-      "lower_wick_frac": 0.153,
-      "body_frac": 0.264,
+      "shares_outstanding": 323831481.0,
+      "vwap": 80.78,
+      "upper_wick_frac": 0.795,
+      "lower_wick_frac": 0.108,
+      "body_frac": 0.096,
       "wick_tag": "長上影",
       "near_limit": "",
-      "inst_net_lots": -1252.07,
-      "inst_net_ratio": -0.129,
-      "inst_foreign_lots": -1287.07,
-      "inst_trust_lots": 39.0,
-      "broker_top5_buy_lots": 631.0,
-      "broker_top5_buy_ratio": 0.065,
-      "broker_top5_sell_lots": 1341.0,
-      "broker_top5_sell_ratio": 0.138,
-      "broker_top_buy": "元大-天母",
-      "broker_top_sell": "台灣摩根士丹利",
+      "inst_net_lots": -2693.41,
+      "inst_net_ratio": -0.037,
+      "inst_foreign_lots": -2901.23,
+      "inst_trust_lots": 0.0,
+      "broker_top5_buy_lots": 2226.0,
+      "broker_top5_buy_ratio": 0.03,
+      "broker_top5_sell_lots": 4351.0,
+      "broker_top5_sell_ratio": 0.059,
+      "broker_top_buy": "凱基-台北",
+      "broker_top_sell": "新加坡商瑞銀",
       "broker_daytrade_hint": true,
-      "avg_volume_15d_lots": 4616.71,
-      "volume_ratio_15d": 2.11,
+      "avg_volume_15d_lots": 34379.45,
+      "volume_ratio_15d": 2.134,
       "surge_volume": true,
       "surge_volume_label": "爆大量(跌)",
       "surge_volume_dir": "down",
-      "daytrade_rate_pct": 58.98,
-      "amplitude_pct": 8.46,
-      "change_pct_display": -0.82,
-      "close_pos_pct": 15.3,
-      "turnover_rate_pct": 8.825,
-      "night_flags": [],
-      "support_shadow": 83.3,
-      "resistance_shadow": 86.6,
+      "daytrade_rate_pct": 81.59,
+      "amplitude_pct": 10.55,
+      "change_pct_display": -0.38,
+      "close_pos_pct": 10.8,
+      "turnover_rate_pct": 22.661,
+      "night_flags": [
+        "夜盤背離",
+        "缺口反轉風險"
+      ],
+      "support_shadow": 77.5,
+      "resistance_shadow": 80.8,
       "support_status": "ok",
       "resistance_status": "ok",
       "support_shadow_meta": {
@@ -1945,8 +1158,8 @@
         ],
         "family_count": 1,
         "distance_band": "near",
-        "distance": 1.1,
-        "normalized_distance": 0.242902,
+        "distance": 0.9,
+        "normalized_distance": 0.159494,
         "consumed": false,
         "confirmation_tags": [],
         "selection_reason": "best_valid_candidate"
@@ -1962,8 +1175,8 @@
         ],
         "family_count": 1,
         "distance_band": "medium",
-        "distance": 2.2,
-        "normalized_distance": 0.485804,
+        "distance": 2.4,
+        "normalized_distance": 0.425316,
         "consumed": false,
         "confirmation_tags": [],
         "selection_reason": "best_valid_candidate"
@@ -1971,44 +1184,763 @@
       "engine_status": "completed",
       "calculation_version": "sr_shadow_v1",
       "volatility_source": "atr14_sma",
-      "volatility_value": 4.528571428571427,
+      "volatility_value": 5.642857142857145,
       "sample_count": 14,
-      "estimated_upper_limit": 92.8,
-      "estimated_lower_limit": 76.0,
+      "estimated_upper_limit": 86.2,
+      "estimated_lower_limit": 70.6,
       "price_limit_source": "calculated_from_previous_close",
       "price_limit_verified": false,
       "special_reference_detector": "unavailable",
       "evaluation_eligible": true,
       "fallback_used": false,
-      "pivot_p": 86.066667,
+      "pivot_p": 80.566667,
       "risk_tags": [],
-      "merge_distance": 0.12660000000000002,
-      "consumed_threshold": 0.36228571428571416,
+      "merge_distance": 0.11760000000000001,
+      "consumed_threshold": 0.4514285714285716,
       "excluded_candidates_and_reasons": [
         {
+          "source": "rolling_high_15d",
+          "price": 93.0,
+          "reason": "outside_estimated_limit"
+        },
+        {
           "source": "rolling_low_15d",
-          "price": 73.2,
+          "price": 60.3,
+          "reason": "outside_estimated_limit"
+        },
+        {
+          "source": "unfilled_gap_near_edge",
+          "price": 67.9,
           "reason": "outside_estimated_limit"
         },
         {
           "source": "previous_day_high",
-          "price": 90.5,
+          "price": 85.8,
           "reason": "out_of_range",
           "raw_sources": [
             "previous_day_high"
           ]
         },
         {
-          "source": "rolling_high_15d",
-          "price": 90.0,
-          "reason": "out_of_range",
+          "source": "pivot_s1",
+          "price": 75.3,
+          "reason": "not_selected",
+          "side": "support",
+          "band": "medium",
+          "consumed": false,
           "raw_sources": [
-            "rolling_high_15d"
+            "pivot_s1"
           ]
         },
         {
+          "source": "unfilled_gap_near_edge",
+          "price": 73.6,
+          "reason": "not_selected",
+          "side": "support",
+          "band": "far",
+          "consumed": false,
+          "raw_sources": [
+            "unfilled_gap_near_edge"
+          ]
+        },
+        {
+          "source": "pivot_r1",
+          "price": 83.6,
+          "reason": "not_selected",
+          "side": "resistance",
+          "band": "far",
+          "consumed": false,
+          "raw_sources": [
+            "pivot_r1"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "8150",
+      "name": "南茂",
+      "date": "20261027",
+      "market": "TWSE",
+      "close": 97.0,
+      "open": 98.9,
+      "high": 103.5,
+      "low": 96.3,
+      "prev_close": 95.9,
+      "change_pct": 0.0115,
+      "amplitude": 0.0751,
+      "volume_lots": 29676.67,
+      "turnover_value": 2947033736,
+      "daytrade_rate": 0.5718,
+      "daytrade_shares": 16968000,
+      "daytrade_buy_value": 1688346300.0,
+      "daytrade_sell_value": 1689009200.0,
+      "close_position": 0.0972,
+      "turnover_rate": 0.042123,
+      "avg_volume_5d_lots": 15531.3,
+      "volume_ratio": 1.911,
+      "quality_score": 73.0,
+      "score_breakdown": {
+        "turnover_rate": 8.0,
+        "rel_volume": 10.0,
+        "close_pos_weak": 7.0,
+        "daytrade_rate": 15.0,
+        "daytrade_amount": 5.0,
+        "broker_buy": 10.0,
+        "broker_sell": 10.0,
+        "broker_daytrade": 8.0
+      },
+      "bias_hint": "偏多*",
+      "support_obs": 96.3,
+      "resistance_obs": 103.5,
+      "notes": [
+        "週轉率4.21%",
+        "量比1.91x",
+        "長上影",
+        "分點買超15.1%",
+        "分點賣超19.4%",
+        "隔日沖券商:台灣摩根士丹利"
+      ],
+      "relaxed": false,
+      "shares_outstanding": 704523126.0,
+      "vwap": 99.3,
+      "upper_wick_frac": 0.639,
+      "lower_wick_frac": 0.097,
+      "body_frac": 0.264,
+      "wick_tag": "長上影",
+      "near_limit": "",
+      "inst_net_lots": 156.44,
+      "inst_net_ratio": 0.005,
+      "inst_foreign_lots": -382.01,
+      "inst_trust_lots": 304.0,
+      "broker_top5_buy_lots": 4478.0,
+      "broker_top5_buy_ratio": 0.151,
+      "broker_top5_sell_lots": 5749.0,
+      "broker_top5_sell_ratio": 0.194,
+      "broker_top_buy": "台灣摩根士丹利",
+      "broker_top_sell": "國泰證券",
+      "broker_daytrade_hint": true,
+      "avg_volume_15d_lots": 40950.52,
+      "volume_ratio_15d": 0.725,
+      "surge_volume": false,
+      "surge_volume_label": "n/a",
+      "surge_volume_dir": "",
+      "daytrade_rate_pct": 57.18,
+      "amplitude_pct": 7.51,
+      "change_pct_display": 1.15,
+      "close_pos_pct": 9.7,
+      "turnover_rate_pct": 4.212,
+      "night_flags": [],
+      "support_shadow": 96.3,
+      "resistance_shadow": 99.3,
+      "support_status": "ok",
+      "resistance_status": "ok",
+      "support_shadow_meta": {
+        "source": "previous_day_low",
+        "role": "boundary",
+        "raw_sources": [
+          "previous_day_low"
+        ],
+        "unique_families": [
+          "prev_day_structure"
+        ],
+        "family_count": 1,
+        "distance_band": "near",
+        "distance": 0.7,
+        "normalized_distance": 0.101344,
+        "consumed": false,
+        "confirmation_tags": [],
+        "selection_reason": "best_valid_candidate"
+      },
+      "resistance_shadow_meta": {
+        "source": "vwap",
+        "role": "cost",
+        "raw_sources": [
+          "vwap"
+        ],
+        "unique_families": [
+          "cost"
+        ],
+        "family_count": 1,
+        "distance_band": "near",
+        "distance": 2.3,
+        "normalized_distance": 0.332989,
+        "consumed": false,
+        "confirmation_tags": [],
+        "selection_reason": "best_valid_candidate"
+      },
+      "engine_status": "completed",
+      "calculation_version": "sr_shadow_v1",
+      "volatility_source": "atr14_sma",
+      "volatility_value": 6.9071428571428575,
+      "sample_count": 14,
+      "estimated_upper_limit": 106.5,
+      "estimated_lower_limit": 87.3,
+      "price_limit_source": "calculated_from_previous_close",
+      "price_limit_verified": false,
+      "special_reference_detector": "unavailable",
+      "evaluation_eligible": true,
+      "fallback_used": false,
+      "pivot_p": 98.933333,
+      "risk_tags": [],
+      "merge_distance": 0.1455,
+      "consumed_threshold": 0.5525714285714286,
+      "excluded_candidates_and_reasons": [
+        {
+          "source": "rolling_high_15d",
+          "price": 133.0,
+          "reason": "outside_estimated_limit"
+        },
+        {
+          "source": "unfilled_gap_near_edge",
+          "price": 120.0,
+          "reason": "outside_estimated_limit"
+        },
+        {
+          "source": "unfilled_gap_near_edge",
+          "price": 111.0,
+          "reason": "outside_estimated_limit"
+        },
+        {
           "source": "pivot_s1",
-          "price": 81.6,
+          "price": 94.4,
+          "reason": "not_selected",
+          "side": "support",
+          "band": "medium",
+          "consumed": false,
+          "raw_sources": [
+            "pivot_s1"
+          ]
+        },
+        {
+          "source": "rolling_low_15d",
+          "price": 95.7,
+          "reason": "not_selected",
+          "side": "support",
+          "band": "near",
+          "consumed": false,
+          "raw_sources": [
+            "rolling_low_15d"
+          ]
+        },
+        {
+          "source": "previous_day_high",
+          "price": 103.5,
+          "reason": "not_selected",
+          "side": "resistance",
+          "band": "far",
+          "consumed": false,
+          "raw_sources": [
+            "previous_day_high"
+          ]
+        },
+        {
+          "source": "pivot_r1",
+          "price": 101.5,
+          "reason": "not_selected",
+          "side": "resistance",
+          "band": "medium",
+          "consumed": false,
+          "raw_sources": [
+            "pivot_r1"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "2409",
+      "name": "友達",
+      "date": "20261027",
+      "market": "TWSE",
+      "close": 33.45,
+      "open": 36.25,
+      "high": 36.55,
+      "low": 33.45,
+      "prev_close": 35.4,
+      "change_pct": -0.0551,
+      "amplitude": 0.0876,
+      "volume_lots": 339948.26,
+      "turnover_value": 11733416886,
+      "daytrade_rate": 0.4804,
+      "daytrade_shares": 163317000,
+      "daytrade_buy_value": 5664240000.0,
+      "daytrade_sell_value": 5650353450.0,
+      "close_position": 0.0,
+      "turnover_rate": 0.045044,
+      "avg_volume_5d_lots": 325068.17,
+      "volume_ratio": 1.046,
+      "quality_score": 71.0,
+      "score_breakdown": {
+        "turnover_rate": 8.0,
+        "abs_change": 8.0,
+        "close_pos_weak": 7.0,
+        "daytrade_rate": 15.0,
+        "daytrade_amount": 5.0,
+        "inst_sell": 12.0,
+        "broker_buy": 6.0,
+        "broker_sell": 10.0
+      },
+      "bias_hint": "中性",
+      "support_obs": 33.45,
+      "resistance_obs": 36.55,
+      "notes": [
+        "週轉率4.50%",
+        "法人賣超28.0%",
+        "分點買超4.8%",
+        "分點賣超30.8%",
+        "缺口反轉風險"
+      ],
+      "relaxed": false,
+      "shares_outstanding": 7547098972.0,
+      "vwap": 34.52,
+      "upper_wick_frac": 0.097,
+      "lower_wick_frac": 0.0,
+      "body_frac": 0.903,
+      "wick_tag": "",
+      "near_limit": "",
+      "inst_net_lots": -95215.06,
+      "inst_net_ratio": -0.28,
+      "inst_foreign_lots": -95959.95,
+      "inst_trust_lots": 3520.16,
+      "broker_top5_buy_lots": 16182.0,
+      "broker_top5_buy_ratio": 0.048,
+      "broker_top5_sell_lots": 104524.0,
+      "broker_top5_sell_ratio": 0.307,
+      "broker_top_buy": "永豐金證券",
+      "broker_top_sell": "元大證券",
+      "broker_daytrade_hint": false,
+      "avg_volume_15d_lots": 447336.06,
+      "volume_ratio_15d": 0.76,
+      "surge_volume": false,
+      "surge_volume_label": "n/a",
+      "surge_volume_dir": "",
+      "daytrade_rate_pct": 48.04,
+      "amplitude_pct": 8.76,
+      "change_pct_display": -5.51,
+      "close_pos_pct": 0.0,
+      "turnover_rate_pct": 4.504,
+      "night_flags": [
+        "夜盤背離",
+        "缺口反轉風險"
+      ],
+      "support_shadow": 32.4,
+      "resistance_shadow": 33.75,
+      "support_status": "ok",
+      "resistance_status": "ok",
+      "support_shadow_meta": {
+        "source": "pivot_s1",
+        "role": "derived",
+        "raw_sources": [
+          "pivot_s1"
+        ],
+        "unique_families": [
+          "prev_day_structure"
+        ],
+        "family_count": 1,
+        "distance_band": "medium",
+        "distance": 1.05,
+        "normalized_distance": 0.478049,
+        "consumed": false,
+        "confirmation_tags": [],
+        "selection_reason": "best_valid_candidate"
+      },
+      "resistance_shadow_meta": {
+        "source": "rolling_low_15d",
+        "role": "boundary",
+        "raw_sources": [
+          "rolling_low_15d"
+        ],
+        "unique_families": [
+          "multi_day"
+        ],
+        "family_count": 1,
+        "distance_band": "near",
+        "distance": 0.3,
+        "normalized_distance": 0.136585,
+        "consumed": false,
+        "confirmation_tags": [],
+        "selection_reason": "best_valid_candidate"
+      },
+      "engine_status": "completed",
+      "calculation_version": "sr_shadow_v1",
+      "volatility_source": "atr14_sma",
+      "volatility_value": 2.1964285714285707,
+      "sample_count": 14,
+      "estimated_upper_limit": 36.8,
+      "estimated_lower_limit": 30.1,
+      "price_limit_source": "calculated_from_previous_close",
+      "price_limit_verified": false,
+      "special_reference_detector": "unavailable",
+      "evaluation_eligible": true,
+      "fallback_used": false,
+      "pivot_p": 34.483333,
+      "risk_tags": [],
+      "merge_distance": 0.050175000000000004,
+      "consumed_threshold": 0.17571428571428566,
+      "excluded_candidates_and_reasons": [
+        {
+          "source": "previous_day_low",
+          "price": 33.45,
+          "reason": "equal_reference"
+        },
+        {
+          "source": "rolling_high_15d",
+          "price": 43.55,
+          "reason": "outside_estimated_limit"
+        },
+        {
+          "source": "previous_day_high",
+          "price": 36.55,
+          "reason": "out_of_range",
+          "raw_sources": [
+            "previous_day_high"
+          ]
+        },
+        {
+          "source": "pivot_r1",
+          "price": 35.5,
+          "reason": "not_selected",
+          "side": "resistance",
+          "band": "far",
+          "consumed": false,
+          "raw_sources": [
+            "pivot_r1"
+          ]
+        },
+        {
+          "source": "vwap",
+          "price": 34.5,
+          "reason": "not_selected",
+          "side": "resistance",
+          "band": "medium",
+          "consumed": false,
+          "raw_sources": [
+            "vwap"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "3715",
+      "name": "定穎投控",
+      "date": "20261027",
+      "market": "TWSE",
+      "close": 125.5,
+      "open": 135.0,
+      "high": 136.5,
+      "low": 125.0,
+      "prev_close": 134.5,
+      "change_pct": -0.0669,
+      "amplitude": 0.0855,
+      "volume_lots": 8202.56,
+      "turnover_value": 1056537276,
+      "daytrade_rate": 0.4495,
+      "daytrade_shares": 3687000,
+      "daytrade_buy_value": 474811500.0,
+      "daytrade_sell_value": 476959000.0,
+      "close_position": 0.0435,
+      "turnover_rate": 0.028926,
+      "avg_volume_5d_lots": 7261.54,
+      "volume_ratio": 1.13,
+      "quality_score": 71.0,
+      "score_breakdown": {
+        "abs_change": 8.0,
+        "close_pos_weak": 7.0,
+        "daytrade_rate": 15.0,
+        "daytrade_amount": 5.0,
+        "inst_sell": 12.0,
+        "broker_buy": 6.0,
+        "broker_sell": 10.0,
+        "broker_daytrade": 8.0
+      },
+      "bias_hint": "中性",
+      "support_obs": 125.0,
+      "resistance_obs": 136.5,
+      "notes": [
+        "法人賣超22.4%",
+        "分點買超4.4%",
+        "分點賣超24.2%",
+        "隔日沖券商:國泰-敦南",
+        "缺口反轉風險"
+      ],
+      "relaxed": false,
+      "shares_outstanding": 283574584.0,
+      "vwap": 128.81,
+      "upper_wick_frac": 0.13,
+      "lower_wick_frac": 0.043,
+      "body_frac": 0.826,
+      "wick_tag": "",
+      "near_limit": "",
+      "inst_net_lots": -1834.06,
+      "inst_net_ratio": -0.224,
+      "inst_foreign_lots": -1567.11,
+      "inst_trust_lots": 0.0,
+      "broker_top5_buy_lots": 361.0,
+      "broker_top5_buy_ratio": 0.044,
+      "broker_top5_sell_lots": 1985.0,
+      "broker_top5_sell_ratio": 0.242,
+      "broker_top_buy": "國泰-敦南",
+      "broker_top_sell": "摩根大通",
+      "broker_daytrade_hint": true,
+      "avg_volume_15d_lots": 8328.48,
+      "volume_ratio_15d": 0.985,
+      "surge_volume": false,
+      "surge_volume_label": "n/a",
+      "surge_volume_dir": "",
+      "daytrade_rate_pct": 44.95,
+      "amplitude_pct": 8.55,
+      "change_pct_display": -6.69,
+      "close_pos_pct": 4.3,
+      "turnover_rate_pct": 2.893,
+      "night_flags": [
+        "夜盤背離",
+        "缺口反轉風險"
+      ],
+      "support_shadow": 121.5,
+      "resistance_shadow": 129.0,
+      "support_status": "ok",
+      "resistance_status": "ok",
+      "support_shadow_meta": {
+        "source": "pivot_s1",
+        "role": "derived",
+        "raw_sources": [
+          "pivot_s1"
+        ],
+        "unique_families": [
+          "prev_day_structure"
+        ],
+        "family_count": 1,
+        "distance_band": "medium",
+        "distance": 4.0,
+        "normalized_distance": 0.484848,
+        "consumed": false,
+        "confirmation_tags": [
+          "122"
+        ],
+        "selection_reason": "best_valid_candidate"
+      },
+      "resistance_shadow_meta": {
+        "source": "vwap",
+        "role": "cost",
+        "raw_sources": [
+          "vwap"
+        ],
+        "unique_families": [
+          "cost"
+        ],
+        "family_count": 1,
+        "distance_band": "medium",
+        "distance": 3.5,
+        "normalized_distance": 0.424242,
+        "consumed": false,
+        "confirmation_tags": [
+          "129"
+        ],
+        "selection_reason": "best_valid_candidate"
+      },
+      "engine_status": "completed",
+      "calculation_version": "sr_shadow_v1",
+      "volatility_source": "atr14_sma",
+      "volatility_value": 8.25,
+      "sample_count": 14,
+      "estimated_upper_limit": 138.0,
+      "estimated_lower_limit": 113.0,
+      "price_limit_source": "calculated_from_previous_close",
+      "price_limit_verified": false,
+      "special_reference_detector": "unavailable",
+      "evaluation_eligible": true,
+      "fallback_used": false,
+      "pivot_p": 129.0,
+      "risk_tags": [],
+      "merge_distance": 0.5,
+      "consumed_threshold": 1.5,
+      "excluded_candidates_and_reasons": [
+        {
+          "source": "rolling_high_15d",
+          "price": 145.0,
+          "reason": "outside_estimated_limit"
+        },
+        {
+          "source": "previous_day_high",
+          "price": 136.5,
+          "reason": "out_of_range",
+          "raw_sources": [
+            "previous_day_high"
+          ]
+        },
+        {
+          "source": "previous_day_low",
+          "price": 125.0,
+          "reason": "consumed",
+          "side": "support",
+          "band": "consumed",
+          "consumed": true,
+          "raw_sources": [
+            "previous_day_low",
+            "rolling_low_15d"
+          ]
+        },
+        {
+          "source": "pivot_r1",
+          "price": 133.0,
+          "reason": "not_selected",
+          "side": "resistance",
+          "band": "far",
+          "consumed": false,
+          "raw_sources": [
+            "pivot_r1"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "6209",
+      "name": "今國光",
+      "date": "20261027",
+      "market": "TWSE",
+      "close": 94.6,
+      "open": 99.9,
+      "high": 104.5,
+      "low": 93.7,
+      "prev_close": 99.0,
+      "change_pct": -0.0444,
+      "amplitude": 0.1091,
+      "volume_lots": 34939.97,
+      "turnover_value": 3438773099,
+      "daytrade_rate": 0.7512,
+      "daytrade_shares": 26246000,
+      "daytrade_buy_value": 2588082300.0,
+      "daytrade_sell_value": 2584780900.0,
+      "close_position": 0.0833,
+      "turnover_rate": 0.192097,
+      "avg_volume_5d_lots": 53265.78,
+      "volume_ratio": 0.656,
+      "quality_score": 70.0,
+      "score_breakdown": {
+        "turnover_rate": 15.0,
+        "abs_change": 8.0,
+        "close_pos_weak": 7.0,
+        "daytrade_rate": 15.0,
+        "daytrade_amount": 5.0,
+        "broker_buy": 6.0,
+        "broker_sell": 6.0,
+        "broker_daytrade": 8.0
+      },
+      "bias_hint": "中性",
+      "support_obs": 93.7,
+      "resistance_obs": 104.5,
+      "notes": [
+        "週轉率19.21%",
+        "分點買超4.0%",
+        "分點賣超3.5%",
+        "隔日沖券商:凱基-台北",
+        "缺口反轉風險"
+      ],
+      "relaxed": false,
+      "shares_outstanding": 181887549.0,
+      "vwap": 98.42,
+      "upper_wick_frac": 0.426,
+      "lower_wick_frac": 0.083,
+      "body_frac": 0.491,
+      "wick_tag": "",
+      "near_limit": "",
+      "inst_net_lots": 719.02,
+      "inst_net_ratio": 0.021,
+      "inst_foreign_lots": 915.12,
+      "inst_trust_lots": 0.0,
+      "broker_top5_buy_lots": 1409.0,
+      "broker_top5_buy_ratio": 0.04,
+      "broker_top5_sell_lots": 1215.0,
+      "broker_top5_sell_ratio": 0.035,
+      "broker_top_buy": "凱基-台北",
+      "broker_top_sell": "摩根大通",
+      "broker_daytrade_hint": true,
+      "avg_volume_15d_lots": 31154.0,
+      "volume_ratio_15d": 1.122,
+      "surge_volume": false,
+      "surge_volume_label": "n/a",
+      "surge_volume_dir": "",
+      "daytrade_rate_pct": 75.12,
+      "amplitude_pct": 10.91,
+      "change_pct_display": -4.44,
+      "close_pos_pct": 8.3,
+      "turnover_rate_pct": 19.21,
+      "night_flags": [
+        "夜盤背離",
+        "缺口反轉風險"
+      ],
+      "support_shadow": 93.7,
+      "resistance_shadow": 98.4,
+      "support_status": "ok",
+      "resistance_status": "ok",
+      "support_shadow_meta": {
+        "source": "previous_day_low",
+        "role": "boundary",
+        "raw_sources": [
+          "previous_day_low"
+        ],
+        "unique_families": [
+          "prev_day_structure"
+        ],
+        "family_count": 1,
+        "distance_band": "near",
+        "distance": 0.9,
+        "normalized_distance": 0.106599,
+        "consumed": false,
+        "confirmation_tags": [],
+        "selection_reason": "best_valid_candidate"
+      },
+      "resistance_shadow_meta": {
+        "source": "vwap",
+        "role": "cost",
+        "raw_sources": [
+          "vwap"
+        ],
+        "unique_families": [
+          "cost"
+        ],
+        "family_count": 1,
+        "distance_band": "medium",
+        "distance": 3.8,
+        "normalized_distance": 0.450085,
+        "consumed": false,
+        "confirmation_tags": [],
+        "selection_reason": "best_valid_candidate"
+      },
+      "engine_status": "completed",
+      "calculation_version": "sr_shadow_v1",
+      "volatility_source": "atr14_sma",
+      "volatility_value": 8.442857142857143,
+      "sample_count": 14,
+      "estimated_upper_limit": 104.0,
+      "estimated_lower_limit": 85.1,
+      "price_limit_source": "calculated_from_previous_close",
+      "price_limit_verified": false,
+      "special_reference_detector": "unavailable",
+      "evaluation_eligible": true,
+      "fallback_used": false,
+      "pivot_p": 97.6,
+      "risk_tags": [],
+      "merge_distance": 0.1419,
+      "consumed_threshold": 0.6754285714285715,
+      "excluded_candidates_and_reasons": [
+        {
+          "source": "previous_day_high",
+          "price": 104.5,
+          "reason": "outside_estimated_limit"
+        },
+        {
+          "source": "rolling_high_15d",
+          "price": 120.0,
+          "reason": "outside_estimated_limit"
+        },
+        {
+          "source": "rolling_low_15d",
+          "price": 81.1,
+          "reason": "outside_estimated_limit"
+        },
+        {
+          "source": "pivot_s1",
+          "price": 90.7,
           "reason": "not_selected",
           "side": "support",
           "band": "medium",
@@ -2019,7 +1951,7 @@
         },
         {
           "source": "pivot_r1",
-          "price": 88.8,
+          "price": 101.5,
           "reason": "not_selected",
           "side": "resistance",
           "band": "far",
@@ -2028,30 +1960,18 @@
             "pivot_r1"
           ]
         }
-      ],
-      "open_structure_bias": "bearish_watch",
-      "open_structure_zh": "偏空觀察",
-      "open_structure_event": "false_breakout",
-      "open_structure_reason": "第一根假突破83.3後收在下方，偏空觀察；量能無同時段可比；先賣後買未核",
-      "open_structure_confidence": "low",
-      "open_structure_space_insufficient": false
+      ]
     }
   ],
-  "report_text": "[FINANCE]\n**每日當沖觀察報告（07:30）** · 資料日 `D=20261022`\n產出時間：2026-10-27 07:31:26\n\n### 1. 大盤／夜盤情境\n- 來源：台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）\n- 參考價：45,660｜昨收：46,234｜漲跌：**-580**（-1.25%）\n- 區間：開 46,270／高 46,399／低 45,523\n- 情境標籤：**高波動警戒（大跌）**\n- 操作建議：|Δ|=580≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。\n- 🚨 **|夜盤|≥300**：置頂高波動警戒，降低強進場語氣\n\n### 2. 選股規則（v1 硬性）\n- 價 10.0–150.0｜量≥6000 張｜額≥5 億｜當沖≥25%｜振幅≥5%（前收）\n- 排除：注意股 14／處置 3\n- 觀察池檔數：10（top 輸出）\n\n### 3. 觀察池（含點位）\n| 代號 | 名稱 | 收盤 | 漲跌% | 爆大量 | 均價 | K棒 | 法人 | 分點 | 綜評分 | 偏向 | S | R | 註 |\n|---|---|---:|---:|---|---:|---|---:|---|---:|---|---:|---:|---|\n| 4526 | 東台 | 41.05 | 7.88 | 爆大量(漲) | 41.18 | - | +18.2% | B16/S8 | 100 | 中性 | 38.80 | 41.85 | 夜盤背離、缺口反轉風險 |\n| 4720 | 德淵 | 30.95 | 5.81 | 爆大量(漲) | 31.55 | 長下影 | +6.9% | B16/S7 | 100 | 中性 | 29.55 | 32.15 | 缺口反轉風險、長下影 |\n| 2413 | 環科 | 54.90 | -4.69 | 爆大量(跌) | 58.47 | - | +3.8% | B10/S10 | 96 | 偏空* | 54.20 | 61.50 | - |\n| 2465 | 麗臺 | 96.20 | 9.94 | 爆大量(漲) | 95.51 | 近漲停 | +30.5% | B31/S10 | 95 | 中性 | 89.00 | 96.20 | 夜盤背離、缺口反轉風險、近漲停 |\n| 4989 | 榮科 | 71.00 | 3.05 | 爆大量(漲) | 72.49 | 長上影 | +7.8% | B14/S3 | 90 | 中性 | 69.10 | 75.40 | 缺口反轉風險、長上影 |\n| 1802 | 台玻 | 67.10 | -0.15 | 爆大量(跌) | 70.30 | 長上影 | +10.7% | B12/S4 | 88 | 偏空* | 66.30 | 73.60 | 長上影 |\n| 2328 | 廣宇 | 53.60 | -1.29 | 爆大量(跌) | 55.89 | 長上影 | +14.6% | B16/S4 | 88 | 偏空* | 53.50 | 57.90 | 長上影 |\n| 1528 | 恩德 | 25.90 | 1.97 | 爆大量(漲) | 26.98 | 長上影 | +3.5% | B8/S3 | 84 | 偏空* | 25.75 | 27.90 | 缺口反轉風險、長上影 |\n| 3673 | TPK-KY | 73.00 | -3.69 | 爆大量(跌) | 76.17 | 長上影 | -7.0% | B2/S6 | 82 | 偏空 | 72.00 | 78.90 | 長上影 |\n| 4566 | 時碩工業 | 84.40 | -0.82 | 爆大量(跌) | 86.63 | 長上影 | -12.9% | B6/S14 | 82 | 偏空 | 83.30 | 90.50 | 長上影 |\n\n**點位口徑**：壓力＝昨高、支撐＝昨低；均價＝成交額÷成交股數，可當箱內中軸。\n**爆大量**＝當日量 ≥ 近 15 交易日均量 × 2；否則 n/a。漲紅跌綠。\n**法人**＝三大法人淨買佔成交%；**分點**＝前5買超／賣超佔比。偏向 `*`＝夜盤微調。\n\n### 4. 操作紀律\n- 只做觀察池，不保證方向；開盤 15 分鐘量能不足則降倉。\n- 當沖嚴設停損；高當沖率＋高振幅常為隔日沖雜訊。\n- 本報告不構成投資建議。\n\n_engine: twse_screener v1 + daytrade_report_0730 · deliver ready_",
+  "report_text": "[FINANCE]\n**每日當沖觀察報告（07:30）** · 資料日 `D=20261027`\n產出時間：2026-10-28 07:31:42\n\n### 1. 大盤／夜盤情境\n- 來源：台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）\n- 參考價：46,878｜昨收：46,106｜漲跌：**+774**（+1.68%）\n- 區間：開 46,080／高 47,000／低 46,006\n- 情境標籤：**高波動警戒（大漲）**\n- 操作建議：|Δ|=774≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。\n- 🚨 **|夜盤|≥300**：置頂高波動警戒，降低強進場語氣\n\n### 2. 選股規則（v1 硬性）\n- 價 10.0–150.0｜量≥6000 張｜額≥5 億｜當沖≥25%｜振幅≥5%（前收）\n- 排除：注意股 18／處置 2\n- 觀察池檔數：10（top 輸出）\n\n### 3. 觀察池（含點位）\n| 代號 | 名稱 | 收盤 | 漲跌% | 爆大量 | 均價 | K棒 | 法人 | 分點 | 綜評分 | 偏向 | S | R | 註 |\n|---|---|---:|---:|---|---:|---|---:|---|---:|---|---:|---:|---|\n| 1709 | 和益 | 52.00 | -5.97 | n/a | 54.41 | - | +12.7% | B13/S12 | 90 | 偏多* | 51.50 | 58.20 | 夜盤背離、缺口反轉風險 |\n| 2465 | 麗臺 | 93.90 | -2.39 | 爆大量(跌) | 95.89 | - | -5.9% | B4/S11 | 88 | 中性 | 91.80 | 99.90 | 夜盤背離、缺口反轉風險 |\n| 3029 | 零壹 | 129.00 | 5.31 | 爆大量(漲) | 125.90 | - | -2.3% | B16/S12 | 81 | 偏多 | 121.50 | 129.50 | - |\n| 4566 | 時碩工業 | 87.20 | 3.32 | 爆大量(漲) | 87.11 | - | +0.1% | B11/S8 | 78 | 偏多 | 81.70 | 90.60 | - |\n| 2353 | 宏碁 | 33.15 | 2.16 | 爆大量(漲) | 33.44 | 長上影 | +22.9% | B19/S8 | 77 | 偏多 | 32.65 | 34.45 | 長上影 |\n| 6269 | 台郡 | 78.40 | -0.38 | 爆大量(跌) | 80.78 | 長上影 | -3.7% | B3/S6 | 74 | 中性 | 77.50 | 85.80 | 夜盤背離、缺口反轉風險、長上影 |\n| 8150 | 南茂 | 97.00 | 1.15 | n/a | 99.30 | 長上影 | +0.5% | B15/S19 | 73 | 偏多* | 96.30 | 103.50 | 長上影 |\n| 2409 | 友達 | 33.45 | -5.51 | n/a | 34.52 | - | -28.0% | B5/S31 | 71 | 中性 | 33.45 | 36.55 | 夜盤背離、缺口反轉風險 |\n| 3715 | 定穎投控 | 125.50 | -6.69 | n/a | 128.81 | - | -22.4% | B4/S24 | 71 | 中性 | 125.00 | 136.50 | 夜盤背離、缺口反轉風險 |\n| 6209 | 今國光 | 94.60 | -4.44 | n/a | 98.42 | - | +2.1% | B4/S4 | 70 | 中性 | 93.70 | 104.50 | 夜盤背離、缺口反轉風險 |\n\n**點位口徑**：壓力＝昨高、支撐＝昨低；均價＝成交額÷成交股數，可當箱內中軸。\n**爆大量**＝當日量 ≥ 近 15 交易日均量 × 2；否則 n/a。漲紅跌綠。\n**法人**＝三大法人淨買佔成交%；**分點**＝前5買超／賣超佔比。偏向 `*`＝夜盤微調。\n\n### 4. 操作紀律\n- 只做觀察池，不保證方向；開盤 15 分鐘量能不足則降倉。\n- 當沖嚴設停損；高當沖率＋高振幅常為隔日沖雜訊。\n- 本報告不構成投資建議。\n\n_engine: twse_screener v1 + daytrade_report_0730 · deliver ready_",
   "shadow_sr": {
     "calculation_version": "sr_shadow_v1",
     "special_reference_detector": "unavailable",
     "note": "support_obs/resistance_obs 仍為昨低／昨高；影子點位見 support_shadow／resistance_shadow"
   },
-  "open_structure": {
-    "label": "開盤結構偏向",
-    "calculation_version": "open_structure_0905_v1",
-    "session_date": "20261027",
-    "note": "開盤結構偏向；非正式進場單。support_obs／resistance_obs／vwap／綜評分未改"
-  },
   "tracker": {
-    "id": "20261022",
-    "updated_at": "2026-10-27T09:05:27",
+    "id": "20261027",
+    "updated_at": "2026-10-28T07:31:42",
     "source": "daytrade_report_0730"
   }
 }
