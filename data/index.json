@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-10-28T09:05:23+08:00",
+  "updated_at": "2026-10-29T07:31:19+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261022",
+  "cutoff": "20261023",
   "entries": [
+    {
+      "date": "20261028",
+      "generated_at": "2026-10-29T07:31:19",
+      "gate_tag": "偏空",
+      "gate_advice": "夜盤／參考 -128（−300–−100）：提高偏空池權重；慎追昨強勢高位。",
+      "index_change": -128.0,
+      "index_change_pct": "-0.27%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "6456 GIS-KY",
+        "3673 TPK-KY",
+        "2409 友達",
+        "2465 麗臺",
+        "2328 廣宇"
+      ],
+      "file": "data/reports/20261028.json"
+    },
     {
       "date": "20261027",
       "generated_at": "2026-10-28T07:31:42",
@@ -25,5 +44,5 @@
       "file": "data/reports/20261027.json"
     }
   ],
-  "count": 1
+  "count": 2
 }
