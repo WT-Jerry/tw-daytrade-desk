@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-11-03T09:05:31+08:00",
+  "updated_at": "2026-11-04T07:31:27+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261028",
+  "cutoff": "20261029",
   "entries": [
+    {
+      "date": "20261103",
+      "generated_at": "2026-11-04T07:31:27",
+      "gate_tag": "高波動警戒（大漲）",
+      "gate_advice": "|Δ|=426≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
+      "index_change": 426.0,
+      "index_change_pct": "+0.98%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "1802 台玻",
+        "2484 希華",
+        "2465 麗臺",
+        "4720 德淵",
+        "6689 伊雲谷"
+      ],
+      "file": "data/reports/20261103.json"
+    },
     {
       "date": "20261102",
       "generated_at": "2026-11-03T07:30:45",
@@ -42,25 +61,6 @@
         "6209 今國光"
       ],
       "file": "data/reports/20261030.json"
-    },
-    {
-      "date": "20261029",
-      "generated_at": "2026-10-30T07:33:01",
-      "gate_tag": "高波動警戒（大跌）",
-      "gate_advice": "|Δ|=643≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
-      "index_change": -643.0,
-      "index_change_pct": "-1.38%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2355 敬鵬",
-        "4916 事欣科",
-        "2352 佳世達",
-        "6209 今國光",
-        "2337 旺宏"
-      ],
-      "file": "data/reports/20261029.json"
     }
   ],
   "count": 3
