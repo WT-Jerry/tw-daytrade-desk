@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-11-04T09:05:23+08:00",
+  "updated_at": "2026-11-05T07:32:11+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261029",
+  "cutoff": "20261030",
   "entries": [
+    {
+      "date": "20261104",
+      "generated_at": "2026-11-05T07:32:11",
+      "gate_tag": "偏多",
+      "gate_advice": "夜盤／參考 +201（100–300）：提高偏多池權重；慎追過度延伸。",
+      "index_change": 201.0,
+      "index_change_pct": "+0.47%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "1528 恩德",
+        "1709 和益",
+        "3376 新日興",
+        "6209 今國光",
+        "3042 晶技"
+      ],
+      "file": "data/reports/20261104.json"
+    },
     {
       "date": "20261103",
       "generated_at": "2026-11-04T07:31:27",
@@ -42,25 +61,6 @@
         "4960 誠美材"
       ],
       "file": "data/reports/20261102.json"
-    },
-    {
-      "date": "20261030",
-      "generated_at": "2026-11-02T07:32:03",
-      "gate_tag": "高波動警戒（大跌）",
-      "gate_advice": "|Δ|=867≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。｜週一：那指週末 +0.42%（NQ）、費半週五 -7.20%（否決資料、不作主資料）；美股週末大幅，提高警戒、開盤前不追。",
-      "index_change": -867.0,
-      "index_change_pct": "-1.91%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2465 麗臺",
-        "6456 GIS-KY",
-        "4566 時碩工業",
-        "2352 佳世達",
-        "6209 今國光"
-      ],
-      "file": "data/reports/20261030.json"
     }
   ],
   "count": 3
