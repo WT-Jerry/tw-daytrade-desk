@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-11-05T09:05:24+08:00",
+  "updated_at": "2026-11-06T07:32:14+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261030",
+  "cutoff": "20261031",
   "entries": [
+    {
+      "date": "20261105",
+      "generated_at": "2026-11-06T07:32:14",
+      "gate_tag": "高波動警戒（大跌）",
+      "gate_advice": "|Δ|=2946≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
+      "index_change": -2946.0,
+      "index_change_pct": "-7.03%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "2033 佳大",
+        "3701 大眾控",
+        "4960 誠美材",
+        "6443 元晶",
+        "1709 和益"
+      ],
+      "file": "data/reports/20261105.json"
+    },
     {
       "date": "20261104",
       "generated_at": "2026-11-05T07:32:11",
@@ -63,5 +82,5 @@
       "file": "data/reports/20261102.json"
     }
   ],
-  "count": 3
+  "count": 4
 }
