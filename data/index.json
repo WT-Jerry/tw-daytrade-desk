@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-11-06T09:05:26+08:00",
+  "updated_at": "2026-11-09T07:31:53+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261031",
+  "cutoff": "20261103",
   "entries": [
+    {
+      "date": "20261106",
+      "generated_at": "2026-11-09T07:31:53",
+      "gate_tag": "高波動警戒（大漲）",
+      "gate_advice": "|Δ|=646≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。｜週一：那指週末 +0.36%（NQ）、費半週五 +4.21%（否決資料、不作主資料）；美股週末大幅，提高警戒、開盤前不追。",
+      "index_change": 646.0,
+      "index_change_pct": "+1.63%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "6112 邁達特",
+        "3481 群創",
+        "3029 零壹",
+        "1301 台塑",
+        "2892 第一金"
+      ],
+      "file": "data/reports/20261106.json"
+    },
     {
       "date": "20261105",
       "generated_at": "2026-11-06T07:32:14",
@@ -42,45 +61,7 @@
         "3042 晶技"
       ],
       "file": "data/reports/20261104.json"
-    },
-    {
-      "date": "20261103",
-      "generated_at": "2026-11-04T07:31:27",
-      "gate_tag": "高波動警戒（大漲）",
-      "gate_advice": "|Δ|=426≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
-      "index_change": 426.0,
-      "index_change_pct": "+0.98%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "1802 台玻",
-        "2484 希華",
-        "2465 麗臺",
-        "4720 德淵",
-        "6689 伊雲谷"
-      ],
-      "file": "data/reports/20261103.json"
-    },
-    {
-      "date": "20261102",
-      "generated_at": "2026-11-03T07:30:45",
-      "gate_tag": "高波動警戒（大跌）",
-      "gate_advice": "|Δ|=917≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
-      "index_change": -917.0,
-      "index_change_pct": "-2.03%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2468 華經",
-        "6269 台郡",
-        "1605 華新",
-        "4919 新唐",
-        "4960 誠美材"
-      ],
-      "file": "data/reports/20261102.json"
     }
   ],
-  "count": 4
+  "count": 3
 }
