@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-11-09T09:05:23+08:00",
+  "updated_at": "2026-11-10T07:37:16+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261103",
+  "cutoff": "20261104",
   "entries": [
+    {
+      "date": "20261109",
+      "generated_at": "2026-11-10T07:37:16",
+      "gate_tag": "高波動警戒（大漲）",
+      "gate_advice": "|Δ|=1064≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
+      "index_change": 1064.0,
+      "index_change_pct": "+2.57%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "3605 宏致",
+        "3019 亞光",
+        "6505 台塑化",
+        "3481 群創",
+        "1802 台玻"
+      ],
+      "file": "data/reports/20261109.json"
+    },
     {
       "date": "20261106",
       "generated_at": "2026-11-09T07:31:53",
@@ -42,25 +61,6 @@
         "1709 和益"
       ],
       "file": "data/reports/20261105.json"
-    },
-    {
-      "date": "20261104",
-      "generated_at": "2026-11-05T07:32:11",
-      "gate_tag": "偏多",
-      "gate_advice": "夜盤／參考 +201（100–300）：提高偏多池權重；慎追過度延伸。",
-      "index_change": 201.0,
-      "index_change_pct": "+0.47%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "1528 恩德",
-        "1709 和益",
-        "3376 新日興",
-        "6209 今國光",
-        "3042 晶技"
-      ],
-      "file": "data/reports/20261104.json"
     }
   ],
   "count": 3
