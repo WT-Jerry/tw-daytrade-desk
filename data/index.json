@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-11-10T09:05:26+08:00",
+  "updated_at": "2026-11-11T07:32:25+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261104",
+  "cutoff": "20261105",
   "entries": [
+    {
+      "date": "20261110",
+      "generated_at": "2026-11-11T07:32:25",
+      "gate_tag": "偏空",
+      "gate_advice": "夜盤／參考 -124（−300–−100）：提高偏空池權重；慎追昨強勢高位。",
+      "index_change": -124.0,
+      "index_change_pct": "-0.29%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "6269 台郡",
+        "4526 東台",
+        "8150 南茂",
+        "6209 今國光",
+        "4927 泰鼎-KY"
+      ],
+      "file": "data/reports/20261110.json"
+    },
     {
       "date": "20261109",
       "generated_at": "2026-11-10T07:37:16",
@@ -42,25 +61,6 @@
         "2892 第一金"
       ],
       "file": "data/reports/20261106.json"
-    },
-    {
-      "date": "20261105",
-      "generated_at": "2026-11-06T07:32:14",
-      "gate_tag": "高波動警戒（大跌）",
-      "gate_advice": "|Δ|=2946≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
-      "index_change": -2946.0,
-      "index_change_pct": "-7.03%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "2033 佳大",
-        "3701 大眾控",
-        "4960 誠美材",
-        "6443 元晶",
-        "1709 和益"
-      ],
-      "file": "data/reports/20261105.json"
     }
   ],
   "count": 3
