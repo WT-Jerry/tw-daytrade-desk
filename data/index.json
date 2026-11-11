@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-11-11T09:05:24+08:00",
+  "updated_at": "2026-11-12T07:34:04+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261105",
+  "cutoff": "20261106",
   "entries": [
+    {
+      "date": "20261111",
+      "generated_at": "2026-11-12T07:34:04",
+      "gate_tag": "高波動警戒（大漲）",
+      "gate_advice": "|Δ|=470≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
+      "index_change": 470.0,
+      "index_change_pct": "+1.06%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "4526 東台",
+        "2355 敬鵬",
+        "8150 南茂",
+        "3605 宏致",
+        "3029 零壹"
+      ],
+      "file": "data/reports/20261111.json"
+    },
     {
       "date": "20261110",
       "generated_at": "2026-11-11T07:32:25",
@@ -42,25 +61,6 @@
         "1802 台玻"
       ],
       "file": "data/reports/20261109.json"
-    },
-    {
-      "date": "20261106",
-      "generated_at": "2026-11-09T07:31:53",
-      "gate_tag": "高波動警戒（大漲）",
-      "gate_advice": "|Δ|=646≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。｜週一：那指週末 +0.36%（NQ）、費半週五 +4.21%（否決資料、不作主資料）；美股週末大幅，提高警戒、開盤前不追。",
-      "index_change": 646.0,
-      "index_change_pct": "+1.63%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "6112 邁達特",
-        "3481 群創",
-        "3029 零壹",
-        "1301 台塑",
-        "2892 第一金"
-      ],
-      "file": "data/reports/20261106.json"
     }
   ],
   "count": 3
