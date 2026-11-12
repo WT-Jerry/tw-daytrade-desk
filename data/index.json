@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-11-12T09:05:23+08:00",
+  "updated_at": "2026-11-13T07:32:31+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261106",
+  "cutoff": "20261107",
   "entries": [
+    {
+      "date": "20261112",
+      "generated_at": "2026-11-13T07:32:31",
+      "gate_tag": "高波動警戒（大漲）",
+      "gate_advice": "|Δ|=548≥300：防熱門股開高走低／利多出盡。名單可留，降低「強進場」語氣。",
+      "index_change": 548.0,
+      "index_change_pct": "+1.27%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "8150 南茂",
+        "1802 台玻",
+        "1709 和益",
+        "2316 楠梓電",
+        "8213 志超"
+      ],
+      "file": "data/reports/20261112.json"
+    },
     {
       "date": "20261111",
       "generated_at": "2026-11-12T07:34:04",
@@ -63,5 +82,5 @@
       "file": "data/reports/20261109.json"
     }
   ],
-  "count": 3
+  "count": 4
 }
