@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-11-18T09:05:25+08:00",
+  "updated_at": "2026-11-19T07:33:04+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261112",
+  "cutoff": "20261113",
   "entries": [
+    {
+      "date": "20261118",
+      "generated_at": "2026-11-19T07:33:04",
+      "gate_tag": "高波動警戒（大跌）",
+      "gate_advice": "|Δ|=345≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
+      "index_change": -345.0,
+      "index_change_pct": "-0.86%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "4916 事欣科",
+        "9933 中鼎",
+        "2468 華經",
+        "4526 東台",
+        "6112 邁達特"
+      ],
+      "file": "data/reports/20261118.json"
+    },
     {
       "date": "20261117",
       "generated_at": "2026-11-18T07:32:49",
@@ -42,25 +61,6 @@
         "4927 泰鼎-KY"
       ],
       "file": "data/reports/20261116.json"
-    },
-    {
-      "date": "20261113",
-      "generated_at": "2026-11-16T08:54:24",
-      "gate_tag": "週一警戒（美股週末大幅）",
-      "gate_advice": "夜盤／參考 -133（−300–−100）：提高偏空池權重；慎追昨強勢高位。｜週一：那指週末 +0.32%（NQ）、費半週五 -3.43%（否決資料、不作主資料）；美股週末大幅，提高警戒、開盤前不追。",
-      "index_change": -133.0,
-      "index_change_pct": "-0.30%",
-      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
-      "count": 10,
-      "relaxed": false,
-      "top_codes": [
-        "3149 正達",
-        "3305 昇貿",
-        "4916 事欣科",
-        "2468 華經",
-        "4938 和碩"
-      ],
-      "file": "data/reports/20261113.json"
     }
   ],
   "count": 3
