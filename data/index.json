@@ -1,10 +1,29 @@
 {
-  "updated_at": "2026-11-19T09:05:23+08:00",
+  "updated_at": "2026-11-20T07:32:47+08:00",
   "title": "TW Daytrade Desk",
   "timezone": "Asia/Taipei",
   "keep_days": 6,
-  "cutoff": "20261113",
+  "cutoff": "20261114",
   "entries": [
+    {
+      "date": "20261119",
+      "generated_at": "2026-11-20T07:32:47",
+      "gate_tag": "高波動警戒（大跌）",
+      "gate_advice": "|Δ|=500≥300：防多殺多；可找相對抗跌，勿盲目抄底。名單可留，降低「強進場」語氣。",
+      "index_change": -500.0,
+      "index_change_pct": "-1.30%",
+      "index_label": "台指期（CMoney TXF1；07:30 視為夜盤／盤後參考）",
+      "count": 10,
+      "relaxed": false,
+      "top_codes": [
+        "2471 資通",
+        "2355 敬鵬",
+        "3715 定穎投控",
+        "2882 國泰金",
+        "2464 盟立"
+      ],
+      "file": "data/reports/20261119.json"
+    },
     {
       "date": "20261118",
       "generated_at": "2026-11-19T07:33:04",
@@ -63,5 +82,5 @@
       "file": "data/reports/20261116.json"
     }
   ],
-  "count": 3
+  "count": 4
 }
